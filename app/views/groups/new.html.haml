@@ -1,1 +1,13 @@
 %h1 new group
+
+= form_with scope: :groups, url: groups_path, local: true do |form|
+  %p
+    = form.label :group_name
+    %br/
+    = form.text_field :group_name
+  %p
+    = form.label :group_description
+    %br/
+    = form.text_area :group_description
+  %p
+    = form.submit

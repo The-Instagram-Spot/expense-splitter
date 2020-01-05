@@ -4,4 +4,8 @@ class GroupsController < ApplicationController
   
   def new
   end
+  
+  def create
+    render plain: params[:groups].inspect
+  end
 end
