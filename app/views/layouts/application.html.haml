@@ -2,25 +2,21 @@
 %html
   %head
     %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
-    %title Expense Splitter
+    %title Rotten Potatoes!
     = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:content => "profile email", :name => "google-signin-scope"}/
-    %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
-    %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
-    
-   %body
-    %div.container
-      %div.navbar.navbar-expand-lg.bg-primary.text-white
-        %h1.title Expense Splitter
-      #main
-        - if flash[:notice]
-          %div.alert.alert-danger
-            #notice.message= flash[:notice]
-        - elsif flash[:warning]
-          %div.alert.alert-danger
-            #warning.message= flash[:warning]
 
-        = yield
+    %body
+      %div.container
+        %div.navbar.navbar-expand-lg.bg-primary.text-white
+          %h1.title Rotten Potatoes!
+        #main
+          - if flash[:notice]
+            %div.alert.alert-danger
+              #notice.message= flash[:notice]
+          - elsif flash[:warning]
+            %div.alert.alert-danger
+              #warning.message= flash[:warning]
+
+          = yield
