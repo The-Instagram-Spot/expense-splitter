@@ -1,25 +1,25 @@
--#  This file is app/views/movies/index.html.haml
-%h2 All Movies
-= form_tag movies_path, :method => :get do
-  Include:
-  - @all_ratings.each do |rating|
-    = rating
-    = check_box_tag "ratings[#{rating}]"
-  = submit_tag 'Refresh', :class => 'btn btn-primary'
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "profile email", :name => "google-signin-scope"}/
+    %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
+    %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
+  %body
+    %h1 index file expense splitter app in progress...
+    .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
+    :javascript
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
-%table#movies.table.table-striped.col-md-12
-  %thead
-    %tr
-      %th{:class => ('hilite' if @hilite == 'title')}= link_to "Movie Title", movies_path(:sort_by => 'title'), id: "title_header" 
-      %th Rating
-      %th{:class => ('hilite' if @hilite == 'release_date')}= link_to "Release Date", movies_path(:sort_by => 'release_date'), id: "release_date_header"
-      %th More Info
-  %tbody
-    - @movies.each do |movie|
-      %tr
-        %td= movie.title
-        %td= movie.rating
-        %td= movie.release_date
-        %td= link_to "More about #{movie.title}", movie_path(movie)
-
-= link_to 'Add new movie', new_movie_path
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
