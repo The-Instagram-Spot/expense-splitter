@@ -1,25 +1,22 @@
 !!!
-%html{:lang => "en"}
+%html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:content => "profile email", :name => "google-signin-scope"}/
-    %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
-    %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
-  %body
-    %h1 index file expense splitter app in progress...
-    .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
-    :javascript
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
+    %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+    %title Expense Splitter!
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
 
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
+    %body
+      %div.container
+        %div.navbar.navbar-expand-lg.bg-primary.text-white
+          %h1.title Expense Splitter
+        #main
+          - if flash[:notice]
+            %div.alert.alert-danger
+              #notice.message= flash[:notice]
+          - elsif flash[:warning]
+            %div.alert.alert-danger
+              #warning.message= flash[:warning]
+
+          = yield

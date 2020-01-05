@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get 'welcome/index'
   
+  root 'groups#index'
   
-  root 'welcome#index'
+  resources :groups
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
