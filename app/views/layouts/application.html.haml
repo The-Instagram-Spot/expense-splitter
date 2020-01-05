@@ -6,7 +6,7 @@
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
   %body
-    %h1 expense splitter app in progress...
+    %h1 index file expense splitter app in progress...
     .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
     :javascript
       function onSignIn(googleUser) {
@@ -23,4 +23,3 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
       }
-
