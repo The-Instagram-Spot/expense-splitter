@@ -49,3 +49,585 @@ puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (236.1ms)[0m  [1m[35mCREATE DATABASE "ruby-getting-started_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (228.9ms)[0m  [1m[35mCREATE DATABASE "ruby-getting-started_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:05:45 +0000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (38.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateWidgets (20140707111715)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "widgets" ("id" bigserial primary key, "name" character varying, "description" text, "stock" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20140707111715_create_widgets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20140707111715"]]
+  ↳ bin/rails:4
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateGroups (20200105080115)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "group_name" character varying, "group_description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200105080115_create_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200105080115"]]
+  ↳ bin/rails:4
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-05 08:05:55.367780"], ["updated_at", "2020-01-05 08:05:55.367780"]]
+  ↳ bin/rails:4
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:06:06 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 1049ms (Views: 1044.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:06:09 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:06:18 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:06:27 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xd6IqXkdcshpFJ+SngtOPakNhpsk7xWiTulTQ0Wga8HA1MoXP+wfH5TXjTFp0ugRVU0W8dTlhsdWNLAYESN+Lw==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group\r\n"}, "commit"=>"Save Groups"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:12:00 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 253ms (Views: 248.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:12:02 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:12:08 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:12:14 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fWDGyViZfESwEa9MC+3dncIgXPoG+yrIvDky8ctYnA3gaoR3HmgRk03Sve/8NHuxPmDMkPbxua2k5NGqn9uJ4w==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group\r\n"}, "commit"=>"Save Groups"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationRecord):
+  
+app/models/group.rb:1:in `<main>'
+app/controllers/groups_controller.rb:13:in `create'
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:24 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 226ms (Views: 221.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:27 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:37 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:43 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:51 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:18:53 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:18:58 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:19:04 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4krFBb6eMMswBrY3V6vbXqUdZKLhCknqhrkbpQ3bHfJ/QIe7+G9dHM3FpJSgcn1yWV30yBEA2o+eZPj+WVgIHA==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group\r\n"}, "commit"=>"Save Groups"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationRecord):
+  
+app/models/group.rb:1:in `<main>'
+app/controllers/groups_controller.rb:13:in `create'
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:21:42 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 223ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:21:43 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:21:49 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:21:54 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAYLotZgQ9t6DjKktstJmS8Qv4cI6OnlnCxtS/nAnv5dDEkckJEuDIfNIAdBEu+101Av7fjieoCE8Y4QrUOLEA==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group"}, "commit"=>"Save Groups"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/groups_controller.rb:13:in `create'
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:23:26 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:23:34 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 226ms (Views: 221.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:23:36 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:23:40 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:23:47 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G/sW0YjiptrpxOCpf+YuxMPjLBqT+ps3W9jLOdBf76+G8VRvzhPLDRQH8gqIP4joP6O8cGPwCFJDBShihNz6QQ==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group"}, "commit"=>"Save Groups"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.6ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/groups_controller.rb:13:in `create'
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:24:17 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 220ms (Views: 215.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:24:20 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:24:24 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:24:30 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wZpGAmgvAmdMuof/StQCVBGuT4WehUxjq5VoUWxF2o5ckAS8Lt5vsLF5lVy9DaR47e7f726P3wazSIsKOMbPYA==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group\r\n"}, "commit"=>"Save Groups"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/groups_controller.rb:13:in `create'
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:26:11 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 217ms (Views: 212.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:26:12 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:26:15 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:26:21 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JOS9CPKrhEnfwv0O6YuE03XLrJ4WhtOSpdt8pzNQGD257v+2tFrpniIB760eUiL/iYs89OaMQPe9Bp/8Z9MN0w==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group"}, "commit"=>"Save Groups"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:15
+  [1m[36mGroup Create (0.7ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "The Instagram Spot"], ["group_description", "project group"], ["created_at", "2020-01-05 08:26:21.309590"], ["updated_at", "2020-01-05 08:26:21.309590"]]
+  ↳ app/controllers/groups_controller.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:15
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/1
+Completed 302 Found in 17ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/groups/1" for 66.96.207.244 at 2020-01-05 08:26:21 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:6
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:28:54 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 221ms (Views: 215.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:28:56 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:29:01 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:29:07 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I13p1bYHg31FmfLTMhzYERNCmcz2TLPJnN0O6Y1Ynx++V6tr8Pbuqrha4HDFxX497wIJpgZGIKyEAO2y2duK8Q==", "groups"=>{"group_name"=>"The Instagram Spot", "group_description"=>"project group"}, "commit"=>"Save Groups"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:16
+  [1m[36mGroup Create (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "The Instagram Spot"], ["group_description", "project group"], ["created_at", "2020-01-05 08:29:07.322869"], ["updated_at", "2020-01-05 08:29:07.322869"]]
+  ↳ app/controllers/groups_controller.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:16
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/2
+Completed 302 Found in 16ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/groups/2" for 66.96.207.244 at 2020-01-05 08:29:07 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups" for 66.96.207.244 at 2020-01-05 08:29:14 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:29:19 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups/1" for 66.96.207.244 at 2020-01-05 08:29:25 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/2" for 66.96.207.244 at 2020-01-05 08:29:28 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 66.96.207.244 at 2020-01-05 08:29:39 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:30:32 +0000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  Rendered groups/index.html.haml within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    15:         %th
+    16:       - @groups.each do |group|
+    17:         %tr
+    18:             %td= group.group_name
+    19:             %td= group.group_description
+    20:             %td= link_to 'Show', group_path(group)
+    21:     .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
+  
+app/views/groups/index.html.haml:18
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:30:56 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (47.1ms)
+Completed 200 OK in 258ms (Views: 248.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:30:58 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:28 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (39.7ms)
+Completed 200 OK in 227ms (Views: 218.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:30 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:39 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:45 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:47 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:31:51 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/new" for 66.96.207.244 at 2020-01-05 08:31:55 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 66.96.207.244 at 2020-01-05 08:32:02 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/DCfAifJccxlFezveAd0w01ldPRJ5b5sBcGol04xLTNhOt28YTgcG5jW/kyP3tLvsSXknrnvLQkdHEvMGrI43Q==", "groups"=>{"group_name"=>"CSCE431", "group_description"=>"class"}, "commit"=>"Save Groups"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:16
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "CSCE431"], ["group_description", "class"], ["created_at", "2020-01-05 08:32:02.381382"], ["updated_at", "2020-01-05 08:32:02.381382"]]
+  ↳ app/controllers/groups_controller.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:16
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/3
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/3" for 66.96.207.244 at 2020-01-05 08:32:02 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-05 08:32:05 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:16
+  Rendered groups/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
