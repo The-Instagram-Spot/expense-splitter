@@ -7,6 +7,9 @@
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
   %body
     %h1 expense splitter app in progress...
+    = link_to 'Home', controller: 'groups'
+    = link_to 'New Group', new_group_path
+
     %h1 Groups
     %table
       %tr
