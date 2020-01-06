@@ -1,3 +1,10 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+
+#{$a-tags} {
+  color: #FFFFFF ;
+  background-color: #597BA0;
+}
