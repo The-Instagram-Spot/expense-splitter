@@ -6,27 +6,11 @@
   = @groups.group_description
   
 %h2 People
-- @groups.people.each do |person|
-  %p
-    %strong Name:
-    = person.name
-  %p
-    %strong email:
-    = person.email
+= render @groups.people
 
-  
 %h2 Add a person:
-= form_with(model: [ @groups, @groups.people.build ], local: true) do |form|
-  %p
-    = form.label :name
-    %br/
-    = form.text_field :name
-  %p
-    = form.label :email
-    %br/
-    = form.text_area :email
-  %p
-    = form.submit
+= render 'people/form'
+
 
 
 = link_to 'Home', groups_path

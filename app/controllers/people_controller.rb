@@ -5,8 +5,15 @@ class PeopleController < ApplicationController
         redirect_to group_path(@groups)
     end
     
+    def destroy
+        @groups = Group.find(params[:group_id])
+        @person = @groups.people.find(params[:id])
+        @person.destroy
+        redirect_to group_path(@groups)
+    end
+    
     private
         def person_params
-            params.require(:group).permit(:name, :email)
+            params.require(:person).permit(:name, :email)
         end
 end
