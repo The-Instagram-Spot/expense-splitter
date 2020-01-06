@@ -40,4 +40,4 @@ gem 'puma'
 # gem 'debugger', group: [:development, :test]
 
 gem "haml-rails", "~> 2.0"
-
+gem 'coffee-script-source', '1.8.0'

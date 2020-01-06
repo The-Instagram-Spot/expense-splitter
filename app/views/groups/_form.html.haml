@@ -1,4 +1,4 @@
-= form_with scope: :group, url: groups_path, local: true do |form|
+= form_with model: @groups, local: true do |form|
   - if @groups.errors.any?
     #error_explanation
       %h2
@@ -18,4 +18,3 @@
     = form.text_area :group_description
   %p
     = form.submit
-= link_to 'Back', groups_path
