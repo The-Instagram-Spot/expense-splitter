@@ -6757,3 +6757,53 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 66.96.207.244 at 2020-01-06 03:12:11 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 237ms (Views: 226.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 66.96.207.244 at 2020-01-06 03:12:14 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/groups/10" for 66.96.207.244 at 2020-01-06 03:12:17 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bucNDAOrso+TrMOFxWOrt7XnArOkSGRGsDv0DSqdzKKK1is+4fniCfhUnu1yfBz7jt3N6ok3m05IEXe3sR7MZw==", "id"=>"10"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 10]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mPerson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mPerson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mGroup Destroy (0.5ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:41
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 28ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/groups" for 66.96.207.244 at 2020-01-06 03:12:18 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
