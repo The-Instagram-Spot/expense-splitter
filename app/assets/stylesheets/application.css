@@ -13,19 +13,27 @@
  *= require_tree .
  *= require_self
  */
- 
- h1 {
-  color: #1167AA;
-  font-size: 150%;
-  font-style: bold;
-  font-family: arial;
-  display: block;
-  width: 100%;
-  text-align: center;
+
+h1 {
+ color: #4E629D;
+ font-family: arial;
 }
 
-home, home:visited {
- color: red;
+nav_bar {
+ width: 100%;
+ height: 50px;
+ background-color: #DBDFEB;
+ display: inline-block;
+ vertical-align: middle;
+ text-align: center;
+ color: #5F71A6;
 }
 
+links {
+ text-decoration: none;
+ color: #FFFFFF;
+}
 
+links:visited {
+ color: #FFFFFF;
+}
