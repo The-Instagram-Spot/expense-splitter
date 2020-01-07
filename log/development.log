@@ -8111,3 +8111,471 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:51:45 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (45.0ms)
+Completed 200 OK in 247ms (Views: 234.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:51:46 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1/edit" for 37.120.208.80 at 2020-01-07 15:52:32 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 67ms (Views: 56.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:52:35 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:52:37 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [2 times] (2.3ms)
+  Rendered people/_form.html.haml (3.0ms)
+  Rendered groups/show.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/1/people/3" for 37.120.208.80 at 2020-01-07 15:52:47 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9LbUQp2hlybPmCZsGMxNCLKFT30HvpVXCdcFf/rYzbfRlwC8gtqX9z6yGPF+YiF6jUwecoMD4GYt2PjgRZ4ENg==", "group_id"=>"1", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:11
+  [1m[36mPerson Destroy (0.9ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/people_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:11
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:52:47 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (1.6ms)
+  Rendered people/_form.html.haml (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/groups/1/people/3" for 37.120.208.80 at 2020-01-07 15:52:49 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9LbUQp2hlybPmCZsGMxNCLKFT30HvpVXCdcFf/rYzbfRlwC8gtqX9z6yGPF+YiF6jUwecoMD4GYt2PjgRZ4ENg==", "group_id"=>"1", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=3 [WHERE "people"."group_id" = $1]):
+  
+app/controllers/people_controller.rb:10:in `destroy'
+Started DELETE "/groups/1/people/3" for 37.120.208.80 at 2020-01-07 15:52:50 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9LbUQp2hlybPmCZsGMxNCLKFT30HvpVXCdcFf/rYzbfRlwC8gtqX9z6yGPF+YiF6jUwecoMD4GYt2PjgRZ4ENg==", "group_id"=>"1", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=3 [WHERE "people"."group_id" = $1]):
+  
+app/controllers/people_controller.rb:10:in `destroy'
+Started DELETE "/groups/1/people/3" for 37.120.208.80 at 2020-01-07 15:52:50 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9LbUQp2hlybPmCZsGMxNCLKFT30HvpVXCdcFf/rYzbfRlwC8gtqX9z6yGPF+YiF6jUwecoMD4GYt2PjgRZ4ENg==", "group_id"=>"1", "id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=3 [WHERE "people"."group_id" = $1]):
+  
+app/controllers/people_controller.rb:10:in `destroy'
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:53:03 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:53:05 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:53:28 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (1.6ms)
+  Rendered people/_form.html.haml (3.0ms)
+  Rendered groups/show.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/groups/1/people/4" for 37.120.208.80 at 2020-01-07 15:53:30 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2nx4gA4922r7pEHgkt8/nQ2HjDBv5Po9Eo+lvxQBVJP/Xax+EUbbuwqOf330cVPvMk7dP+tZjww2gFggq0edEg==", "group_id"=>"1", "id"=>"4"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:11
+  [1m[36mPerson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/people_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:11
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:53:31 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered people/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/groups/1/people/4" for 37.120.208.80 at 2020-01-07 15:53:31 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2nx4gA4922r7pEHgkt8/nQ2HjDBv5Po9Eo+lvxQBVJP/Xax+EUbbuwqOf330cVPvMk7dP+tZjww2gFggq0edEg==", "group_id"=>"1", "id"=>"4"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=4 [WHERE "people"."group_id" = $1]):
+  
+app/controllers/people_controller.rb:10:in `destroy'
+Started DELETE "/groups/1/people/4" for 37.120.208.80 at 2020-01-07 15:57:52 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2nx4gA4922r7pEHgkt8/nQ2HjDBv5Po9Eo+lvxQBVJP/Xax+EUbbuwqOf330cVPvMk7dP+tZjww2gFggq0edEg==", "group_id"=>"1", "id"=>"4"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Person with 'id'=4 [WHERE "people"."group_id" = $1]):
+  
+app/controllers/people_controller.rb:10:in `destroy'
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:57:59 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:58:00 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:58:03 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered people/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/groups/1/people" for 37.120.208.80 at 2020-01-07 15:58:06 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"50wCKMEQYm6PC83lIs01lQMUrxM1YXP4g96qOU5LthHCbdbW3mtiv34h83hEY1nnPN3+HLHcBsmn0Vem8Q1/kA==", "person"=>{"name"=>"asdf", "email"=>"asdfsd"}, "commit"=>"Create Person", "group_id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:4
+  [1m[36mPerson Create (0.6ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "group_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asdf"], ["email", "asdfsd"], ["group_id", 1], ["created_at", "2020-01-07 15:58:06.429777"], ["updated_at", "2020-01-07 15:58:06.429777"]]
+  ↳ app/controllers/people_controller.rb:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:4
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:58:06 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (1.6ms)
+  Rendered people/_form.html.haml (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/groups/1/people" for 37.120.208.80 at 2020-01-07 15:58:10 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bHV0DFAnW5rxR/MgpS99osochy7FCGintVoEj7cSX+NJVKDyT1xbSwBtzb3DgRHQ9dXWIUG1HZaRVfkQCFSWYg==", "person"=>{"name"=>"asdf", "email"=>"asdfasdf"}, "commit"=>"Create Person", "group_id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:4
+  [1m[36mPerson Create (0.4ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "group_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asdf"], ["email", "asdfasdf"], ["group_id", 1], ["created_at", "2020-01-07 15:58:10.406764"], ["updated_at", "2020-01-07 15:58:10.406764"]]
+  ↳ app/controllers/people_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:4
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:58:10 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [2 times] (1.8ms)
+  Rendered people/_form.html.haml (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/groups/1/people/5" for 37.120.208.80 at 2020-01-07 15:58:13 +0000
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H4gzO7Pbs3a3bCrhGnFln++JLdomvPGDc/ybX3eCYXs6qefFrKCzp0ZGFHx83wnt0EB81aIBhLJX82bAyMSo+g==", "group_id"=>"1", "id"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:9
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."group_id" = $1 AND "people"."id" = $2 LIMIT $3[0m  [["group_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:11
+  [1m[36mPerson Destroy (3.0ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/people_controller.rb:11
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:11
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:58:14 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (1.7ms)
+  Rendered people/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:59:04 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (2.4ms)
+  Rendered people/_form.html.haml (4.7ms)
+  Rendered groups/show.html.haml within layouts/application (52.4ms)
+Completed 200 OK in 269ms (Views: 241.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:59:07 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (37.0ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/new" for 37.120.208.80 at 2020-01-07 15:59:10 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 37.120.208.80 at 2020-01-07 15:59:18 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bsGjQMEE2o19TIWpGDlWAIR20Oy7ltC9r7+hpxUazkZL4He+3n/aXIxmuzR+lzpyu7+B4z8rpYyLsFw4qlwHxw==", "group"=>{"group_name"=>"This ", "group_description"=>"WOWO"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (2.0ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "This "], ["group_description", "WOWO"], ["created_at", "2020-01-07 15:59:18.349301"], ["updated_at", "2020-01-07 15:59:18.349301"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/2
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/groups/2" for 37.120.208.80 at 2020-01-07 15:59:18 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered people/_form.html.haml (3.3ms)
+  Rendered groups/show.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/groups/2/people" for 37.120.208.80 at 2020-01-07 15:59:23 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Vm6FlQSaBCPLlGLcZQfYOSUm8UxKKR99TFsjTagOrTIeG7oS2lowX4EbxYXOnMS213KyrWV0UzRPpESiebzNQ==", "person"=>{"name"=>"asdf", "email"=>"dfsf"}, "commit"=>"Create Person", "group_id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/people_controller.rb:4
+  [1m[36mPerson Create (0.5ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "group_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asdf"], ["email", "dfsf"], ["group_id", 2], ["created_at", "2020-01-07 15:59:23.681736"], ["updated_at", "2020-01-07 15:59:23.681736"]]
+  ↳ app/controllers/people_controller.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/people_controller.rb:4
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/2
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/2" for 37.120.208.80 at 2020-01-07 15:59:23 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (1.6ms)
+  Rendered people/_form.html.haml (3.0ms)
+  Rendered groups/show.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:59:26 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/2/edit" for 37.120.208.80 at 2020-01-07 15:59:28 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:59:29 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:59:53 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of people/_person.html.haml [1 times] (2.7ms)
+  Rendered people/_form.html.haml (4.6ms)
+  Rendered groups/show.html.haml within layouts/application (21.2ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
