@@ -5,6 +5,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = link_to controller: 'groups', class: ['home'] do 
+      Home
+    
+    // = link_to 'https://websitelink.com/', class: 'link' do
+    //   %span Visit website
 
     %body
       #main

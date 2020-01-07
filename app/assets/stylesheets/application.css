@@ -24,3 +24,8 @@
   text-align: center;
 }
 
+home, home:visited {
+ color: red;
+}
+
+

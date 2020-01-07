@@ -5,10 +5,12 @@
     %meta{:content => "profile email", :name => "google-signin-scope"}/
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
+   
   %body
-    = link_to 'Home', controller: 'groups'
+  %div
+    
     %a= link_to 'New Group', new_group_path
-    = button_to "New Group", new_group_path
+  %div
 
     %h1 Groups
     %table
