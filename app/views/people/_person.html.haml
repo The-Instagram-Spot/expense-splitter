@@ -1,0 +1,10 @@
+%p
+  %strong Name:
+  = person.name
+%p
+  %strong Email:
+  = person.email
+  
+%p
+  = link_to 'Delete person', [person.group, person], method: :delete, data: { confirm: 'Are you sure?' }                  
+
