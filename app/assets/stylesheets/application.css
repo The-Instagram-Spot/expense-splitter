@@ -17,6 +17,17 @@
 h1 {
  color: #4E629D;
  font-family: arial;
+ text-align: center;
+}
+
+body {
+ text-align: center;
+ align-items: center;
+}
+
+table {
+ margin-left: auto;
+ margin-right: auto;
 }
 
 nav_bar {

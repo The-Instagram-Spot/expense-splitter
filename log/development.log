@@ -6387,3 +6387,351 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:13:32 +0000
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (7.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:21
+  Rendered groups/index.html.haml within layouts/application (40.5ms)
+Completed 200 OK in 495ms (Views: 477.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:13:33 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:21
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:19:27 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:21
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:19:57 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:20:06 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 294ms (Views: 261.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:20:08 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:20:10 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1/edit" for 37.120.208.80 at 2020-01-07 15:20:11 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (3.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:20:13 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:20:35 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:21:20 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:21:49 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:23:11 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:23:29 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:23:46 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:24:43 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:26:07 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     8:       
+     9:     %nav_bar
+    10:       = link_to 'Home', controller: 'groups'
+    11:           .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
+    12:     :javascript
+    13:       function onSignIn(googleUser) {
+    14:         // Useful data for your client-side scripts:
+  
+app/views/layouts/application.html.haml:11
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:26:22 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:27:54 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:17
+  Rendered groups/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:28:05 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:31:02 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:31:19 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:32:13 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:32:59 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:33:41 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:34:20 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (29.5ms)
+Completed 200 OK in 255ms (Views: 244.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:34:22 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 243ms (Views: 220.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/groups/1/edit" for 37.120.208.80 at 2020-01-07 15:34:25 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/groups/1" for 37.120.208.80 at 2020-01-07 15:34:32 +0000
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q0rAoCicWWjgv7mDIoxA4RxxfxQL7oHFvh+i1P/fzWdmaxReN+dZuRGVhx5EIiyTI7guG49T9PSaEF9LQJkE5g==", "group"=>{"group_name"=>"Howdy", "group_description"=>"world\r\n"}, "commit"=>"Update Group", "id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[36mGroup Update (6.4ms)[0m  [1m[33mUPDATE "groups" SET "group_name" = $1, "updated_at" = $2 WHERE "groups"."id" = $3[0m  [["group_name", "Howdy"], ["updated_at", "2020-01-07 15:34:32.973892"], ["id", 1]]
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to https://b17c11941582486abd0dcff654a33d4c.vfs.cloud9.us-east-2.amazonaws.com/groups/1
+Completed 302 Found in 18ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:34:33 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:34:35 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 37.120.208.80 at 2020-01-07 15:35:35 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:35:38 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/1" for 37.120.208.80 at 2020-01-07 15:37:58 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 37.120.208.80 at 2020-01-07 15:38:00 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:18
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
