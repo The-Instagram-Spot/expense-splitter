@@ -1,0 +1,35 @@
+[1mdiff --cc app/views/groups/index.html.haml[m
+[1mindex 7327068,00edbd3..0000000[m
+[1m--- a/app/views/groups/index.html.haml[m
+[1m+++ b/app/views/groups/index.html.haml[m
+[36m@@@ -12,16 -12,17 +12,30 @@@[m
+      = link_to 'New Group', new_group_path[m
+    %table[m
+      %tr[m
+[32m++<<<<<<< HEAD[m
+[32m +      %th Group Name[m
+[32m +      %th Description[m
+[32m +      %th[m
+[32m +    - @groups.each do |group|[m
+[32m +      %tr[m
+[32m +        %td= group.group_name[m
+[32m +        %td= group.group_description[m
+[32m +        %td= link_to 'Show', group_path(group)[m
+[32m +        %td= link_to 'Edit', edit_group_path(group)[m
+[32m +        %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }[m
+[32m++=======[m
+[32m+         %th Group Name[m
+[32m+         %th Description[m
+[32m+         %th[m
+[32m+       - @groups.each do |group|[m
+[32m+         %tr[m
+[32m+           %td= group.group_name[m
+[32m+           %td= group.group_description[m
+[32m+           %td= link_to 'Show', group_path(group)[m
+[32m+           %td= link_to 'Edit', edit_group_path(group)[m
+[32m+           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }[m
+[32m+             [m
+[32m++>>>>>>> 7f0f333a353400ce2d4f4c1fb067219022f373d2[m
+            [m
+      // .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}[m
+      // :javascript[m
