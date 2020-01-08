@@ -12,16 +12,17 @@
     = link_to 'New Group', new_group_path
   %table
     %tr
-      %th Group Name
-      %th Description
-      %th
-    - @groups.each do |group|
-      %tr
-        %td= group.group_name
-        %td= group.group_description
-        %td= link_to 'Show', group_path(group)
-        %td= link_to 'Edit', edit_group_path(group)
-        %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
+        %th Group Name
+        %th Description
+        %th
+      - @groups.each do |group|
+        %tr
+          %td= group.group_name
+          %td= group.group_description
+          %td= link_to 'Show', group_path(group)
+          %td= link_to 'Edit', edit_group_path(group)
+          %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
+            
           
     // .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
     // :javascript
@@ -34,7 +35,6 @@
     //     console.log('Family Name: ' + profile.getFamilyName());
     //     console.log("Image URL: " + profile.getImageUrl());
     //     console.log("Email: " + profile.getEmail());
-
     //     // The ID token you need to pass to your backend:
     //     var id_token = googleUser.getAuthResponse().id_token;
     //     console.log("ID Token: " + id_token);
