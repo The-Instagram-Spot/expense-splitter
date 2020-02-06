@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_023717) do
+ActiveRecord::Schema.define(version: 2020_02_06_004504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2020_01_06_023717) do
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
     t.text "group_description"
+    t.integer "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "member_of_groups", force: :cascade do |t|
+    t.integer "group_id"
+    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,19 +33,19 @@ ActiveRecord::Schema.define(version: 2020_01_06_023717) do
   create_table "people", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.bigint "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_people_on_group_id"
-  end
-
-  create_table "widgets", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "stock"
+    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "people", "groups"
+  create_table "transactions", force: :cascade do |t|
+    t.integer "transaction_id"
+    t.integer "p1_id"
+    t.integer "p2_id"
+    t.integer "group_id"
+    t.decimal "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

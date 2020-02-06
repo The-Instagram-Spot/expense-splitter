@@ -6807,3 +6807,1220 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to AddPersonIdToPeople (20200206002351)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (5.6ms)[0m  [1m[35mALTER TABLE "people" ADD "person_id" int[0m
+  ↳ db/migrate/20200206002351_add_person_id_to_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206002351"]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to RemovegroupIdFrompeople (20200206002637)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206002637"]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to RemoveGroupIdFromPeople (20200206002821)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE "people" DROP COLUMN "group_id"[0m
+  ↳ db/migrate/20200206002821_remove_group_id_from_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206002821"]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMemberOfGroups (20200206003532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateMemberOfGroups (20200206003532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMemberOfGroups (20200206003532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateMemberOfGroups (20200206003811)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (34.0ms)[0m  [1m[35mCREATE TABLE "member_of_groups" ("id" bigserial primary key, "group_id" integer, "person_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200206003811_create_member_of_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206003811"]]
+  ↳ bin/rails:4
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateTransactions (20200206004005)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "transaction_id" integer, "p1_id" integer, "p2_id" integer, "group_id" integer, "amount" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200206004005_create_transactions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206004005"]]
+  ↳ bin/rails:4
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to DropWidgets (20200206004122)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "widgets"[0m
+  ↳ db/migrate/20200206004122_drop_widgets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206004122"]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddOwnerIdToGroups (20200206004504)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "groups" ADD "owner_id" int[0m
+  ↳ db/migrate/20200206004504_add_owner_id_to_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200206004504"]]
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3978878207179910370)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:57:17 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 446ms (Views: 428.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:57:19 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:57:24 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups/new" for 165.91.12.208 at 2020-02-06 00:57:27 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 48ms (Views: 39.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/groups" for 165.91.12.208 at 2020-02-06 00:57:34 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGhQ/7DYAIHKs71mSiKBfQxRw6ovBK9n/0AaSehprHCKdl0m/xzAwjwSGPKikrOKviNvFU0KNl9t34+k9sUG1Q==", "group"=>{"group_name"=>"test group", "group_description"=>"test group\r\n"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (4.3ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "test group"], ["group_description", "test group\r\n"], ["created_at", "2020-02-06 00:57:34.161419"], ["updated_at", "2020-02-06 00:57:34.161419"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/11
+Completed 302 Found in 14ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:57:34 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (45.4ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+     6:   = @groups.group_description
+     7:   
+     8: %h2 People
+     9: = render @groups.people
+    10: 
+    11: %h2 Add a person:
+    12: = render 'people/form'
+  
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml__2726897541710164089_69984255893720'
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:58:19 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 237ms (Views: 223.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:58:21 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:58:23 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (13.9ms)
+  Rendered groups/show.html.haml within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'group_id' for Person.):
+    1: = form_with(model: [ @groups, @groups.people.build ], local: true) do |form|
+    2:   %p
+    3:     = form.label :name
+    4:     %br/
+  
+app/views/people/_form.html.haml:1:in `_app_views_people__form_html_haml__3438122694721302521_69973788136420'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___37272558781022488_69973787957280'
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:58:52 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.3ms)
+  Rendered groups/show.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'group_id' for Person.):
+    1: = form_with(model: [ @groups, @groups.people.build ], local: true) do |form|
+    2:   %p
+    3:     = form.label :name
+    4:     %br/
+  
+app/views/people/_form.html.haml:1:in `_app_views_people__form_html_haml__3438122694721302521_69973781965240'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___37272558781022488_69973781439080'
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:58:56 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:59:12 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (44.0ms)
+Completed 200 OK in 239ms (Views: 226.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 00:59:15 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:59:17 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (7.8ms)
+  Rendered groups/show.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/groups/11" for 165.91.12.208 at 2020-02-06 00:59:23 +0000
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"98sVhdd49RVkqmGQiNpIAtoZk7uKS0q9A/ZSqlPb4VrMPWKgQS5k1SSAiDUPHiEMawtN/D7FM63tq0Up3miwhA==", "group"=>{"name"=>"Elizabeth", "email"=>"elizabeth"}, "commit"=>"Update Group", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:29
+Unpermitted parameters: :name, :email
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/11
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:59:23 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.8ms)
+  Rendered groups/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 00:59:25 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/11/edit" for 165.91.12.208 at 2020-02-06 00:59:30 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 00:59:31 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 00:59:32 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.8ms)
+  Rendered groups/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:06:53 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (41.4ms)
+Completed 200 OK in 235ms (Views: 223.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 01:06:56 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (5.3ms)
+  Rendered groups/show.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 60ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:08:03 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (44.6ms)
+Completed 200 OK in 243ms (Views: 231.6ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:08:06 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u4OpJgM1boNHSABJRWLvmg3Q+iwzaDGEEG2hVbsn/85FW2SZtlGSq59AExU/zubQw73ugqOUYXq+00j6pUxFiQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:09:24 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u4OpJgM1boNHSABJRWLvmg3Q+iwzaDGEEG2hVbsn/85FW2SZtlGSq59AExU/zubQw73ugqOUYXq+00j6pUxFiQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:10:29 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 250ms (Views: 237.8ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:10:32 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6tYFZIDhIhPfz24Z8crY1I0GihcaAvvIqHhYXqWY3w4UDsjbNYXeOwfHfUWLZtGeQ2ueuYr+qzYGxrHxu/NlSQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:12:16 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (42.0ms)
+Completed 200 OK in 237ms (Views: 224.7ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:12:19 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lcv0YNv0RuCENYVI9Q38Ze7sP1gxWK0ZCfkPpxX5xBZrEznfbpC6yFw9lhSPofUvIIEr9qGk/eenR+YIC5J+UQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/groups/11/edit" for 165.91.12.208 at 2020-02-06 01:12:24 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/groups/11" for 165.91.12.208 at 2020-02-06 01:12:25 +0000
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQlUNoA7eZzaFAOirJhzrbg0LKdtMnuQmEvcgaHhpn8q/yMTFm3oXJo+6gcrXBqjCSby4Nm8AoB2FssCLFL3oQ==", "group"=>{"group_name"=>"test group", "group_description"=>"test group\r\n"}, "commit"=>"Update Group", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/11
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 01:12:25 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:12:29 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/new" for 165.91.12.208 at 2020-02-06 01:12:30 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 165.91.12.208 at 2020-02-06 01:12:36 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6LP3qVovn98jPkXHJayMdD8wq3BL2iVby+5tx5k4UGlSrfpwFetfnNWf4FPNHL6DjUIHzynUvGNZcfgqh5T6zA==", "group"=>{"group_name"=>"test 2", "group_description"=>"test 2"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "test 2"], ["group_description", "test 2"], ["created_at", "2020-02-06 01:12:36.201109"], ["updated_at", "2020-02-06 01:12:36.201109"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/12
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/12" for 165.91.12.208 at 2020-02-06 01:12:36 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.3ms)
+  Rendered groups/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:12:38 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/12" for 165.91.12.208 at 2020-02-06 01:12:40 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KIvf+AGFHIr70ZkIvBqGVQ7KqmyAg6JwQQrLHLbeL+7WUxJHtOHgoiPZilTGto8fwKe+whB/8o7vtCKzqLWVqQ==", "id"=>"12"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:15:27 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.6ms)
+Completed 200 OK in 258ms (Views: 244.9ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:15:30 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZO58PHXha9HQluoIJ/LJ4lnu29gLXP5J6Wvie0GDYTKaNrGDwIWX+Qie+VRdXsCol4PPdpugrrdH1QvUX+jbdQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 01:15:37 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (4.4ms)
+  Rendered groups/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/groups/11" for 165.91.12.208 at 2020-02-06 01:15:41 +0000
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O6F+uERdF+twk0ei9Iqd/ct8GILP8w8k+GP0KrwqabwAVwmd0guGKzC5rgdzTvTzem7GxXt9djQWPuOpMZk4Yg==", "group"=>{"email"=>"email"}, "commit"=>"Update Group", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:29
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/11
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/11" for 165.91.12.208 at 2020-02-06 01:15:41 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.4ms)
+  Rendered groups/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:15:55 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:15:57 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8P6i5K9qDhz6Ax2LTXa8FNIZta3D8y0KVWlmxD+mR5IOJm9bGg7yNCILDtc32rVeHHShA1MPffT7149rIc391Q==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:17:27 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (45.1ms)
+Completed 200 OK in 242ms (Views: 228.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/groups/12" for 165.91.12.208 at 2020-02-06 01:17:30 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (8.3ms)
+  Rendered groups/show.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 41ms (Views: 32.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/groups/new" for 165.91.12.208 at 2020-02-06 01:17:33 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for 165.91.12.208 at 2020-02-06 01:17:38 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0KwUOi/jrK8Hpf6kZ1NE71+cf99RQm5mk52+RiSVWdVqshnjYCds7PEEWzCP43YY7e7TYDNM914BAiurOjnzcA==", "group"=>{"group_name"=>"test 3", "group_description"=>"test 3"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "test 3"], ["group_description", "test 3"], ["created_at", "2020-02-06 01:17:38.352914"], ["updated_at", "2020-02-06 01:17:38.352914"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/13
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/13" for 165.91.12.208 at 2020-02-06 01:17:38 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.4ms)
+  Rendered groups/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:18:52 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.6ms)
+Completed 200 OK in 252ms (Views: 239.1ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/groups/13" for 165.91.12.208 at 2020-02-06 01:18:55 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hHGw55pxQ0z0e/b4n2VD1eea0hdcRuwerOAyEV3gZRp6qX1YLxW/ZCxz5aTlyUqfKffGucy6vOACXtu+Q4vfXQ==", "id"=>"13"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:19:17 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (35.2ms)
+Completed 200 OK in 230ms (Views: 217.2ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:19:22 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PT/FzhEXeOqN6FWWcrt+NaxIR+vPCmifDERorHt+aDHD5whxpHOEwlXgRsoIF3d/YiVTRV/2OGGi+oEDZRXSdg==", "id"=>"11"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:19:22 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:19:38 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (42.7ms)
+Completed 200 OK in 237ms (Views: 224.8ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:19:41 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9Qywf9+fn5rXrVrwySinxFxTB709UwXNsR4yg9HFc3AL1H3Aavtjsg+lSayzhK6Okj4TE62vVTMfoNssz67JNw==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:41
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column people.group_id does not exist
+LINE 1: SELECT "people".* FROM "people" WHERE "people"."group_id" = ...
+                                              ^
+: SELECT "people".* FROM "people" WHERE "people"."group_id" = $1):
+  
+app/controllers/groups_controller.rb:41:in `destroy'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:20:33 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.2ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"groups"}, missing required keys: [:id]):
+    22:           %td= group.group_description
+    23:           %td= link_to 'Show', group_path(group)
+    24:           %td= link_to 'Edit', edit_group_path(group)
+    25:           %td= link_to 'Delete', group_path(), method: :delete, data: { confirm: 'Are you sure?' }
+    26:             
+    27:     .g-signin2{"data-onsuccess" => "onSignIn", "data-theme" => "dark"}
+    28:     :javascript
+  
+app/views/groups/index.html.haml:25:in `block in _app_views_groups_index_html_haml___3718733824465179534_47432533661480'
+app/views/groups/index.html.haml:19:in `_app_views_groups_index_html_haml___3718733824465179534_47432533661480'
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:21:45 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (17.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (45.5ms)
+Completed 200 OK in 240ms (Views: 212.4ms | ActiveRecord: 21.2ms)
+
+
+Started DELETE "/groups/11" for 165.91.12.208 at 2020-02-06 01:21:47 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XjWhqemJ8MoT3G88iFFIdxdF3EBYJdBGbFkK5j6C6uag7WwWXO0M4svUfGDy/UE92SjI7sjZgLjC5+NJIOlQoQ==", "id"=>"11"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:41
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:21:47 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/12" for 165.91.12.208 at 2020-02-06 01:21:50 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TL7gTb0t0EUabF7hZAtCNSwxexXVlfeohphxlwlSp2yyZi3yCEksbcJkTb0ep0t/4lxvu0Vpp1YoJpg4FzkdKw==", "id"=>"12"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:41
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:21:50 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.9ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/13" for 165.91.12.208 at 2020-02-06 01:21:53 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C2c48+FNT1q9zLgE1MVnbZZ1iLwIgLD6qe67uXsm6m71v/VMVCmzcmXEq1iuaW4nWBicEph84AQHUFIWZU1QKQ==", "id"=>"13"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:41
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:21:53 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:22:20 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (35.9ms)
+Completed 200 OK in 227ms (Views: 219.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/new" for 165.91.12.208 at 2020-02-06 01:22:21 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 34ms (Views: 25.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/groups" for 165.91.12.208 at 2020-02-06 01:22:28 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y84goJE0VBxayaAuIQDupw1TpNiKySWfkCRX3vW6Zj5x0C153vCUX6xoBbrJsNxQvyEIZ+jHvKcCu8Iz6xbMmw==", "group"=>{"group_name"=>"test", "group_description"=>"test"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:21
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/groups" for 165.91.12.208 at 2020-02-06 01:22:33 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7QDZP2pZImzsGd3Ip7qBW4+/a3Ezq2q8UehUHX87BosT2BSA3z3eRDQRzpTdFogRQdJ/36NXOkL/Vr2yYVC8zA==", "group"=>{"group_name"=>"test 1", "group_description"=>"test 1"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "test 1"], ["group_description", "test 1"], ["created_at", "2020-02-06 01:22:33.184860"], ["updated_at", "2020-02-06 01:22:33.184860"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/14
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/14" for 165.91.12.208 at 2020-02-06 01:22:33 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/groups/14" for 165.91.12.208 at 2020-02-06 01:22:37 +0000
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sp9ITi6SUTcfEAxgYQqZtqHz9Gd36fSCkPVnA56YIkS0R4Xxm/atH8cYHzwbppD8b57gyecVpHw+S46sgPOYAw==", "group"=>{"email"=>"elizabeth"}, "commit"=>"Update Group", "id"=>"14"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:29
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:31
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/14
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/14" for 165.91.12.208 at 2020-02-06 01:22:37 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.3ms)
+  Rendered groups/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/14/edit" for 165.91.12.208 at 2020-02-06 01:22:53 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:15
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:22:54 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/14" for 165.91.12.208 at 2020-02-06 01:22:56 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered people/_form.html.haml (2.4ms)
+  Rendered groups/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:22:57 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/14" for 165.91.12.208 at 2020-02-06 01:22:59 +0000
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X6Qh/MvEkiEyy8NtQLIbAO7cFkDW2yPZizzMSs/hJkuhfOxDfqBuCerD0DE6HhJKILEC7kYncyclgiXl0YqcDA==", "id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/groups_controller.rb:41
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:41
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups" for 165.91.12.208 at 2020-02-06 01:22:59 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:32:31 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (26.9ms)
+Completed 200 OK in 243ms (Views: 235.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:32:34 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.208 at 2020-02-06 01:32:39 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
