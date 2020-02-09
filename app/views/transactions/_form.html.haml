@@ -1,4 +1,4 @@
-= form_with scope: :transaction, url: transactions_path, local: true do |form|
+= form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
   %p
     = form.label :p1_id
     %br/

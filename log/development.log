@@ -9698,3 +9698,2219 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 47ms (Views: 39.8ms | ActiveRecord: 3.3ms)
 
 
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:39:06 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 227ms (Views: 217.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:39:08 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:39:09 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  Rendered groups/show.html.haml within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (The line was indented 6 levels deeper than the previous line.):
+    10: 
+    11: %h2 Add a transaction:
+    12: = render 'transactions/form'
+    13:             |
+    14: 
+    15: 
+    16: 
+  
+app/views/groups/show.html.haml:13
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:39:29 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.4ms)
+Completed 200 OK in 249ms (Views: 236.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:39:30 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:39:32 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered groups/show.html.haml within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial transactions/_transaction with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/ubuntu/environment/csce431/expense-splitter/app/views"
+):
+     6:   = @groups.group_description
+     7:   
+     8: %h2 Transactions
+     9: = render @groups.transactions
+    10: 
+    11: %h2 Add a transaction:
+    12: = render 'transactions/form'
+  
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___1016304008688155590_70081897188480'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:40:03 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 230ms (Views: 219.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:40:04 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 233ms (Views: 222.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:40:06 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (3.0ms)
+  Rendered groups/show.html.haml within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transactions.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transactions.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml___1430056834581868910_70327014122120'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml__2894951158038358829_70327007987460'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:40:27 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.2ms)
+Completed 200 OK in 232ms (Views: 217.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:40:28 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 56ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:40:29 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (4.4ms)
+  Rendered groups/show.html.haml within layouts/application (31.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transaction.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transaction.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml__93746881093412432_70216887495460'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___1820656448198847964_70216886475980'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:41:03 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 252ms (Views: 238.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:41:04 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:41:05 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transactions.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transactions.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml___1729180046289951341_69845543989940'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___4095425932892522885_69845542936980'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:41:43 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 230ms (Views: 220.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:41:44 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:41:46 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transactions.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transactions.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml___2112961655060601299_70279940106480'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___4541872905844367119_70279939063200'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:44:09 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 227ms (Views: 216.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:44:09 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:44:11 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.7ms)
+  Rendered groups/show.html.haml within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transactions.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transactions.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml___4123557016790159192_70103004799800'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___1242867418464546787_70103003764780'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:45:21 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 231ms (Views: 221.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:45:22 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:45:23 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transactions.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transactions.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml__2684075930885611045_70351306904420'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___4126421378615769477_70351305851780'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:46:07 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.8ms)
+Completed 200 OK in 229ms (Views: 216.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:46:07 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 56ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:46:09 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.9ms)
+  Rendered groups/show.html.haml within layouts/application (25.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `p1_id' for nil:NilClass):
+    1: %p
+    2:   %strong Person 1:
+    3:   = @transaction.p1_id
+    4: %p
+    5:   %strong Person 2:
+    6:   = @transaction.p2_id
+  
+app/views/transactions/_transaction.html.haml:3:in `_app_views_transactions__transaction_html_haml___27688746433448037_70116596473400'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml__4511010622950318189_70116595421320'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:46:52 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 249ms (Views: 236.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:46:54 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:46:55 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (1.6ms)
+  Rendered transactions/_form.html.haml (10.1ms)
+  Rendered groups/show.html.haml within layouts/application (32.2ms)
+Completed 200 OK in 57ms (Views: 49.6ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/groups/17/transactions" for 165.91.12.71 at 2020-02-09 19:47:15 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q1K/mHAEA3Bj0qCr69BrutSFMXv27RLOlUBdZCoV+k38A6R42lCjaPSjY9gY/cvJaER+yzsT8m2okSa9RHgidA==", "transaction"=>{"p1_id"=>"1", "p2_id"=>"2", "amount"=>"3"}, "commit"=>"Create Transaction", "group_id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 1], ["p2_id", 2], ["group_id", 17], ["amount", "3.0"], ["created_at", "2020-02-09 19:47:15.049273"], ["updated_at", "2020-02-09 19:47:15.049273"]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:12
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/17
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:47:15 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (1.7ms)
+  Rendered transactions/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions/2" for 165.91.12.71 at 2020-02-09 19:48:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/transactions/2"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:49:43 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (32.3ms)
+Completed 200 OK in 252ms (Views: 239.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:49:44 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:49:45 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (6.6ms)
+  Rendered groups/show.html.haml within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for #<Transaction:0x00007fcc014c2898>
+Did you mean?  group
+               group=):
+     9:   = transaction.amount
+    10:   
+    11: %p
+    12:   = link_to 'Destroy Transaction', [transaction.groups, transaction], |
+    13:     method: :delete,                                       |
+    14:     data: { confirm: 'Are you sure?' }                     |
+  
+app/views/transactions/_transaction.html.haml:12:in `_app_views_transactions__transaction_html_haml__185253165393886650_70257085974660'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml__1011371939137983571_70257084939480'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:00 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 234ms (Views: 223.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:02 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:50:03 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (265.9ms)
+  Rendered groups/show.html.haml within layouts/application (285.3ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `transactions' for #<#<Class:0x00005640866659c8>:0x00007f00d1a6a760>
+Did you mean?  transaction):
+     9:   = transaction.amount
+    10:   
+    11: %p
+    12:   = link_to 'Destroy Transaction', [transactions.groups, transactions], |
+    13:     method: :delete,                                       |
+    14:     data: { confirm: 'Are you sure?' }                     |
+  
+app/views/transactions/_transaction.html.haml:12:in `_app_views_transactions__transaction_html_haml__1125837414653679109_69820748080400'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___3206655668542539544_69820747046360'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:26 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 231ms (Views: 220.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:27 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:50:28 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (6.3ms)
+  Rendered groups/show.html.haml within layouts/application (25.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `groups' for #<Transaction:0x00007fc09960c280>
+Did you mean?  group
+               group=):
+     9:   = transaction.amount
+    10:   
+    11: %p
+    12:   = link_to 'Destroy Transaction', [transaction.groups, transaction], |
+    13:     method: :delete,                                       |
+    14:     data: { confirm: 'Are you sure?' }                     |
+  
+app/views/transactions/_transaction.html.haml:12:in `_app_views_transactions__transaction_html_haml___2203659353630754708_70232591930680'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml__2444885296896344359_70232590872060'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:38 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 229ms (Views: 218.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:50:39 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (4.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:50:41 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (3.1ms)
+  Rendered transactions/_form.html.haml (5.1ms)
+  Rendered groups/show.html.haml within layouts/application (29.0ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 19:50:44 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uB3nQtncJB28G0zM2H6q8Qd5DRSVNqkuWlhMgKKV8/zg/p8UKAmV8F3bvKEsqZefhSlBYVMGynqTNKWBPK9RZg==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007fa478071f60>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:51:04 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 238ms (Views: 227.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:51:05 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:51:06 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (3.0ms)
+  Rendered transactions/_form.html.haml (4.8ms)
+  Rendered groups/show.html.haml within layouts/application (29.5ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 19:51:08 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AXjF3ovNaUyx8Li+dk1wxaplQYwA6/afuSe1O0iD6OZZm72IehjYoVAwSNOCmk2rKDUN+cbblctwS1w61rlKfA==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcation' for #<Group:0x00007f27900827a8>
+Did you mean?  transaction
+               transactions):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:53:48 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.2ms)
+Completed 200 OK in 227ms (Views: 214.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:53:49 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.9ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:53:52 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (3.0ms)
+  Rendered transactions/_form.html.haml (4.8ms)
+  Rendered groups/show.html.haml within layouts/application (28.0ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/17/transactions/4" for 165.91.12.71 at 2020-02-09 19:53:55 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q3fRqneHSJQq0N2G1h716FEHwgdk00zrfbugwSjFrQUblKn8hlL5ecsQLesiyciG01eOcqLjL7+010nAtv8Pnw==", "group_id"=>"17", "id"=>"4"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007f326a18f378>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:54:41 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (You tried to define an association named transaction on the model Group, but this will conflict with a method transaction already defined by Active Record. Please choose a different association name.):
+  
+app/models/group.rb:2:in `<class:Group>'
+app/models/group.rb:1:in `<main>'
+app/controllers/groups_controller.rb:3:in `index'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:54:42 +0000
+Processing by GroupsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (You tried to define an association named transaction on the model Group, but this will conflict with a method transaction already defined by Active Record. Please choose a different association name.):
+  
+app/models/group.rb:2:in `<class:Group>'
+app/models/group.rb:1:in `<main>'
+app/controllers/groups_controller.rb:3:in `index'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:55:12 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.9ms)
+Completed 200 OK in 257ms (Views: 243.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:55:14 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:55:15 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (6.2ms)
+  Rendered groups/show.html.haml within layouts/application (24.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `group' for #<Transaction:0x00007f6ea54c1d80>
+Did you mean?  groups
+               groups=):
+     9:   = transaction.amount
+    10:   
+    11: %p
+    12:   = link_to 'Destroy Transaction', [transaction.group, transaction], |
+    13:     method: :delete,                                       |
+    14:     data: { confirm: 'Are you sure?' }                     |
+  
+app/views/transactions/_transaction.html.haml:12:in `_app_views_transactions__transaction_html_haml__3450999453592887520_70056598186480'
+app/views/groups/show.html.haml:9:in `_app_views_groups_show_html_haml___2066088036631364565_70056597200700'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:55:22 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 236ms (Views: 226.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:55:23 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:55:25 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (2.9ms)
+  Rendered transactions/_form.html.haml (4.7ms)
+  Rendered groups/show.html.haml within layouts/application (27.4ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:56:36 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 232ms (Views: 221.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:56:37 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:56:39 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (3.0ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 51ms (Views: 44.4ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 19:56:41 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6r6vP+DFP0Y4lRoxV/CTf0bY6baT/+dV1W2KcEhC8d+yXddpERCOq9lV6lyjJ64RxIilw1XPhAEcAWNx1nhTRQ==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007f76f80705a0>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 19:58:28 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 19:58:29 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [5 times] (2.3ms)
+  Rendered transactions/_form.html.haml (3.3ms)
+  Rendered groups/show.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/17/transactions/4" for 165.91.12.71 at 2020-02-09 19:58:46 +0000
+Processing by TransactionsController#show as HTML
+  Parameters: {"group_id"=>"17", "id"=>"4"}
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (TransactionsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/groups/17/transactions/4" for 165.91.12.71 at 2020-02-09 19:58:51 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WCeBsSBeZh6lpUl/I5rrZTj8HcsQaY2DYWSNOgNjoLIAxPnn0YvX80RluRLXTdYLuqxRvtZZ7teoCGQ7nVkCKA==", "group_id"=>"17", "id"=>"4"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00005571537b0d08>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started POST "/groups/17/transactions" for 165.91.12.71 at 2020-02-09 20:00:34 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WCeBsSBeZh6lpUl/I5rrZTj8HcsQaY2DYWSNOgNjoLIAxPnn0YvX80RluRLXTdYLuqxRvtZZ7teoCGQ7nVkCKA==", "transaction"=>{"p1_id"=>"3", "p2_id"=>"5", "amount"=>"3"}, "commit"=>"Create Transaction", "group_id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 3], ["p2_id", 5], ["group_id", 17], ["amount", "3.0"], ["created_at", "2020-02-09 20:00:34.195717"], ["updated_at", "2020-02-09 20:00:34.195717"]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:12
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/17
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:00:34 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (2.3ms)
+  Rendered transactions/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/groups/17/transactions/8" for 165.91.12.71 at 2020-02-09 20:00:43 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M44DhmgCCbrlTGUtvU+wz7728q54MNzVvQajKzJ/jFJrbXvQmde4VwSMlUBJmI2hPKa+274Av4F0akoqrEUuyA==", "group_id"=>"17", "id"=>"8"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:21
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007f770596bf08>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:22:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:01:37 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 236ms (Views: 225.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:01:38 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:01:39 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (3.2ms)
+  Rendered transactions/_form.html.haml (5.0ms)
+  Rendered groups/show.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:01:41 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/groups/17/transactions/3"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:23 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.0ms)
+Completed 200 OK in 224ms (Views: 213.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:24 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:03:25 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (3.0ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (28.0ms)
+Completed 200 OK in 52ms (Views: 44.5ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:03:27 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C3IJ/rbZXEJ/jwMIU/G5JoYFy7vI/Ty87xNfVj1QR8lTkXGoRwztr55P82WnJoRIBFWHzg7NX+gmf7ZXo2rlUw==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:40 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 227ms (Views: 216.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:41 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:03:42 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (2.7ms)
+  Rendered transactions/_form.html.haml (4.8ms)
+  Rendered groups/show.html.haml within layouts/application (27.4ms)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:03:44 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZFflmEhCdosIuS6jh2JbCR315Wg7rKVf08rr/VMyy4g8tJ3OuZfHZul53s5ztWZnn6WpHf2cxgsapgL8zQhpEg==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007f003c07cb58>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:20:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:53 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 230ms (Views: 219.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:03:54 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:03:55 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (2.9ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 57ms (Views: 44.3ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:03:56 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tt0to8BRZM/OOYPzk0upZLOs/sDkgLspC3SlGx0qzoYWPlX1MYTVIi/5c55nnJQKMfyytSKw2H3CGEwagxBsHA==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcation' for nil:NilClass):
+  
+app/controllers/transactions_controller.rb:20:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:04:12 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 233ms (Views: 222.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:04:13 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:04:15 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (3.1ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (34.0ms)
+Completed 200 OK in 58ms (Views: 50.2ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:04:16 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rrFlOjBapDh0p7GrVGnNalWfdlXJRYuANdMJzy66tSH2Uh1swY8V1ZVnQcagvvAE1886IA916NT8v+DOsIAXuw==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcation' for #<Group:0x00007ff72c07e330>
+Did you mean?  transaction
+               transactions):
+  
+app/controllers/transactions_controller.rb:20:in `destroy'
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:04:27 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rrFlOjBapDh0p7GrVGnNalWfdlXJRYuANdMJzy66tSH2Uh1swY8V1ZVnQcagvvAE1886IA916NT8v+DOsIAXuw==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcation' for #<Group:0x00007ff728032d30>
+Did you mean?  transaction
+               transactions):
+  
+app/controllers/transactions_controller.rb:20:in `destroy'
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:04:31 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (2.4ms)
+  Rendered transactions/_form.html.haml (3.3ms)
+  Rendered groups/show.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:04:32 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (9.2ms)
+  Rendered transactions/_form.html.haml (14.0ms)
+  Rendered groups/show.html.haml within layouts/application (48.7ms)
+Completed 200 OK in 263ms (Views: 242.5ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/groups/17/transactions/5" for 165.91.12.71 at 2020-02-09 20:04:35 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NeN8MRAhKMIQDx6sflSB5ew/zO0QgXVXKMRNBvr5tgZtAARn4fSZL/HP7sGKg7yLbm+AmNaxFgPhqKQHZMMUnA==", "group_id"=>"17", "id"=>"5"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:19
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcation' for #<Group:0x00007ff72c4fd7a8>
+Did you mean?  transaction
+               transactions):
+  
+app/controllers/transactions_controller.rb:20:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:08:16 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (35.0ms)
+Completed 200 OK in 236ms (Views: 221.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:08:17 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.4ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:08:18 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (3.0ms)
+  Rendered transactions/_form.html.haml (6.9ms)
+  Rendered groups/show.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 63ms (Views: 54.4ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:08:20 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jW7mwF9YI6ZOtL7tMwZZRtM7HLpXyqx2MVKFVmQJfW/VjZ6Wro2SS690ToDH0WQoUWtQz5H6zyL4PmxX+jPf9Q==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:11
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007f86ddb96f20>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:12:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:12:09 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.8ms)
+Completed 200 OK in 259ms (Views: 245.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:12:11 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:12:12 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [6 times] (3.0ms)
+  Rendered transactions/_form.html.haml (5.1ms)
+  Rendered groups/show.html.haml within layouts/application (28.4ms)
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/17/transactions/3" for 165.91.12.71 at 2020-02-09 20:12:14 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fsBnly0pxXhjq4I8EmtuLF/0GLYYMuiJ0O1W8fiiR/YmIx/B3Px0lYJrclHmvFNC3aRUw94Ci90Zgb/wZpjlbA==", "group_id"=>"17", "id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 17]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:11
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/17
+Completed 302 Found in 20ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/groups/17" for 165.91.12.71 at 2020-02-09 20:12:14 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=17):
+  
+app/controllers/groups_controller.rb:7:in `show'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:12:59 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (26.1ms)
+Completed 200 OK in 229ms (Views: 217.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:13:00 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 221ms (Views: 209.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/new" for 165.91.12.71 at 2020-02-09 20:13:02 +0000
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 62ms (Views: 27.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/groups" for 165.91.12.71 at 2020-02-09 20:13:08 +0000
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bo0g0LeqbYqFpsaGvp3I7SCHnOHdzz9/hz4kar7VlT04Qf9StiXyfioSyz494kqJHu0ryphTiLIkRux7C9ourg==", "group"=>{"group_name"=>"test group", "group_description"=>"test"}, "commit"=>"Save Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("group_name", "group_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["group_name", "test group"], ["group_description", "test"], ["created_at", "2020-02-09 20:13:08.142965"], ["updated_at", "2020-02-09 20:13:08.142965"]]
+  ↳ app/controllers/groups_controller.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:21
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:13:08 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.haml (11.9ms)
+  Rendered groups/show.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:13:12 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Z64V4FxRXXeFHdeckOjieuk1SR4KzpFWw2lwxs6oCS9fcABcKT0mD/UhzOGlJ7nafSZUb4bWRGSYUzChQACvg==", "transaction"=>{"p1_id"=>"1", "p2_id"=>"2", "amount"=>"3"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 1], ["p2_id", 2], ["group_id", 18], ["amount", "3.0"], ["created_at", "2020-02-09 20:13:12.882505"], ["updated_at", "2020-02-09 20:13:12.882505"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:13:12 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (1.7ms)
+  Rendered transactions/_form.html.haml (3.2ms)
+  Rendered groups/show.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:13:15 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"slcOIYLw1+lRHZal0NNVz1mcxMFbusG/CZrkoYyN4wPqtHZ3cyVmBLDdZsgkBGih28yItJ2KouvA9g2gErdBmQ==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `transcations' for #<Group:0x00007ff081b97390>
+Did you mean?  transactions
+               transactions=
+               transaction):
+  
+app/controllers/transactions_controller.rb:10:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:13:43 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 228ms (Views: 217.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:13:44 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:13:46 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (7.4ms)
+  Rendered transactions/_form.html.haml (14.7ms)
+  Rendered groups/show.html.haml within layouts/application (44.9ms)
+Completed 200 OK in 253ms (Views: 232.4ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:13:48 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yGmv43T2M2x7om9xyUxvoCjx6X12eoEX05GFZN/UuUWQite1hSOCgZpinxw9m1LOqqGlCLBK4kMa/WxlQe4b3w==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `destroy' for 9:Integer):
+  
+app/controllers/transactions_controller.rb:11:in `destroy'
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:14:21 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.0ms)
+Completed 200 OK in 231ms (Views: 217.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:14:22 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:14:24 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.3ms)
+  Rendered transactions/_form.html.haml (6.2ms)
+  Rendered groups/show.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:14:26 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ztUlncXcc8qNQE8JHNYlVPWKvJaC2f7/ZCnuwB98PbmWNl3LNAnCJ2yAv2ToARg6d9rw40TpnautRQfBgUafIw==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.3ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:14:29 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ztUlncXcc8qNQE8JHNYlVPWKvJaC2f7/ZCnuwB98PbmWNl3LNAnCJ2yAv2ToARg6d9rw40TpnautRQfBgUafIw==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:05 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 226ms (Views: 215.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:06 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:15:09 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.3ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (27.2ms)
+Completed 200 OK in 52ms (Views: 44.9ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:15:11 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4yQpKbAFJcllp2N+3NsbZNJYjoyNcDLn/qDE2zKOZDe7x1F/QdCUJIRnkxMoDCYKUAjC+UtAUbM3zC3arLTGrQ==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:21 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 230ms (Views: 219.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:22 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:15:24 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.4ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 51ms (Views: 44.3ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:15:25 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3cyOjEcmPUJLVvrupfIoCpZvP1/Z/eEnlTZm4AeuoD+FL/batvOMr6qWCoNRJRVkFD9zKh/NgnNcWo/hmZQCpQ==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:41 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 233ms (Views: 223.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:42 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:15:43 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.4ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (27.2ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:15:45 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2E8Pz3HnF1wFdKJluDDTVk9j/hndAE++HODzQGVQ/aGArHeZgDKmseS0UghM5+44zTOybBswLOrVjBpB+2pfOw==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1 AND "transactions"."id" = $2 LIMIT $3[0m  [["group_id", 18], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:57 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 231ms (Views: 217.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:15:59 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (34.5ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:00 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.5ms)
+  Rendered transactions/_form.html.haml (4.9ms)
+  Rendered groups/show.html.haml within layouts/application (27.4ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/groups/18/transactions/9" for 165.91.12.71 at 2020-02-09 20:16:02 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kQtH5vlEdkzMQibZRw6WQbrdGZfKM9ODvTAvpATrA4zJ6D+wCJHHoS2C1rSz2asvOI1V4gwDsNd0XMalmtGhFg==", "group_id"=>"18", "id"=>"9"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1 AND "transactions"."id" = $2 LIMIT $3[0m  [["group_id", 18], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:12
+No template found for TransactionsController#destroy, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:07 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.haml (3.4ms)
+  Rendered groups/show.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:16:14 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 235ms (Views: 224.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:16:15 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:17 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.haml (13.6ms)
+  Rendered groups/show.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 49ms (Views: 42.0ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:16:21 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T4sR1qaIzGxCW8HJXkVYPD/DkoEXEDa/zg9wchgWl68ToLmY5+7/Q+0qMBB72vy4dZWm2Yg04Yk4hKvdrylzUw==", "transaction"=>{"p1_id"=>"2", "p2_id"=>"3", "amount"=>"5"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 2], ["p2_id", 3], ["group_id", 18], ["amount", "5.0"], ["created_at", "2020-02-09 20:16:21.622110"], ["updated_at", "2020-02-09 20:16:21.622110"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:21 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (1.7ms)
+  Rendered transactions/_form.html.haml (3.3ms)
+  Rendered groups/show.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/groups/18/transactions/10" for 165.91.12.71 at 2020-02-09 20:16:23 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zSMAJlsiZcyuiZ4hxOsBPVhttHytczNPnCSliY8jj1+VwHhwqvfUIU9JbkwwPDxT2j34CWtDUBtVSEyIERktxQ==", "group_id"=>"18", "id"=>"10"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1 AND "transactions"."id" = $2 LIMIT $3[0m  [["group_id", 18], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/transactions_controller.rb:12
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:12
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:23 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.haml (3.4ms)
+  Rendered groups/show.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:16:48 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (33.5ms)
+Completed 200 OK in 227ms (Views: 214.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 165.91.12.71 at 2020-02-09 20:16:50 +0000
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.haml:19
+  Rendered groups/index.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:53 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered transactions/_form.html.haml (13.4ms)
+  Rendered groups/show.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:16:56 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tqY/7cn2xDB2t/nkbqbQlSnuRfme5dUhRDz1hBg3E0fqjZejiJD3H9nGCD1LOXQRY7hxoQHBAheyty4rrwj3uw==", "transaction"=>{"p1_id"=>"1", "p2_id"=>"2", "amount"=>"3"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 1], ["p2_id", 2], ["group_id", 18], ["amount", "3.0"], ["created_at", "2020-02-09 20:16:56.395066"], ["updated_at", "2020-02-09 20:16:56.395066"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:16:56 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [1 times] (1.7ms)
+  Rendered transactions/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:17:00 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HIJY2KSmLMOM0cmr74z8TUBmM+jiJGzIM+Hrqfg5VKVEYSCOVXOdLm0ROcYbW8EjwjZ/nSQUD5z6jQKoZgP2Pw==", "transaction"=>{"p1_id"=>"2", "p2_id"=>"3", "amount"=>"4"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 2], ["p2_id", 3], ["group_id", 18], ["amount", "4.0"], ["created_at", "2020-02-09 20:17:00.312729"], ["updated_at", "2020-02-09 20:17:00.312729"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:17:00 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [2 times] (1.8ms)
+  Rendered transactions/_form.html.haml (3.2ms)
+  Rendered groups/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:17:04 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/ubuTANv0/K97EvSEFWX3JZQHBDaGGgP+rUIg39uwt/GOPvwdgOois3QUK8lmsx8AkMBYVYAvT2hj0jk8cZkQ==", "transaction"=>{"p1_id"=>"4", "p2_id"=>"5", "amount"=>"2"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 4], ["p2_id", 5], ["group_id", 18], ["amount", "2.0"], ["created_at", "2020-02-09 20:17:04.015681"], ["updated_at", "2020-02-09 20:17:04.015681"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:17:04 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [3 times] (6.0ms)
+  Rendered transactions/_form.html.haml (7.5ms)
+  Rendered groups/show.html.haml within layouts/application (23.6ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/groups/18/transactions" for 165.91.12.71 at 2020-02-09 20:17:10 +0000
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ir1sYXTyt1YAngfQmTcqcisl91FzQTPx93lt8Xt1M2GyY3ndAZ7MLnCiHK2s+HHSvzbqIP9Z5sOsQy2W9d2Vw==", "transaction"=>{"p1_id"=>"3", "p2_id"=>"5", "amount"=>"13"}, "commit"=>"Create Transaction", "group_id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[36mTransaction Create (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("p1_id", "p2_id", "group_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["p1_id", 3], ["p2_id", 5], ["group_id", 18], ["amount", "13.0"], ["created_at", "2020-02-09 20:17:10.599292"], ["updated_at", "2020-02-09 20:17:10.599292"]]
+  ↳ app/controllers/transactions_controller.rb:4
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:4
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 12ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:17:10 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [4 times] (2.1ms)
+  Rendered transactions/_form.html.haml (3.3ms)
+  Rendered groups/show.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/groups/18/transactions/12" for 165.91.12.71 at 2020-02-09 20:17:13 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xiV9J+EsMVbzUoPHKtfQ79S5xcvc5bkx32iutSAvO9+exgVxEPmAuxKSc6reAO2BVumJvhrV2mUWBEe0vhWZRQ==", "group_id"=>"18", "id"=>"12"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1 AND "transactions"."id" = $2 LIMIT $3[0m  [["group_id", 18], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:11
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:17:13 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [3 times] (2.0ms)
+  Rendered transactions/_form.html.haml (3.1ms)
+  Rendered groups/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/groups/18/transactions/14" for 165.91.12.71 at 2020-02-09 20:17:16 +0000
+Processing by TransactionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LFSPmmDlRRjq2sW0hMme1cB+foPQ7vH3irUPL4Ms5/l0t/fMkTD09QsaNdlwHqO7Qi4y9hbekqND2eYuHRZFYw==", "group_id"=>"18", "id"=>"14"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:9
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT  "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1 AND "transactions"."id" = $2 LIMIT $3[0m  [["group_id", 18], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/transactions_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[36mTransaction Destroy (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/transactions_controller.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/transactions_controller.rb:11
+Redirected to https://1d34212c73b94a49bb6581a3735a908e.vfs.cloud9.us-east-1.amazonaws.com/groups/18
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/18" for 165.91.12.71 at 2020-02-09 20:17:16 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:7
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mTransaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 18]]
+  ↳ app/views/groups/show.html.haml:9
+  Rendered collection of transactions/_transaction.html.haml [2 times] (1.9ms)
+  Rendered transactions/_form.html.haml (3.2ms)
+  Rendered groups/show.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
