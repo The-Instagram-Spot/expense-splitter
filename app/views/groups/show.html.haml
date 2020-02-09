@@ -4,9 +4,36 @@
 %p
   %strong Description:
   = @groups.group_description
+  
+%h2 Transactions
+- @groups.transactions.each do |transaction|
+  %p
+    %strong P1:
+    = transaction.p1_id
+  %p
+    %strong P2:
+    = transaction.p2_id
+  %p
+    %strong Amount:
+    = transaction.amount
 
-%h2 Add a person:
-= render 'people/form'
+
+%h2 Add a transaction:
+= form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
+  %p
+    = form.label :p1_id
+    %br/
+    = form.text_field :p1_id
+  %p
+    = form.label :p2_id
+    %br/
+    = form.text_field :p2_id
+  %p
+    = form.label :amount
+    %br/
+    = form.text_field :amount
+  %p
+    = form.submit                   |
 
 
 

@@ -1,2 +1,3 @@
-class Transaction < ApplicationRecord
+class Transaction < ActiveRecord::Base
+    belongs_to :group
 end
