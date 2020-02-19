@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2020_02_06_004504) do
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
     t.text "group_description"
-    t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "owner_id"
   end
 
   create_table "member_of_groups", force: :cascade do |t|
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 2020_02_06_004504) do
   create_table "people", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "person_id"
   end
 
   create_table "transactions", force: :cascade do |t|
