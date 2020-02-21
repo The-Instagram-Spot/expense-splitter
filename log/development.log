@@ -13549,3 +13549,31 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 165.91.12.63 at 2020-02-21 17:14:50 +0000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 165.91.12.63 at 2020-02-21 17:14:51 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 327ms (Views: 310.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 165.91.12.63 at 2020-02-21 17:14:52 +0000
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 165.91.12.63 at 2020-02-21 17:14:52 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+

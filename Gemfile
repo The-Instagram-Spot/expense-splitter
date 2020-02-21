@@ -31,7 +31,7 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'puma'
+gem "puma", ">= 3.12.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -43,4 +43,3 @@ gem "haml-rails", "~> 2.0"
 gem 'coffee-script-source', '1.8.0'
 gem 'devise'
 gem 'toastr-rails'
-gem 'jquery-rails'
