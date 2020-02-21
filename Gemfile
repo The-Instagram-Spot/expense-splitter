@@ -41,3 +41,6 @@ gem 'puma'
 
 gem "haml-rails", "~> 2.0"
 gem 'coffee-script-source', '1.8.0'
+gem 'devise'
+gem 'toastr-rails'
+gem 'jquery-rails'

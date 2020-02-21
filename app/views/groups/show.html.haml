@@ -5,13 +5,11 @@
   %strong Description:
   = @groups.group_description
   
-%h2 People
-= render @groups.people
+%h2 Transactions
+= render @groups.transactions
 
-%h2 Add a person:
-= render 'people/form'
-
-
+%h2 Add a transaction:
+= render 'transactions/form'
 
 = link_to 'Home', groups_path
 = link_to 'Edit', edit_group_path(@groups)

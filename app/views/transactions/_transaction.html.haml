@@ -1,0 +1,12 @@
+%p
+  %strong Person 1:
+  = transaction.p1_id
+%p
+  %strong Person 2:
+  = transaction.p2_id
+%p
+  %strong Amount:
+  = transaction.amount
+  
+%p
+  = link_to 'Destroy Transaction', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
