@@ -9,7 +9,7 @@
     %h1 expense splitter app in progress...test
     = link_to 'Home', controller: 'groups'
     = link_to 'New Group', new_group_path
-
+    
     %h1 Groups
     %table
       %tr
@@ -23,15 +23,22 @@
           %td= link_to 'Show', group_path(group)
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
+    
+    %h1 Current Users 
+    - @users = User.all
+    - @users.each do |user|
+      = user.email
+      %br/
+
 
   - if current_user.nil?
     = link_to 'Sign in', new_user_session_path, class: 'login-button'
   - else
     //= link_to 'Go to App' , app_dashboard_index_path, class: 'login-button'
-    = link_to 'Log out', destroy_user_session_path, method: :delete
+    //= link_to 'Log out', destroy_user_session_path, method: :delete
   
   - if user_signed_in?
-    = link_to('Edit registration', edit_user_registration_path)
+    = link_to('My Profile', edit_user_registration_path)
     = link_to('Logout', destroy_user_session_path, :method => :delete)
   - else
     = link_to('Register', new_user_registration_path)

@@ -4,7 +4,16 @@
 %p
   %strong Description:
   = @groups.group_description
-  
+
+%p 
+  %strong Members
+= render @groups.memberships
+
+%p
+  %strong Add members:
+
+
+
 %h2 Transactions
 = render @groups.transactions
 
