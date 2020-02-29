@@ -8,11 +8,10 @@ Rails.application.routes.draw do
   
   root 'groups#index'
   
-  resources :people
   resources :groups do
     resources :transactions
+    resources :users
   end
-  resources :member_of_groups
-  
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -5,6 +5,22 @@ class TransactionsController < ApplicationController
         redirect_to group_path(@groups)
     end
     
+    def edit
+        @groups = Group.find(params[:group_id])
+        @transactions = @groups.transactions.find(params[:id])
+    end
+    
+    def update
+        @groups = Group.find(params[:group_id])
+        @transactions = @groups.transactions.find(params[:id])
+    
+        if @transactions.update(transaction_params)
+            redirect_to @groups
+        else
+            render 'edit'
+        end
+    end
+    
     def destroy
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.find(params[:id])

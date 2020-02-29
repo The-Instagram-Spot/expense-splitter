@@ -4,8 +4,16 @@
 %p
   %strong Description:
   = @groups.group_description
+
+%p
+  %strong Members:
+= @groups.users.each do |user|
+  = user.email
+
+%p
+  %strong Add members:
   
-%h2 Transactions
+%h2 Transactions:
 = render @groups.transactions
 
 %h2 Add a transaction:

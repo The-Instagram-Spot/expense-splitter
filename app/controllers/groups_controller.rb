@@ -1,6 +1,9 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @groups = Group.all
+    @user = current_user
   end
   
   def show
@@ -17,6 +20,7 @@ class GroupsController < ApplicationController
   
   def create
     @groups = Group.new(group_params)
+    @groups.users << current_user
     
     if @groups.save
      redirect_to @groups
