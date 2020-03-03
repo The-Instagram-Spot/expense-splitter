@@ -1,0 +1,8 @@
+= form_for @groups, url: {action: "update"} do |form|
+  = form_for (:users) do |user_form|
+    %p
+      = user_form.label :email
+      %br/
+      = user_form.text_field :email
+    %p
+      = user_form.submit

@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
   
   def index
     @groups = Group.all
@@ -31,8 +32,12 @@ class GroupsController < ApplicationController
   
   def update
     @groups = Group.find(params[:id])
+    @user = User.find_by(email: params[:users][:email])
+    if(@user)
+      @groups.users << @user
+    end
     
-    if @groups.update(group_params)
+    if @groups.update(group_user_params)
       redirect_to @groups
     else
       render 'edit'
@@ -50,7 +55,11 @@ class GroupsController < ApplicationController
   
   private
     def group_params
-      params.require(:group).permit(:group_name, :group_description)
+      params.require(:group).permit(:group_name, :group_description, users_attributes:[:email])
+    end
+    
+    def group_user_params
+      params.permit(:group_name, :group_description, users_attributes:[:email])
     end
     
 end

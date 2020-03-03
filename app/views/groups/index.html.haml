@@ -17,7 +17,7 @@
         %th Title
         %th Text
         %th
-      - @groups.each do |group|
+      - @user.groups.each do |group|
         %tr
           %td= group.group_name
           %td= group.group_description
