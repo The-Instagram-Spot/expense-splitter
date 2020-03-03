@@ -32,17 +32,16 @@ class GroupsController < ApplicationController
   
   def update
     @groups = Group.find(params[:id])
-    @user = User.find_by(email: params[:users][:email])
-    if(@user)
+    if(params[:users][:email] != "")
+      @user = User.find_by(email: params[:users][:email])
       @groups.users << @user
     end
     
-    if @groups.update(group_user_params)
+    if @groups.update(group_params)
       redirect_to @groups
     else
       render 'edit'
     end
-    
   end
   
   def destroy 
@@ -59,7 +58,7 @@ class GroupsController < ApplicationController
     end
     
     def group_user_params
-      params.permit(:group_name, :group_description, users_attributes:[:email])
+      params.permit(:group, :group_name, :group_description, users_attributes:[:email])
     end
     
 end
