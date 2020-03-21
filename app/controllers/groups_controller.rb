@@ -34,7 +34,9 @@ class GroupsController < ApplicationController
     @groups = Group.find(params[:id])
     if(params[:users][:email] != "")
       @user = User.find_by(email: params[:users][:email])
-      @groups.users << @user
+      if(!(@groups.users.exists?(:id)))
+        @groups.users << @user
+      end
     end
     
     if @groups.update(group_params)

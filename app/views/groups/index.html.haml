@@ -7,7 +7,7 @@
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
   %body
     %h1 
-      = @user.email
+      = @user.name
     = link_to 'Home', controller: 'groups'
     = link_to 'New Group', new_group_path
 

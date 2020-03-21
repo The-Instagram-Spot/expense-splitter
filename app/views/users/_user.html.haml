@@ -1,2 +1,3 @@
 %p
-  = user.email
+  = user.name
+  = link_to 'Delete from group', group_user_path(user), method: :delete

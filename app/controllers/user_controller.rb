@@ -28,6 +28,17 @@ class UserController < ApplicationController
         end
     end
     
+    def destroy
+        @group = Group.find(params[:id])
+        @user = User.find(params[:group_id])
+        
+        @group.users.delete(@user)
+        @user.groups.delete(@group)
+        
+       redirect_to @group
+        
+    end
+    
     private
         def user_params
             params.require(:user).permit(:email)
