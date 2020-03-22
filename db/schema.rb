@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_27_211536) do
+ActiveRecord::Schema.define(version: 2020_03_18_210017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amounts", force: :cascade do |t|
+    t.bigint "transactions_id"
+    t.bigint "users_id"
+    t.decimal "difference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["transactions_id"], name: "index_amounts_on_transactions_id"
+    t.index ["users_id"], name: "index_amounts_on_users_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
@@ -21,6 +31,8 @@ ActiveRecord::Schema.define(version: 2020_02_27_211536) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "owner_id"
+    t.bigint "transaction_id"
+    t.index ["transaction_id"], name: "index_groups_on_transaction_id"
   end
 
   create_table "memberships", force: :cascade do |t|
@@ -40,12 +52,9 @@ ActiveRecord::Schema.define(version: 2020_02_27_211536) do
 
   create_table "transactions", force: :cascade do |t|
     t.integer "transaction_id"
-    t.integer "p1_id"
-    t.integer "p2_id"
-    t.integer "group_id"
-    t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,4 +75,5 @@ ActiveRecord::Schema.define(version: 2020_02_27_211536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "groups", "transactions"
 end
