@@ -1,14 +1,9 @@
 %p
-  %strong Person 1:
-  = transaction.p1_id
-%p
-  %strong Person 2:
-  = transaction.p2_id
+  %strong Name:
+  = transaction.name
 %p
   %strong Amount:
   = transaction.amount
 
-%p
-  = link_to 'Edit Transaction', edit_group_transaction_path(transaction.group, transaction)
-%p
-  = link_to 'Destroy Transaction', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'Edit Transaction', edit_group_transaction_path(transaction.group, transaction)
+= link_to 'Destroy Transaction', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }

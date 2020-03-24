@@ -1,0 +1,14 @@
+%h1 New transaction
+= form_with(model: [@groups, @transactions], local: true) do |form|
+  %p
+    = form.label :name
+    %br/
+    = form.text_field :name
+  %p
+    = form.label :amount
+    %br/
+    = form.text_field :amount
+  %p
+    = form.submit
+    
+= link_to 'Back', groups_path

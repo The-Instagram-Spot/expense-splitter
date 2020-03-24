@@ -1,13 +1,9 @@
 %h1 Edit transaction
 = form_with(model: [@groups, @transactions], local: true) do |form|
   %p
-    = form.label :p1_id
+    = form.label :name
     %br/
-    = form.text_field :p1_id
-  %p
-    = form.label :p2_id
-    %br/
-    = form.text_field :p2_id
+    = form.text_field :name
   %p
     = form.label :amount
     %br/
