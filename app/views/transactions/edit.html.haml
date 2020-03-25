@@ -9,6 +9,20 @@
     %br/
     = form.text_field :amount
   %p
+    = form.label :amount
+    %br/
+    = form.text_field :amount
+  %p
     = form.submit
+    
+  %p
+    %strong Add members:
+    = form_for (:users) do |user_form|
+      %p
+        = user_form.label :email
+        %br/
+        = user_form.text_field :email
+      %p
+        = user_form.submit
     
 = link_to 'Back', groups_path

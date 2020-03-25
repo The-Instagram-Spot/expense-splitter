@@ -18,6 +18,7 @@ class TransactionsController < ApplicationController
     def update
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.find(params[:id])
+        @users = @transactions.users
     
         if @transactions.update(transaction_params)
             redirect_to @groups
