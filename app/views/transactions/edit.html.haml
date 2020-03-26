@@ -1,28 +1,42 @@
-%h1 Edit transaction
+%h1 
+  = @transactions.name
+
 = form_with(model: [@groups, @transactions], local: true) do |form|
   %p
     = form.label :name
-    %br/
     = form.text_field :name
-  %p
-    = form.label :amount
-    %br/
-    = form.text_field :amount
-  %p
-    = form.label :amount
-    %br/
-    = form.text_field :amount
-  %p
-    = form.submit
+    &nbsp;&nbsp;
     
+    = form.label :amount
+    = form.text_field :amount
+    
+    &nbsp;&nbsp;
+    
+    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
+    %label{:for => "split-evenly"} Split Evenly?
+  
+  %strong Add people:
+  %br/
+  
   %p
-    %strong Add members:
     = form_for (:users) do |user_form|
       %p
-        = user_form.label :email
+        = user_form.label :name
+        = user_form.text_field :name
+        &nbsp;&nbsp;
+      
+        paid &nbsp;&nbsp;
+        %input{:type => "text"}/
+        &nbsp;&nbsp;
+        
+        proportion:
+        %input{:type => "text"}/
         %br/
-        = user_form.text_field :email
+
       %p
         = user_form.submit
+        
+  %p
+    = form.submit
     
 = link_to 'Back', groups_path

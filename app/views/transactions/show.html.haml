@@ -1,0 +1,6 @@
+%h1 
+  = @transactions.name
+
+= render 'transactions/form'
+    
+= link_to 'Back', group_transaction_path(:group_id)

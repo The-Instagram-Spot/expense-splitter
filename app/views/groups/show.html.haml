@@ -14,7 +14,15 @@
 = render @groups.transactions
 
 %h2 Add a transaction:
-= render 'transactions/form'
+= form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
+  %p
+    = form.label :name
+    = form.text_field :name
+  %p
+    = form.label :amount
+    = form.text_field :amount
+  %p
+    = form.submit
 
 = link_to 'Home', groups_path
 = link_to 'Edit', edit_group_path(@groups)

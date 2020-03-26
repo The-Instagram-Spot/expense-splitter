@@ -1,13 +1,17 @@
 class TransactionsController < ApplicationController
     def new
         @groups = Group.find(params[:id])
-       @transactions = Transaction.new
+        @transactions = Transaction.new
+    end
+    
+    def show
+        @transactions = Transaction.find(params[:id])
     end
     
     def create
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.create(transaction_params)
-        redirect_to group_path(@groups)
+        redirect_to transaction_path(@transactions)
     end
     
     def edit
