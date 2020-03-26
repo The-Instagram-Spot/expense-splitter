@@ -39064,8 +39064,13 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 232ms (Views: 225.7ms | ActiveRecord: 2.5ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 73.6.79.221 at 2020-03-24 18:20:21 +0000
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+Started GET "/" for 73.6.79.221 at 2020-03-26 17:53:07 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> users
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
 Processing by GroupsController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
@@ -39073,17 +39078,26 @@ Processing by GroupsController#index as HTML
   Rendering groups/index.html.haml within layouts/application
   [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = $1[0m  [["user_id", 2]]
   ↳ app/views/groups/index.html.haml:20
+<<<<<<< HEAD
   Rendered groups/index.html.haml within layouts/application (61.6ms)
 Completed 200 OK in 483ms (Views: 419.0ms | ActiveRecord: 8.2ms)
 
 
 Started GET "/" for 73.6.79.221 at 2020-03-24 18:20:22 +0000
+=======
+  Rendered groups/index.html.haml within layouts/application (67.2ms)
+Completed 200 OK in 281ms (Views: 241.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 73.6.79.221 at 2020-03-26 17:53:07 +0000
+>>>>>>> users
 Processing by GroupsController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
   Rendering groups/index.html.haml within layouts/application
   [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = $1[0m  [["user_id", 2]]
   ↳ app/views/groups/index.html.haml:20
+<<<<<<< HEAD
   Rendered groups/index.html.haml within layouts/application (7.1ms)
 Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.6ms)
 
@@ -39734,10 +39748,128 @@ Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.7ms)
 Started GET "/" for 73.6.79.221 at 2020-03-25 15:06:45 +0000
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+=======
+  Rendered groups/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/10" for 73.6.79.221 at 2020-03-26 17:53:10 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:11
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users"."id" = "memberships"."user_id" WHERE "memberships"."group_id" = $1[0m  [["group_id", 10]]
+  ↳ app/views/groups/show.html.haml:10
+  Rendered collection of users/_user.html.haml [1 times] (1.4ms)
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 10]]
+  ↳ app/views/groups/show.html.haml:14
+  Rendered collection of transactions/_transaction.html.haml [1 times] (2.3ms)
+  Rendered transactions/_form.html.haml (4.7ms)
+  Rendered groups/show.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 62ms (Views: 53.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/groups/10/edit" for 73.6.79.221 at 2020-03-26 17:53:12 +0000
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:19
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/edit.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 5.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4282144473215274645)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to RemoveColumsFromTransactions (20200326193854)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (22.4ms)[0m  [1m[35mALTER TABLE "transactions" DROP COLUMN "p1_id"[0m
+  ↳ db/migrate/20200326193854_remove_colums_from_transactions.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "transactions" DROP COLUMN "p2_id"[0m
+  ↳ db/migrate/20200326193854_remove_colums_from_transactions.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "transactions" DROP COLUMN "group_id"[0m
+  ↳ db/migrate/20200326193854_remove_colums_from_transactions.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200326193854"]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (8.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4282144473215274645)[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+Started GET "/" for 73.6.79.221 at 2020-03-26 19:40:10 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 73.6.79.221 at 2020-03-26 19:40:10 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (3.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 369ms (Views: 347.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 73.6.79.221 at 2020-03-26 19:40:15 +0000
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 73.6.79.221 at 2020-03-26 19:40:15 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 73.6.79.221 at 2020-03-26 19:40:17 +0000
+Processing by GroupsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 73.6.79.221 at 2020-03-26 19:40:17 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for 73.6.79.221 at 2020-03-26 19:40:20 +0000
+Started GET "/users/auth/google_oauth2" for 73.6.79.221 at 2020-03-26 19:40:20 +0000
+Started GET "/users/auth/google_oauth2/callback?state=1a5a43991db0b7b9e70bd4cf5a35501a760d18213ec88cb2&code=4%2FyAHylVaYElONY-ajfshF4zjdvbG-67vK0AYSqRXeEtarQqoKjt83OnyY0GvLAmAgG4bq-BIt_16xU92XmFcy8j0&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 73.6.79.221 at 2020-03-26 19:40:26 +0000
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"1a5a43991db0b7b9e70bd4cf5a35501a760d18213ec88cb2", "code"=>"4/yAHylVaYElONY-ajfshF4zjdvbG-67vK0AYSqRXeEtarQqoKjt83OnyY0GvLAmAgG4bq-BIt_16xU92XmFcy8j0", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "google_oauth2"], ["uid", "101014615019391322388"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to https://8894b6be5e55483b9a7366d3b599aa54.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 29ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 73.6.79.221 at 2020-03-26 19:40:27 +0000
+>>>>>>> users
 Processing by GroupsController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
   Rendering groups/index.html.haml within layouts/application
+<<<<<<< HEAD
   [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = $1[0m  [["user_id", 2]]
   ↳ app/views/groups/index.html.haml:20
   Rendered groups/index.html.haml within layouts/application (46.5ms)
@@ -39808,11 +39940,26 @@ Processing by GroupsController#show as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
   [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+=======
+  [1m[36mGroup Load (11.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/groups/index.html.haml:20
+  Rendered groups/index.html.haml within layouts/application (77.5ms)
+Completed 200 OK in 149ms (Views: 118.3ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/groups/10" for 73.6.79.221 at 2020-03-26 19:40:29 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+>>>>>>> users
   ↳ app/controllers/groups_controller.rb:11
   Rendering groups/show.html.haml within layouts/application
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users"."id" = "memberships"."user_id" WHERE "memberships"."group_id" = $1[0m  [["group_id", 10]]
   ↳ app/views/groups/show.html.haml:10
   Rendered collection of users/_user.html.haml [1 times] (1.4ms)
+<<<<<<< HEAD
   [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1[0m  [["group_id", 10]]
   ↳ app/views/groups/show.html.haml:14
   Rendered collection of templates [0 times] (0.0ms)
@@ -40016,3 +40163,52 @@ Migrating to ChangeColumnsInTransactions (20200325232015)
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/bin/rake:23
+=======
+  Rendered groups/show.html.haml within layouts/application (33.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column transactions.group_id does not exist
+LINE 1: SELECT "transactions".* FROM "transactions" WHERE "transacti...
+                                                          ^
+: SELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1):
+    11: 
+    12:   
+    13: %h2 Transactions:
+    14: = render @groups.transactions
+    15: 
+    16: %h2 Add a transaction:
+    17: = render 'transactions/form'
+  
+app/views/groups/show.html.haml:14:in `_app_views_groups_show_html_haml___3456054910815620251_70028271834260'
+Started GET "/groups/10" for 73.6.79.221 at 2020-03-26 19:40:34 +0000
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ubuntu/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:11
+  Rendering groups/show.html.haml within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users"."id" = "memberships"."user_id" WHERE "memberships"."group_id" = $1[0m  [["group_id", 10]]
+  ↳ app/views/groups/show.html.haml:10
+  Rendered collection of users/_user.html.haml [1 times] (1.4ms)
+  Rendered groups/show.html.haml within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column transactions.group_id does not exist
+LINE 1: SELECT "transactions".* FROM "transactions" WHERE "transacti...
+                                                          ^
+: SELECT "transactions".* FROM "transactions" WHERE "transactions"."group_id" = $1):
+    11: 
+    12:   
+    13: %h2 Transactions:
+    14: = render @groups.transactions
+    15: 
+    16: %h2 Add a transaction:
+    17: = render 'transactions/form'
+  
+app/views/groups/show.html.haml:14:in `_app_views_groups_show_html_haml___3456054910815620251_70028283202140'
+>>>>>>> users
