@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_033108) do
+ActiveRecord::Schema.define(version: 2020_03_26_193854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amounts", force: :cascade do |t|
+    t.bigint "transactions_id"
+    t.bigint "users_id"
+    t.decimal "difference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["transactions_id"], name: "index_amounts_on_transactions_id"
+    t.index ["users_id"], name: "index_amounts_on_users_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string "group_name"
@@ -40,12 +50,10 @@ ActiveRecord::Schema.define(version: 2020_03_05_033108) do
 
   create_table "transactions", force: :cascade do |t|
     t.integer "transaction_id"
-    t.integer "p1_id"
-    t.integer "p2_id"
-    t.integer "group_id"
     t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|

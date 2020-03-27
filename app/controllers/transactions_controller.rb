@@ -1,4 +1,9 @@
 class TransactionsController < ApplicationController
+    def new
+        @groups = Group.find(params[:id])
+       @transactions = Transaction.new
+    end
+    
     def create
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.create(transaction_params)
@@ -30,7 +35,7 @@ class TransactionsController < ApplicationController
     
     private
         def transaction_params
-            params.require(:transaction).permit(:p1_id, :p2_id, :amount)
+            params.require(:transaction).permit(:name, :amount)
         end
     
 end
