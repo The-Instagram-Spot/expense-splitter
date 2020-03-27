@@ -1,37 +1,22 @@
-= form_with(model: [@groups, @transactions], local: true) do |form|
-  %p
-    = form.label :name
-    = form.text_field :name
-    &nbsp;&nbsp;
-    
-    = form.label :amount
-    = form.text_field :amount
-    
-    &nbsp;&nbsp;
-    
-    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
-    %label{:for => "split-evenly"} Split Evenly?
-  
-  %strong Add people:
-  %br/
-  
-  %p
-    = form_for (:users) do |user_form|
-      %p
-        = user_form.label :name
-        = user_form.text_field :name
-        &nbsp;&nbsp;
-      
-        paid &nbsp;&nbsp;
-        %input{:type => "text"}/
-        &nbsp;&nbsp;
-        
-        proportion:
-        %input{:type => "text"}/
-        %br/
+%strong Add people:
+%br/
 
-      %p
-        = user_form.submit
-        
-  %p
-    = form.submit
+= form_for @transactions, url: {action: "update"} do |form|
+  = form_for (:users) do |user_form|
+    %p
+      = user_form.label :name
+      = user_form.text_field :name
+  
+      &nbsp;&nbsp;
+    
+      paid &nbsp;&nbsp;
+      %input{:type => "text"}/
+      &nbsp;&nbsp;
+      
+      proportion:
+      %input{:type => "text"}/
+      %br/
+
+    %p
+      = form.submit
+

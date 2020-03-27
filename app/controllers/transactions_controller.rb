@@ -1,4 +1,9 @@
 class TransactionsController < ApplicationController
+    skip_before_action :verify_authenticity_token  
+    
+    def index
+    end
+    
     def new
         @groups = Group.find(params[:id])
         @transactions = Transaction.new
@@ -11,7 +16,8 @@ class TransactionsController < ApplicationController
     def create
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.create(transaction_params)
-        redirect_to transaction_path(@transactions)
+        
+        redirect_to group_path(@groups)
     end
     
     def edit
@@ -22,7 +28,12 @@ class TransactionsController < ApplicationController
     def update
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.find(params[:id])
-        @users = @transactions.users
+        
+        #@transaction = Transaction.find(params[:id])
+        
+        #@user = User.find_by(name: params[:users][:name])
+        #@transaction.users << @user
+        
     
         if @transactions.update(transaction_params)
             redirect_to @groups
@@ -40,7 +51,7 @@ class TransactionsController < ApplicationController
     
     private
         def transaction_params
-            params.require(:transaction).permit(:name, :amount)
+            params.require(:transaction).permit(:name, :amount, users_attributes:[:name])
         end
     
 end

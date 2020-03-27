@@ -12,31 +12,7 @@
     
     &nbsp;&nbsp;
     
-    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
-    %label{:for => "split-evenly"} Split Evenly?
-  
-  %strong Add people:
-  %br/
-  
-  %p
-    = form_for (:users) do |user_form|
-      %p
-        = user_form.label :name
-        = user_form.text_field :name
-        &nbsp;&nbsp;
+    %p
+    = form.submit "Save Transaction Details"
       
-        paid &nbsp;&nbsp;
-        %input{:type => "text"}/
-        &nbsp;&nbsp;
-        
-        proportion:
-        %input{:type => "text"}/
-        %br/
-
-      %p
-        = user_form.submit
-        
-  %p
-    = form.submit
-    
-= link_to 'Back', groups_path
+= link_to 'Back', group_path(@transactions.group)

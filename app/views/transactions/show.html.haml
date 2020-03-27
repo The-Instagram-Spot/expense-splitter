@@ -1,6 +1,19 @@
-%h1 
+%strong
   = @transactions.name
+&nbsp;
+= number_to_currency(@transactions.amount) 
+&nbsp;&nbsp;
+= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+%br
+%br
+
+%input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
+%label{:for => "split-evenly"} Split Evenly?
+%br
+%br
 
 = render 'transactions/form'
+
+= render @transactions.users
     
-= link_to 'Back', group_transaction_path(:group_id)
+= link_to 'Back', group_path(@transactions.group)
