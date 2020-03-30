@@ -1,7 +1,7 @@
 %strong Add people:
 %br/
 
-= form_for @transactions, url: {action: "update"} do |form|
+= form_with(model: @transactions, url: transaction_update_users_path(@transactions), local: true) do |form|
   = form_for (:users) do |user_form|
     %p
       = user_form.label :name
@@ -10,13 +10,13 @@
       &nbsp;&nbsp;
     
       paid &nbsp;&nbsp;
-      %input{:type => "text"}/
-      &nbsp;&nbsp;
-      
-      proportion:
-      %input{:type => "text"}/
-      %br/
+      = user_form.text_field :paid
 
+      &nbsp;&nbsp;
+      proportion:
+      = user_form.text_field :proportion
+      %br/
+  
     %p
-      = form.submit
+      = user_form.submit
 

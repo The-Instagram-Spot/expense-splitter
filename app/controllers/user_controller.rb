@@ -28,6 +28,17 @@ class UserController < ApplicationController
         end
     end
     
+    def destroy_from_transaction
+        @users = User.find(params[:user_id])
+        @transactions = Transaction.find(params[:id])
+        
+        @users.transactions.delete(@transactions)
+        @transactions.users.delete(@users)
+        
+        redirect_to @transactions
+        
+    end
+    
     def destroy
         @group = Group.find(params[:id])
         @user = User.find(params[:group_id])

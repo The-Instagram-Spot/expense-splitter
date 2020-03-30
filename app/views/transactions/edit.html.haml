@@ -1,7 +1,7 @@
 %h1 
   = @transactions.name
 
-= form_with(model: [@groups, @transactions], local: true) do |form|
+= form_with(model: [@groups, @transactions], local: true) do |form|s
   %p
     = form.label :name
     = form.text_field :name

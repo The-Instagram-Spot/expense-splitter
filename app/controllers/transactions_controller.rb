@@ -17,7 +17,7 @@ class TransactionsController < ApplicationController
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.create(transaction_params)
         
-        redirect_to group_path(@groups)
+        render 'show'
     end
     
     def edit
@@ -26,17 +26,30 @@ class TransactionsController < ApplicationController
     end
     
     def update
-        @groups = Group.find(params[:group_id])
-        @transactions = @groups.transactions.find(params[:id])
-        
-        #@transaction = Transaction.find(params[:id])
-        
-        #@user = User.find_by(name: params[:users][:name])
-        #@transaction.users << @user
-        
+        @transaction = Transaction.find(params[:id])
     
-        if @transactions.update(transaction_params)
-            redirect_to @groups
+        if @transaction.update(params.require(:transaction).permit(:id, :name, :amount, users_attributes:[:name]))
+            redirect_to @transaction
+        else
+            render 'edit'
+        end
+    end
+    
+    def update_users
+        @transaction = Transaction.find(params[:transaction_id])
+        @user = User.find_by(name: params[:users][:name])
+        @difference = @paid.to_d - @proportion.to_d
+        
+        if(@user.in? @transaction.group.users)
+            @transaction.users << @user
+        
+            @paid = params[:users][:paid]
+            @proportion = params[:users][:proportion]
+        
+            @user.amounts.find_by(user_id: @user.id).update(difference: @difference)
+        end
+        if @transaction.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
+            redirect_to @transaction
         else
             render 'edit'
         end
