@@ -38,15 +38,17 @@ class TransactionsController < ApplicationController
     def update_users
         @transaction = Transaction.find(params[:transaction_id])
         @user = User.find_by(name: params[:users][:name])
-        @difference = @paid.to_d - @proportion.to_d
+        @amounts = @user.amounts
         
-        if(@user.in? @transaction.group.users)
+        if((@user.in? @transaction.group.users) && (!@user.in? @transaction.users))
             @transaction.users << @user
         
             @paid = params[:users][:paid]
             @proportion = params[:users][:proportion]
-        
-            @user.amounts.find_by(user_id: @user.id).update(difference: @difference)
+            
+            @difference = @paid.to_d - @proportion.to_d
+            
+            @amounts.find_by(transaction_id: @transaction.id).update_attributes(difference: @difference)
         end
         if @transaction.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
             redirect_to @transaction

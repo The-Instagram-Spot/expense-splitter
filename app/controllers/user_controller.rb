@@ -39,6 +39,15 @@ class UserController < ApplicationController
         
     end
     
+    def settle_up
+       @user = User.find(params[:user_id]) 
+       @amounts = @user.amounts
+       
+       
+       
+       render 'settle_up'
+    end
+    
     def destroy
         @group = Group.find(params[:id])
         @user = User.find(params[:group_id])

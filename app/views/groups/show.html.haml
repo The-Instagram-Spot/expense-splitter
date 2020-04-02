@@ -23,6 +23,10 @@
     = form.text_field :amount
   %p
     = form.submit
+    
+= link_to 'Settle Up', settle_up_path(current_user)
+%br
+%br
 
 = link_to 'Home', groups_path
 = link_to 'Edit', edit_group_path(@groups)

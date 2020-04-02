@@ -16,7 +16,8 @@
 
 - @transactions.users.each do |user|
   = user.name
-  = user.amounts.all.first.difference
+  is owed &nbsp;
+  = user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference
   %td= link_to 'Remove from transaction', destroy_from_transaction_path(user), method: :delete, data: { confirm: 'Are you sure?' }
   %br/
   
