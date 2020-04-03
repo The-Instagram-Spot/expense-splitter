@@ -50,6 +50,7 @@ class TransactionsController < ApplicationController
             
             @amounts.find_by(transaction_id: @transaction.id).update_attributes(difference: @difference)
         end
+        
         if @transaction.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
             redirect_to @transaction
         else
@@ -60,6 +61,9 @@ class TransactionsController < ApplicationController
     def destroy
         @groups = Group.find(params[:group_id])
         @transactions = @groups.transactions.find(params[:id])
+        
+        @transactions.amounts.destroy
+        
         @transactions.destroy
         redirect_to group_path(@groups)
     end

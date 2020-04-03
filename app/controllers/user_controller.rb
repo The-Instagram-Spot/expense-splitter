@@ -40,11 +40,11 @@ class UserController < ApplicationController
     end
     
     def settle_up
-       @user = User.find(params[:user_id]) 
+       @user = User.find(params[:user_id])
+       @group = Group.find(params[:group_id])
        @amounts = @user.amounts
        
-       
-       
+      
        render 'settle_up'
     end
     
