@@ -5,16 +5,16 @@
   = form_for (:users) do |user_form|
     %p
       = user_form.label :name
-      = user_form.text_field :name
+      = user_form.text_field :name, required: true
   
       &nbsp;&nbsp;
     
       paid &nbsp;&nbsp;
-      = user_form.text_field :paid
+      = user_form.text_field :paid, required: true
 
       &nbsp;&nbsp;
-      proportion:
-      = user_form.text_field :proportion
+      Expected Portion:
+      = user_form.text_field :proportion, required: true
       %br/
   
     %p

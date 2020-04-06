@@ -17,10 +17,10 @@
 = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
   %p
     = form.label :name
-    = form.text_field :name
+    = form.text_field :name, required: true
   %p
     = form.label :amount
-    = form.text_field :amount
+    = form.text_field :amount, required: true
   %p
     = form.submit
     

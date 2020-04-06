@@ -4,11 +4,11 @@
 = form_with(model: [@groups, @transactions], local: true) do |form|
   %p
     = form.label :name
-    = form.text_field :name
+    = form.text_field :name,  required: true
     &nbsp;&nbsp;
     
     = form.label :amount
-    = form.text_field :amount
+    = form.text_field :amount,
     
     &nbsp;&nbsp;
     

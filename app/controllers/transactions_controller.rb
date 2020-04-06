@@ -36,25 +36,27 @@ class TransactionsController < ApplicationController
     end
     
     def update_users
-        @transaction = Transaction.find(params[:transaction_id])
+        @transactions = Transaction.find(params[:transaction_id])
         @user = User.find_by(name: params[:users][:name])
         @amounts = @user.amounts
         
-        if((@user.in? @transaction.group.users) && (!@user.in? @transaction.users))
-            @transaction.users << @user
-        
-            @paid = params[:users][:paid]
-            @proportion = params[:users][:proportion]
+        @paid = params[:users][:paid]
+        @proportion = params[:users][:proportion]
             
-            @difference = @paid.to_d - @proportion.to_d
-            
-            @amounts.find_by(transaction_id: @transaction.id).update_attributes(difference: @difference)
-        end
-        
-        if @transaction.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
-            redirect_to @transaction
+        if(@proportion.to_d > @transactions.amount) #check if proportion is higher than total
+            render 'show'
         else
-            render 'edit'
+            if((@user.in? @transactions.group.users) && (!@user.in? @transactions.users)) #check if user is in the group and not already in the transaction
+                @transactions.users << @user
+                @difference = @paid.to_d - @proportion.to_d
+                @amounts.find_by(transaction_id: @transactions.id).update_attributes(difference: @difference)
+            end
+            
+            if @transactions.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
+                redirect_to @transactions
+            else
+                render 'edit'
+            end
         end
     end
     
