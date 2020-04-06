@@ -20,5 +20,6 @@
         = user_form.text_field :email
       %p
         = user_form.submit
-    
+
+= link_to 'Delete Group', group_path(@groups), method: :delete, data: { confirm: 'Are you sure?' }
 = link_to 'Back', groups_path

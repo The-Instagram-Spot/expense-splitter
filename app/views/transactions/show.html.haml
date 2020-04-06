@@ -4,6 +4,7 @@
 = number_to_currency(@transactions.amount) 
 &nbsp;&nbsp;
 = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+= link_to 'Delete', [@transactions.group, @transactions], method: :delete, data: { confirm: 'Are you sure?' }
 %br
 %br
 
