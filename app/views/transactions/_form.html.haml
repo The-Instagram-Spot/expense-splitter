@@ -1,11 +1,22 @@
-= form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
-  %p
-    = form.label :name
-    %br/
-    = form.text_field :name
-  %p
-    = form.label :amount
-    %br/
-    = form.text_field :amount
-  %p
-    = form.submit
+%strong Add people:
+%br/
+
+= form_with(model: @transactions, url: transaction_update_users_path(@transactions), local: true) do |form|
+  = form_for (:users) do |user_form|
+    %p
+      = user_form.label :name
+      = user_form.text_field :name, required: true
+  
+      &nbsp;&nbsp;
+    
+      paid &nbsp;&nbsp;
+      = user_form.text_field :paid, required: true
+
+      &nbsp;&nbsp;
+      Expected Portion:
+      = user_form.text_field :proportion, required: true
+      %br/
+  
+    %p
+      = user_form.submit
+

@@ -1,14 +1,18 @@
-%h1 Edit transaction
+%h1 
+  = @transactions.name
+
 = form_with(model: [@groups, @transactions], local: true) do |form|
   %p
     = form.label :name
-    %br/
-    = form.text_field :name
-  %p
-    = form.label :amount
-    %br/
-    = form.text_field :amount
-  %p
-    = form.submit
+    = form.text_field :name,  required: true
+    &nbsp;&nbsp;
     
-= link_to 'Back', groups_path
+    = form.label :amount
+    = form.text_field :amount,
+    
+    &nbsp;&nbsp;
+    
+    %p
+    = form.submit "Save Transaction Details"
+      
+= link_to 'Back', group_path(@transactions.group)

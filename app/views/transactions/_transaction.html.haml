@@ -1,9 +1,7 @@
-%p
-  %strong Name:
-  = transaction.name
-%p
-  %strong Amount:
-  = transaction.amount
-
-= link_to 'Edit Transaction', edit_group_transaction_path(transaction.group, transaction)
-= link_to 'Destroy Transaction', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
+Name:
+= link_to transaction.name, group_transaction_path(transaction.group, transaction)
+Total:
+= number_to_currency(transaction.amount) 
+= link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
+= link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
+%br
