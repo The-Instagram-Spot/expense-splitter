@@ -2,7 +2,7 @@
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: black;
  font-size: 35px;
- 
+ /*background-color: #a6a6a6  ;*/
 }
 
 #formLabels{
@@ -52,7 +52,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #3d7ab8 ;
   color: white;
 }
 
@@ -64,10 +64,10 @@
   width: 100%;
 }
 
-#transactionTable  td{
+#transactionTable  td, #transactionTable  th{
   border: 1px solid #ddd;
   padding: 8px;
-  width: 25%;
+  width: 16%;
 }
 
 #transactionTable  tr:nth-child(even){background-color: #f2f2f2;}
@@ -78,9 +78,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  /*background-color: #002e63;*/
+  background-color: #6d9bc3;
   color: white;
-  width: 25%;
+  width: 16%;
 }
 
 #body{
@@ -92,7 +93,7 @@
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 60%;
+    width: 80%;
     height:60%;
     margin: 0 auto;
     background-color:#F0F0F0 ;

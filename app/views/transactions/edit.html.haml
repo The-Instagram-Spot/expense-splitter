@@ -1,5 +1,5 @@
 %div#body  
-  %span#pageTitle Edit Transaction:
+  %strong#pageTitle Edit Transaction:
   %span#pageTitle= @transactions.name
   
   = form_with(model: [@groups, @transactions], local: true) do |form|

@@ -6,12 +6,10 @@
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
 
-  %body
-    %h1 
-      = @user.name
-    
   %div#body
-    %strong#pageTitle Groups
+    %span#sectionTitle= @user.name
+    %div#pageTitle
+      %strong Groups
     %br
     %br
     %table#groupTable 
