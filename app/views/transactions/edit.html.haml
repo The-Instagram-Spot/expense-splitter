@@ -1,18 +1,19 @@
-%h1 
-  = @transactions.name
-
-= form_with(model: [@groups, @transactions], local: true) do |form|
-  %p
-    = form.label :name
-    = form.text_field :name,  required: true
-    &nbsp;&nbsp;
-    
-    = form.label :amount
-    = form.text_field :amount,  required: true
-    
-    &nbsp;&nbsp;
-    
-    %p
-    = form.submit "Save Transaction Details"
+%div#body  
+  %span#pageTitle Edit Transaction:
+  %span#pageTitle= @transactions.name
+  
+  = form_with(model: [@groups, @transactions], local: true) do |form|
+    %p#formLabels
+      = form.label :name
+      = form.text_field :name
+      &nbsp;&nbsp;
       
-= link_to 'Back', group_path(@transactions.group)
+      = form.label :amount
+      = form.text_field :amount
+      
+      &nbsp;&nbsp;
+      
+      %p#formLabels
+      = form.submit "Save Transaction Details"
+  %div#navButtons    
+    = link_to 'Back', group_path(@transactions.group)

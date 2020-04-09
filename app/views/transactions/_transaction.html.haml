@@ -1,7 +1,19 @@
-= link_to transaction.name, group_transaction_path(transaction.group, transaction)
-&nbsp;
-Total:
-= number_to_currency(transaction.amount) 
-//= link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
-//= link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
-%br
+// %p
+//   %strong Name:
+//   = transaction.name
+//   &nbsp;&nbsp;
+//   %strong Total:
+//   = number_to_currency(transaction.amount) 
+  
+//   = link_to 'Show', group_transaction_path(transaction.group, transaction)
+//   = link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
+//   = link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
+
+
+%table#transactionTable 
+  %tr
+    %td= link_to transaction.name, group_transaction_path(transaction.group, transaction)
+    %td= number_to_currency(transaction.amount) 
+    %td= link_to 'Show', group_transaction_path(transaction.group, transaction)
+    %td= link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
+    %td= link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }

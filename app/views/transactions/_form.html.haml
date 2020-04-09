@@ -1,22 +1,22 @@
-%strong Add people:
+%strong#sectionTitle Add people:
 %br/
 
 = form_with(model: @transactions, url: transaction_update_users_path(@transactions), local: true) do |form|
   = form_for (:users) do |user_form|
-    %p
+    %p#formLabels
       = user_form.label :name
       = user_form.text_field :name, required: true
   
       &nbsp;&nbsp;
     
-      paid &nbsp;&nbsp;
+      Paid &nbsp;&nbsp;
       = user_form.text_field :paid, required: true
-
       &nbsp;&nbsp;
+      
       Expected Portion:
       = user_form.text_field :proportion, required: true
       %br/
-  
-    %p
-      = user_form.submit
+
+    %p#formLabels
+      = form.submit
 

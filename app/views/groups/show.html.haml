@@ -1,33 +1,36 @@
-%p
-  %strong Group Name:
-  = @groups.group_name
-%p
-  %strong Description:
-  = @groups.group_description
+%div#body  
+  %p#pageTitle
+    %strong Group Name:
+    = @groups.group_name
+  %p#sectionInfo
+    %strong Description:
+    = @groups.group_description
   
-= link_to 'Add Members', group_add_members_path(@groups)
-
-%p
-  %strong Members:
-= render @groups.users
+  %p#sectionInfo
+    %strong Members:
+  = render @groups.users
   
-%h2 Transactions:
-= render @groups.transactions
-
-%h2 Add a transaction:
-= form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
-  %p
-    = form.label :name
-    = form.text_field :name, required: true
-  %p
-    = form.label :amount
-    = form.text_field :amount, required: true
-  %p
-    = form.submit
     
-= link_to 'Settle Up', settle_up_path(current_user, @groups.id)
-%br
-%br
-
-= link_to 'Edit', edit_group_path(@groups)
-= link_to 'Home', groups_path
+  %h3#sectionTitle Transactions:
+  %table#transactionTable 
+    %tr
+      %th Name 
+      %th Total
+      %th
+      %th
+  = render @groups.transactions
+  
+  %h3#sectionTitle Add a transaction:
+  = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
+    %p#formLabels
+      = form.label :name
+      = form.text_field :name, , required: true
+    %p#formLabels
+      = form.label :amount
+      = form.text_field :amount, required: true
+    %p#formLabels
+      = form.submit
+ 
+  %div#navButtons
+    = link_to 'Home', groups_path
+    // = link_to 'Edit', edit_group_path(@groups)

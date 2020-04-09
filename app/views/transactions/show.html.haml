@@ -1,20 +1,20 @@
-%strong
-  = @transactions.name
-&nbsp;
-= number_to_currency(@transactions.amount) 
-&nbsp;&nbsp;
-= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
-= link_to 'Delete', [@transactions.group, @transactions], method: :delete, data: { confirm: 'Are you sure?' }
-%br
-%br
-
-%input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
-%label{:for => "split-evenly"} Split Evenly?
-%br
-%br
-
+%div#body   
+    %strong#pageTitle Transaction:
+    %span#pageTitle= @transactions.name
+    // &nbsp;
+    %br
+    %span#sectionInfo= number_to_currency(@transactions.amount) 
+    // &nbsp;&nbsp;
+    %br
+    %br
+    // %span#linkButtons= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
+    %label#formLabels{:for => "split-evenly"} Split Evenly?
+    %br
+    %br
+    
 = render 'transactions/form'
-
+    
 - @transactions.users.each do |user|
   = user.name
   - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
@@ -26,6 +26,6 @@
   = link_to 'Edit', update_users_path(users: {name: user.name}, transaction_id: @transactions.id, group_id: @transactions.group.id), method: :patch
   = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
   %br
-
     
-= link_to 'Back', group_path(@transactions.group)
+    %div#navButtons    
+        = link_to 'Back', group_path(@transactions.group)
