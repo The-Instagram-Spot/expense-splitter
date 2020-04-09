@@ -4,11 +4,12 @@
 %p
   %strong Description:
   = @groups.group_description
+  
+= link_to 'Add Members', group_add_members_path(@groups)
 
 %p
   %strong Members:
 = render @groups.users
-
   
 %h2 Transactions:
 = render @groups.transactions

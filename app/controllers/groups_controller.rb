@@ -30,16 +30,20 @@ class GroupsController < ApplicationController
     end
   end
   
+  def add_members
+    @group = Group.find(params[:group_id])
+  end
+  
   def update
     @groups = Group.find(params[:id])
     if(params[:users][:email] != "")
       @user = User.find_by(email: params[:users][:email])
-      if(!(@groups.users.exists?(:id)) && !@user.nil?)
+      if(!(@groups.users.exists?(@user.id)) && !@user.nil?)
         @groups.users << @user
       end
     end
     
-    if @groups.update(group_params)
+    if @groups.update(group_user_params)
       redirect_to @groups
     else
       render 'edit'

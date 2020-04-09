@@ -19,12 +19,13 @@
   = user.name
   - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
     owes
-    = 0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference
+    = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
   - else
     is owed
-    = user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference
-  %td= link_to 'Remove from transaction', destroy_from_transaction_path(user), method: :delete, data: { confirm: 'Are you sure?' }
-  %br/
-  
+    = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+  = link_to 'Edit', update_users_path(users: {name: user.name}, transaction_id: @transactions.id, group_id: @transactions.group.id), method: :patch
+  = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
+  %br
+
     
 = link_to 'Back', group_path(@transactions.group)

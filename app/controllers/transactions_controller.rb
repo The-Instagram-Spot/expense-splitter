@@ -43,9 +43,10 @@ class TransactionsController < ApplicationController
         @paid = params[:users][:paid]
         @proportion = params[:users][:proportion]
             
-        if(@proportion.to_d > @transactions.amount) #check if proportion is higher than total
+        if((@proportion.to_d > @transactions.amount) || (@paid.to_d > @transactions.amount)) #check if proportion or paid is higher than total
             render 'show'
         else
+            flash.discard
             if((@user.in? @transactions.group.users) && (!@user.in? @transactions.users)) #check if user is in the group and not already in the transaction
                 @transactions.users << @user
                 @difference = @paid.to_d - @proportion.to_d
