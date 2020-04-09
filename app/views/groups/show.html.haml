@@ -5,6 +5,8 @@
   %p#sectionInfo
     %strong Description:
     = @groups.group_description
+    
+  = link_to 'Add Members', group_add_members_path(@groups)
   
   %p#sectionInfo
     %strong Members:
@@ -24,7 +26,7 @@
   = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
     %p#formLabels
       = form.label :name
-      = form.text_field :name, , required: true
+      = form.text_field :name, required: true
     %p#formLabels
       = form.label :amount
       = form.text_field :amount, required: true
@@ -33,4 +35,4 @@
  
   %div#navButtons
     = link_to 'Home', groups_path
-    // = link_to 'Edit', edit_group_path(@groups)
+    = link_to 'Edit', edit_group_path(@groups)

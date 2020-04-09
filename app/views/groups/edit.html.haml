@@ -12,15 +12,15 @@
     %p#formLabels
       = form.submit
       
-    %p#sectionTitle
-      %strong Add members:
-      = form_for (:users) do |user_form|
-        %p#formLabels
-          = user_form.label :email
-          %br/
-          = user_form.text_field :email
-        %p#formLabels
-          = user_form.submit
+    //%p#sectionTitle
+    //  %strong Add members:
+    //  = form_for (:users) do |user_form|
+    //    %p#formLabels
+    //      = user_form.label :email
+    //      %br/
+    //      = user_form.text_field :email
+    //    %p#formLabels
+    //      = user_form.submit
       
   %div#navButtons
     = link_to 'Back', groups_path
