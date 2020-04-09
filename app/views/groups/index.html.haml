@@ -10,9 +10,10 @@
     %h1 
       = @user.name
     
-
-    %h1#pageTitle Groups
-
+  %div#body
+    %strong#pageTitle Groups
+    %br
+    %br
     %table#groupTable 
       %tr
         %th Name
@@ -28,21 +29,22 @@
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
           
-      %trs
-        %td= link_to 'New Group', new_group_path
+    %p#linkButtons= link_to 'New Group', new_group_path
 
-  - if current_user.nil?
-    %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'
-  - else
-    //= link_to 'Go to App' , app_dashboard_index_path, class: 'login-button'
-    //= link_to 'Log out', destroy_user_session_path, method: :delete
-  
-  - if user_signed_in?
-    %span#linkButtons= link_to('Edit profile', edit_user_registration_path)
-    %span#linkButtons= link_to('Logout', destroy_user_session_path, :method => :delete)
-  - else
-    %span#linkButtons= link_to('Register', new_user_registration_path)
-    %span#linkButtons= link_to('Login', new_user_session_path)
+    - if current_user.nil?
+      %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'
+    - else
+      //= link_to 'Go to App' , app_dashboard_index_path, class: 'login-button'
+      //= link_to 'Log out', destroy_user_session_path, method: :delete
+    
+    - if user_signed_in?
+      %div#navButtons
+        %span= link_to('Edit profile', edit_user_registration_path)
+        %span= link_to('Logout', destroy_user_session_path, :method => :delete)
+    - else
+      %div#navButtons
+        %span= link_to('Register', new_user_registration_path)
+        %span= link_to('Login', new_user_session_path)
 
       
 

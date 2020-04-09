@@ -1,21 +1,21 @@
-%strong#pageTitle Transaction:
-%span#pageTitle= @transactions.name
-// &nbsp;
-%br
-%span#sectionInfo= number_to_currency(@transactions.amount) 
-// &nbsp;&nbsp;
-%br
-%br
-%span#linkButtons= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
-%br
-%br
-%input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
-%label#formLabels{:for => "split-evenly"} Split Evenly?
-%br
-%br
-
-= render 'transactions/form'
-
-= render @transactions.users
+%div#body   
+    %strong#pageTitle Transaction:
+    %span#pageTitle= @transactions.name
+    // &nbsp;
+    %br
+    %span#sectionInfo= number_to_currency(@transactions.amount) 
+    // &nbsp;&nbsp;
+    %br
+    %br
+    // %span#linkButtons= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
+    %label#formLabels{:for => "split-evenly"} Split Evenly?
+    %br
+    %br
     
-= link_to 'Back', group_path(@transactions.group)
+    = render 'transactions/form'
+    
+    = render @transactions.users
+    
+    %div#navButtons    
+        = link_to 'Back', group_path(@transactions.group)

@@ -1,24 +1,26 @@
-%h1 Edit group
-= form_with(model: @groups, local: true) do |form|
-  %p
-    = form.label :group_name
-    %br/
-    = form.text_field :group_name
-  %p
-    = form.label :group_description
-    %br/
-    = form.text_area :group_description
-  %p
-    = form.submit
-    
-  %p
-    %strong Add members:
-    = form_for (:users) do |user_form|
-      %p
-        = user_form.label :email
-        %br/
-        = user_form.text_field :email
-      %p
-        = user_form.submit
-    
-= link_to 'Back', groups_path
+%div#body
+  %strong#pageTitle Edit group
+  = form_with(model: @groups, local: true) do |form|
+    %p#formLabels
+      = form.label :group_name
+      %br/
+      = form.text_field :group_name
+    %p#formLabels
+      = form.label :group_description
+      %br/
+      = form.text_area :group_description
+    %p#formLabels
+      = form.submit
+      
+    %p#sectionTitle
+      %strong Add members:
+      = form_for (:users) do |user_form|
+        %p#formLabels
+          = user_form.label :email
+          %br/
+          = user_form.text_field :email
+        %p#formLabels
+          = user_form.submit
+      
+  %div#navButtons
+    = link_to 'Back', groups_path

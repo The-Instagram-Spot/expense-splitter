@@ -16,6 +16,12 @@
  color: #4CAF50;
 }
 
+#navButtons{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #4CAF50;
+ text-align: right;
+}
+
 #sectionTitle{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: black;
@@ -77,3 +83,17 @@
   width: 25%;
 }
 
+#body{
+    /*margin-top:0;*/
+    /*margin-right:auto;*/
+    /*margin-bottom:0;*/
+    /*margin-left:auto;*/
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+    height:60%;
+    margin: 0 auto;
+    background-color:#F0F0F0 ;
+}
