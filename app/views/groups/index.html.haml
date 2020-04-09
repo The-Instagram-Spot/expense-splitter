@@ -5,16 +5,20 @@
     %meta{:content => "profile email", :name => "google-signin-scope"}/
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
+
   %body
     %h1 
       = @user.name
-    = link_to 'New Group', new_group_path
+    
 
-    %h1 Groups
-    %table
+    %h1#pageTitle Groups
+
+    %table#groupTable 
       %tr
         %th Name
         %th Description
+        %th
+        %th
         %th
       - @user.groups.each do |group|
         %tr
@@ -23,19 +27,22 @@
           %td= link_to 'Show', group_path(group)
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
+          
+      %trs
+        %td= link_to 'New Group', new_group_path
 
   - if current_user.nil?
-    = link_to 'Sign in', new_user_session_path, class: 'login-button'
+    %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'
   - else
     //= link_to 'Go to App' , app_dashboard_index_path, class: 'login-button'
     //= link_to 'Log out', destroy_user_session_path, method: :delete
   
   - if user_signed_in?
-    = link_to('Edit profile', edit_user_registration_path)
-    = link_to('Logout', destroy_user_session_path, :method => :delete)
+    %span#linkButtons= link_to('Edit profile', edit_user_registration_path)
+    %span#linkButtons= link_to('Logout', destroy_user_session_path, :method => :delete)
   - else
-    = link_to('Register', new_user_registration_path)
-    = link_to('Login', new_user_session_path)
+    %span#linkButtons= link_to('Register', new_user_registration_path)
+    %span#linkButtons= link_to('Login', new_user_session_path)
 
       
 

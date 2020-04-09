@@ -1,8 +1,8 @@
-%h1 
-  = @transactions.name
+%span#pageTitle Edit:
+%span#pageTitle= @transactions.name
 
 = form_with(model: [@groups, @transactions], local: true) do |form|
-  %p
+  %p#formLabels
     = form.label :name
     = form.text_field :name
     &nbsp;&nbsp;
@@ -12,7 +12,6 @@
     
     &nbsp;&nbsp;
     
-    %p
+    %p#formLabels
     = form.submit "Save Transaction Details"
-      
-= link_to 'Back', group_path(@transactions.group)
+%span#linkButtons= link_to 'Back', group_path(@transactions.group)

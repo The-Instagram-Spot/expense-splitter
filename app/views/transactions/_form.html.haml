@@ -1,22 +1,22 @@
-%strong Add people:
+%strong#sectionTitle Add people:
 %br/
 
 = form_for @transactions, url: {action: "update"} do |form|
   = form_for (:users) do |user_form|
-    %p
+    %p#formLabels
       = user_form.label :name
       = user_form.text_field :name
   
       &nbsp;&nbsp;
     
-      paid &nbsp;&nbsp;
+      Paid &nbsp;&nbsp;
       %input{:type => "text"}/
       &nbsp;&nbsp;
       
-      proportion:
+      Proportion:
       %input{:type => "text"}/
       %br/
 
-    %p
+    %p#formLabels
       = form.submit
 

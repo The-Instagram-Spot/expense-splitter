@@ -1,3 +1,5 @@
+%h1#pageTitle Creating New Group
+ 
 = form_with scope: :group, url: groups_path, local: true do |form|
   - if @groups.errors.any?
     #error_explanation
@@ -8,14 +10,15 @@
       %ul
         - @groups.errors.full_messages.each do |msg|
           %li= msg
-  %p
+  %p#formLabels
     = form.label :group_name
     %br/
     = form.text_field :group_name
-  %p
+  %p#formLabels
     = form.label :group_description
     %br/
     = form.text_area :group_description
   %p
     = form.submit
-= link_to 'Back', groups_path
+%br/
+%span#linkButtons= link_to 'Back', groups_path

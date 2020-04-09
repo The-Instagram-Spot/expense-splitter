@@ -1,19 +1,79 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+#pageTitle{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: black;
+ font-size: 35px;
  
- /* app/asssets/javascripts/application.css */
- /*= require toastr
+}
+
+#formLabels{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: black;
+ font-size: 16px;
+}
+
+#linkButtons{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: #4CAF50;
+}
+
+#sectionTitle{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: black;
+}
+
+#sectionInfo{
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ color: black;
+ font-size: 20px;
+}
+
+#groupTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#groupTable  td, #groupTable  th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#groupTable  tr:nth-child(even){background-color: #f2f2f2;}
+
+#groupTable  tr:hover {background-color: #ddd;}
+
+#groupTable  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+#transactionTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#transactionTable  td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 25%;
+}
+
+#transactionTable  tr:nth-child(even){background-color: #f2f2f2;}
+
+#transactionTable  tr:hover {background-color: #ddd;}
+
+#transactionTable  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  width: 25%;
+}
 
