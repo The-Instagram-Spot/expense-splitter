@@ -14,8 +14,19 @@
     %br
     
     = render 'transactions/form'
+        
+    - @transactions.users.each do |user|
+        = user.name
+        - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
+            owes
+            = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+        - else
+            is owed
+            = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
     
-    = render @transactions.users
-    
+        = link_to 'Edit', update_users_path(users: {name: user.name}, transaction_id: @transactions.id, group_id: @transactions.group.id), method: :patch
+        = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
+    %br
+        
     %div#navButtons    
         = link_to 'Back', group_path(@transactions.group)

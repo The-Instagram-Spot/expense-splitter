@@ -12,8 +12,7 @@
 
 %table#transactionTable 
   %tr
-    %td= transaction.name
+    %td= link_to transaction.name, group_transaction_path(transaction.group, transaction)
     %td= number_to_currency(transaction.amount) 
-    %td= link_to 'Show', group_transaction_path(transaction.group, transaction)
     %td= link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
     %td= link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }

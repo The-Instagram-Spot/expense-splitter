@@ -21,9 +21,8 @@
         %th
       - @user.groups.each do |group|
         %tr
-          %td= group.group_name
+          %td= link_to group.group_name, group_path(group)
           %td= group.group_description
-          %td= link_to 'Show', group_path(group)
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
           
@@ -31,9 +30,7 @@
 
     - if current_user.nil?
       %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'
-    - else
-      //= link_to 'Go to App' , app_dashboard_index_path, class: 'login-button'
-      //= link_to 'Log out', destroy_user_session_path, method: :delete
+  
     
     - if user_signed_in?
       %div#navButtons

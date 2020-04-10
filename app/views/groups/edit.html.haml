@@ -12,6 +12,7 @@
     %p#formLabels
       = form.submit
       
+// <<<<<<< HEAD
     %p#sectionTitle
       %strong Add members:
       = form_for (:users) do |user_form|
@@ -21,6 +22,8 @@
           = user_form.text_field :email
         %p#formLabels
           = user_form.submit 
+
+// >>>>>>> fd62b85af85480cac9d3ed20895e13b2a9b87c30
       
   %div#navButtons
     = link_to 'Back', groups_path

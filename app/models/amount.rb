@@ -1,4 +1,4 @@
 class Amount < ApplicationRecord
-    belongs_to :tx, class_name: 'Transaction'
+    belongs_to :txn, class_name: 'Transaction', foreign_key: "transaction_id"
     belongs_to :user
 end
