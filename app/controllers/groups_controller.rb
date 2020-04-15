@@ -30,6 +30,38 @@ class GroupsController < ApplicationController
     end
   end
   
+  def settle_up
+    @group = Group.find(params[:group_id])
+    @users = @group.users
+    @transactions = @group.transactions
+    
+    @isowed = Hash.new
+    @owes = Hash.new
+    
+    @users.each do |user| #for each user
+      @total = 0
+      if(!user.transactions.empty?) #if user has transactions
+        @transactions.each do |trx| #for each transaction in the group
+          if(user.transactions.exists?(trx.id)) #if the transaction is in the user's transactions
+            @total = @total + (user.amounts.find_by(user_id: user.id, transaction_id: trx.id).difference) #add up user differences
+          end
+        end
+      end
+      if(@total > 0)
+        #@isowed << user
+        @isowed[user] = @total
+      elsif(@total < 0)
+        #@owes << user
+        @owes[user] = @total
+      end
+    end
+    
+    @isowed.sort_by { |user, total| total }
+    @owes.sort_by { |user, total| total }
+  
+    render 'settle_up'
+  end
+  
   def add_members
     @group = Group.find(params[:group_id])
   end

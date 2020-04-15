@@ -1,0 +1,38 @@
+//- @users.each do |user|
+//  -if(!user.transactions.empty?)
+//    = user.name
+//    - @total = 0
+//    - @transactions.each do |trx|
+//      - if(user.transactions.exists?(trx.id))
+//        - @total = @total + (user.amounts.find_by(user_id: user.id, transaction_id: trx.id).difference)
+//    - if(@total == 0)
+//      has broke even
+//    - elsif (@total > 0)
+//      is owed
+//      = @total
+//    - elsif (@total < 0)
+//      owes
+//      = @total
+//    %br
+People who owe money: 
+%br
+- @owes.each do |user, total|
+  = user.name
+  = total
+  %br
+
+%br
+
+People who are owed money:
+%br
+- @isowed.each do |user, total|
+  = user.name
+  = total
+  %br
+  
+%br
+
+
+
+= link_to 'Back', group_path(@group)
+= link_to 'Group has settled up'

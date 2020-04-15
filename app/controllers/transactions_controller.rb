@@ -50,7 +50,7 @@ class TransactionsController < ApplicationController
             if((@user.in? @transactions.group.users) && (!@user.in? @transactions.users)) #check if user is in the group and not already in the transaction
                 @transactions.users << @user
                 @difference = @paid.to_d - @proportion.to_d
-                @amounts.find_by(transaction_id: @transactions.id).update_attributes(difference: @difference)
+                @amounts.find_by(transaction_id: @transactions.id).update_attributes(difference: @difference, paid: @paid)
             end
             
             if @transactions.update(params.permit(:id, :name, :amount, users_attributes:[:name]))
