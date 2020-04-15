@@ -28,5 +28,5 @@
         = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
     %br
         
-    %div#navButtons    
+    %div#navButtons
         = link_to 'Back', group_path(@transactions.group)

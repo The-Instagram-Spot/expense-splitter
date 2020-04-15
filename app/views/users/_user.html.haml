@@ -1,3 +1,3 @@
 %p
   = user.name
-  = link_to 'Remove from group', group_user_path(user), method: :delete
+  %span#linkButton= link_to 'Remove from group', group_user_path(user), method: :delete

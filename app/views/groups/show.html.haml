@@ -1,16 +1,36 @@
+// %script{:type => "text/javascript",
+//         :src  => "/script.js"}
+:javascript
+  function myFunction() {
+    var x = document.getElementById("hiddenForm");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
 %div#body  
-  // %p#pageTitle
   %strong#pageTitle Group Name:
   %span#pageTitle= @groups.group_name
   %p#sectionInfo
     %strong Description:
     = @groups.group_description
     
-  = link_to 'Add Members', group_add_members_path(@groups)
-  
+    
   %p#sectionInfo
     %strong Members:
   = render @groups.users
+  // = form_with(model: [@groups, @groups.users.build], local: true) do |form|
+  //   // = form_for (:users) do |user_form|
+  //   %p#formLabels
+  //     = form.label :email
+  //     %br/
+  //     = from.text_field :email
+  //   %p#formLabels
+  //     = form.submit
+  %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
   
     
   %h3#sectionTitle Transactions:
@@ -20,20 +40,22 @@
       %th Total
       %th
       %th
-      %th
   = render @groups.transactions
   
-  %h3#sectionTitle Add a transaction:
-  = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
-    %p#formLabels
-      = form.label :name
-      = form.text_field :name, required: true
-    %p#formLabels
-      = form.label :amount
-      = form.text_field :amount, required: true
-    %p#formLabels
-      = form.submit 
- 
-  %div#navButtons
+  %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
+  
+  %div#hiddenForm
+    %h3#sectionTitle New Transaction:
+    = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
+      %p#formLabels
+        = form.label :name
+        = form.text_field :name, required: true
+      %p#formLabels
+        = form.label :amount
+        = form.text_field :amount, required: true
+      %p#formLabels
+        = form.submit 
+   
+  %span#navButtons
     = link_to 'Home', groups_path
-    = link_to 'Edit', edit_group_path(@groups)
+

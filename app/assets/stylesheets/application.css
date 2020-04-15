@@ -13,13 +13,42 @@
 
 #linkButtons{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #4CAF50;
+ color: white;
+ background-color: #fdfd96;
+ margin-top:10px;
+ width:15%;
+ /*padding: 3px 5px;*/
+ position:relative;
+ text-decoration: none;
+ text-transform: uppercase;
+ text-align: center;
+ box-shadow: 0 3px 0 #e9e959;
 }
+
+#linkButtons:active {
+  box-shadow: none;
+  top: 5px;
+}
+
 
 #navButtons{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: #4CAF50;
- text-align: right;
+ /*text-align: right;*/
+ float: right;
+ color: white;
+ background-color: #9fbfdf;
+ /*margin-top:10px;*/
+ width:15%;
+ display: inline;
+ text-decoration: none;
+ text-transform: uppercase;
+ text-align: center;
+ box-shadow: 0 3px 0 #6699cc;
+}
+
+#navButtons:active{
+  box-shadow: none;
+  top: 5px;
 }
 
 #sectionTitle{
@@ -56,8 +85,6 @@
   color: white;
 }
 
-
-
 #transactionTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -78,23 +105,39 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  /*background-color: #002e63;*/
-  background-color: #6d9bc3;
+  background-color: #3d7ab8;
   color: white;
   width: 16%;
 }
 
 #body{
-    /*margin-top:0;*/
-    /*margin-right:auto;*/
-    /*margin-bottom:0;*/
-    /*margin-left:auto;*/
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     width: 80%;
-    height:60%;
+    height:100%;
     margin: 0 auto;
     background-color:#F0F0F0 ;
+}
+
+#hiddenForm{
+    width: 50%;
+    background-color: #ebecf0;
+    display: none;
+}
+
+#showFormButton{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 15px;
+    background-color: #64cbaf;
+    margin-top:10px;
+    width:15%;
+    /*padding: 3px 5px;*/
+    /*position:relative;*/
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 3px 0 #49aa8f;
+    border: none;
 }
