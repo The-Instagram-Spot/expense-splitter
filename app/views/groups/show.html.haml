@@ -42,6 +42,7 @@
       %th
   = render @groups.transactions
   
+<<<<<<< HEAD
   %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
   
   %div#hiddenForm
@@ -57,5 +58,20 @@
         = form.submit 
    
   %span#navButtons
+=======
+  %h3#sectionTitle Add a transaction:
+  = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
+    %p#formLabels
+      = form.label :name
+      = form.text_field :name, required: true
+    %p#formLabels
+      = form.label :amount
+      = form.text_field :amount, required: true
+    %p#formLabels
+      = form.submit
+ 
+  %div#navButtons
+    //= link_to 'Settle Up', settle_up_path(@groups)
+>>>>>>> 00ef8de81ffe7916e340c29b43f6c2eba88d1149
     = link_to 'Home', groups_path
 
