@@ -48,16 +48,38 @@ class GroupsController < ApplicationController
         end
       end
       if(@total > 0)
-        #@isowed << user
         @isowed[user] = @total
       elsif(@total < 0)
-        #@owes << user
         @owes[user] = @total
       end
     end
     
-    @isowed.sort_by { |user, total| total }
-    @owes.sort_by { |user, total| total }
+    @isowed = (@isowed.sort_by{|user, total| -total}).to_h
+    @owes = (@owes.sort_by{|user, total| total}).to_h
+    
+    @settle = Hash.new {|is_owed, amount| is_owed[amount] = Hash.new(0)}
+    
+    
+    @isowed.each do |owed_user, owed_total|
+      @owes.each do |owes_user, owes_total|
+        @total = owed_total + owes_total
+        if(owes_total < 0)
+          
+          if(@total >= 0)
+            @owes[owes_user] = 0
+            @isowed[owed_user] = @total
+            @settle[owes_user][owed_user] = owes_total
+          
+          elsif(@total < 0)
+            @isowed[owed_user] = 0
+            @owes[owes_user] = @total
+            @settle[owes_user][owed_user] = @total
+
+          end 
+        end
+        @isowed[owed_user] = @total
+      end
+    end
   
     render 'settle_up'
   end
