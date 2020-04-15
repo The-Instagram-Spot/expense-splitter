@@ -5,10 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(name: "Sausha-Rae Brown", email: "sausha@tamu.edu", password: "password")
-User.create!(name: "Allison Kinnamore", email: "allison@tamu.edu", password: "password")
-User.create!(name:  "Ben Jirka" , email: "ben@tamu.edu", password: "password")
-User.create!(name:  "Eric Anderson", email: "eric@tamu.edu", password: "password")
+
+#User.create(name: "Elizabeth Christman", email: "elizabeth@tamu.edu", password: "password")
+User.create(name: "Sausha-Rae Brown", email: "sausha@tamu.edu", password: "password")
+User.create(name: "Allison Kinnamore", email: "allison@tamu.edu", password: "password")
+User.create(name:  "Ben Jirka" , email: "ben@tamu.edu", password: "password")
+User.create(name:  "Eric Anderson", email: "eric@tamu.edu", password: "password")
 User.create(name:  "Faheem Noorani", email: "faheem@tamu.edu", password: "password")
 User.create(name:  "Jack Shirley", email: "jack@tamu.edu", password: "password")
 User.create(name:  "Jenny Quinn", email: "jenny@tamu.edu", password: "password")
