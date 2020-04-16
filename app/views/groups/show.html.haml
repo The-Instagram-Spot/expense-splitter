@@ -17,7 +17,7 @@
     
     
   %div#membersBox
-    %strong Members:
+    %div#membeersHeader Members:
     = render @groups.users
     %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
   
@@ -48,8 +48,8 @@
         %p#formLabels
           = form.submit 
    
-  %span#navButtons
-    //= link_to 'Settle Up', settle_up_path(@groups)
-
-    = link_to 'Home', groups_path
+  // %button.btn#navButtons
+  %span#navButtons= link_to 'Home', groups_path
+  //= link_to 'Settle Up', settle_up_path(@groups)
+    
 

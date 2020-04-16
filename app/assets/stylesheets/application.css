@@ -23,6 +23,7 @@
  text-align: center;
  box-shadow: 0 3px 0 #ed801e;
  margin: 0 auto;
+ border-radius: 3px;
 }
 
 #linkButtons:active {
@@ -44,6 +45,7 @@
  text-transform: uppercase;
  text-align: center;
  box-shadow: 0 3px 0 #6699cc;
+ border-radius: 3px;
 }
 
 #navButtons:active{
@@ -140,6 +142,7 @@
     text-align: center;
     box-shadow: 0 3px 0 #49aa8f;
     border: none;
+    border-radius: 3px;
 }
 
 #membersBox{
@@ -148,5 +151,29 @@
     font-size: 15px;
     float: right;
     background-color: #ebecf0;
-    width: 25%;
+    width: 23%;
+    padding-left: 5px;
+}
+
+#deleteButton{
+    float: right;
+    background-color: #ebecf0;
+    border: none;
+    color: black;
+    padding: 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#deleteButton:hover{
+    background-color: #ff6961;    
+}
+
+#membeersHeader{
+    background-color: #ed801e;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
 }
