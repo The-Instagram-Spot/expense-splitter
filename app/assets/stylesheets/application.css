@@ -34,18 +34,16 @@
 
 #navButtons{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- /*text-align: right;*/
  float: right;
  color: white;
  background-color: #9fbfdf;
- /*margin-top:10px;*/
  width:15%;
- display: inline;
  text-decoration: none;
  text-transform: uppercase;
  text-align: center;
  box-shadow: 0 3px 0 #6699cc;
  border-radius: 3px;
+ display: inline-block;
 }
 
 #navButtons:active{
@@ -91,7 +89,8 @@
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 75%;
-  display: inline-table;
+  /*display: inline-table;*/
+  /*float: left;*/
 }
 
 #transactionTable  td, #transactionTable  th{
@@ -120,9 +119,12 @@
     padding-right: 20px;
     width: 80%;
     height:100%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     background-color:#F0F0F0 ;
-    /*display: inherit;*/
+    display: inline-block;
+    /*position: absolute;*/
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 #hiddenForm{
@@ -145,19 +147,28 @@
     box-shadow: 0 3px 0 #49aa8f;
     border: none;
     border-radius: 3px;
+    /*float: left;*/
 }
 
 #membersBox{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: black;
     font-size: 15px;
-    float: right;
     background-color: #ebecf0;
     width: 23%;
     padding-left: 5px;
-    /*height:15%;*/
+    height:15%;
     overflow: scroll;
     display: inline-block;
+    float: right;
+}
+
+#membersHeader{
+    background-color: #ed801e;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
 }
 
 #deleteButton{
@@ -175,10 +186,7 @@
     background-color: #ff6961;    
 }
 
-#membersHeader{
-    background-color: #ed801e;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-    font-size: 20px;
+#leftDiv{
+    float: left;
+    display: inline-block;
 }

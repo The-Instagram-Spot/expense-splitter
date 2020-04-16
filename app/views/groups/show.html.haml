@@ -11,16 +11,21 @@
 %div#body  
   %strong#pageTitle Group Name:
   %span#pageTitle= @groups.group_name
+  %span#navButtons= link_to 'Home', groups_path
   %p#sectionInfo
     %strong Description:
     = @groups.group_description
+  
+  
     
   %div#membersBox
     %div#membersHeader Members:
-    = render @groups.users
+    %span= render @groups.users
     %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
-    
-  %div  
+
+ 
+
+  %div
     %h3#sectionTitle Transactions:
     %table#transactionTable 
       %tr
@@ -28,11 +33,10 @@
         %th Total
         %th
         %th
-    = render @groups.transactions
-  
-  
-  
-  %span 
+      = render @groups.transactions
+      
+
+  %div 
     %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
     
     %div#hiddenForm
@@ -46,9 +50,6 @@
           = form.text_field :amount, required: true
         %p#formLabels
           = form.submit 
-   
-  // %button.btn#navButtons
-  %span#navButtons= link_to 'Home', groups_path
   //= link_to 'Settle Up', settle_up_path(@groups)
-    
-
+  
+  
