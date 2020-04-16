@@ -14,15 +14,15 @@
 #linkButtons{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: white;
- background-color: #fdfd96;
+ background-color: #f2a35c;
  margin-top:10px;
- width:15%;
- /*padding: 3px 5px;*/
- position:relative;
+ width:70%;
+ padding: 3px 5px;
  text-decoration: none;
  text-transform: uppercase;
  text-align: center;
- box-shadow: 0 3px 0 #e9e959;
+ box-shadow: 0 3px 0 #ed801e;
+ margin: 0 auto;
 }
 
 #linkButtons:active {
@@ -88,7 +88,7 @@
 #transactionTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 75%;
 }
 
 #transactionTable  td, #transactionTable  th{
@@ -133,11 +133,20 @@
     font-size: 15px;
     background-color: #64cbaf;
     margin-top:10px;
-    width:15%;
-    /*padding: 3px 5px;*/
+    width:20%;
+    padding: 5px 5px;
     /*position:relative;*/
     text-transform: uppercase;
     text-align: center;
     box-shadow: 0 3px 0 #49aa8f;
     border: none;
+}
+
+#membersBox{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 15px;
+    float: right;
+    background-color: #ebecf0;
+    width: 25%;
 }

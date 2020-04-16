@@ -1,3 +1,8 @@
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
 %p
   = user.name
-  %span#linkButton= link_to 'Remove from group', group_user_path(user), method: :delete
+  // %span#linkButton= link_to 'Remove from group', group_user_path(user), method: :delete
+  
+  %button.btn
+    %i.fa.fa-trash
+    = link_to '', group_user_path(user), method: :delete
