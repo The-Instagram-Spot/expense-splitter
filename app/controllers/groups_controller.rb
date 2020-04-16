@@ -60,25 +60,26 @@ class GroupsController < ApplicationController
     @settle = Hash.new {|is_owed, amount| is_owed[amount] = Hash.new(0)}
     
     
-    @isowed.each do |owed_user, owed_total|
-      @owes.each do |owes_user, owes_total|
-        @total = owed_total + owes_total
-        if(owes_total < 0)
-          
-          if(@total >= 0)
-            @owes[owes_user] = 0
-            @isowed[owed_user] = @total
-            @settle[owes_user][owed_user] = owes_total
-          
-          elsif(@total < 0)
-            @isowed[owed_user] = 0
-            @owes[owes_user] = @total
-            @settle[owes_user][owed_user] = @total
-
-          end 
+    @isowed.each do |owed_user, owed_amount|
+      @total = owed_amount
+      
+      @owes.each do |owes_user, owes_amount|
+        if(owed_amount + owes_amount > 0)
+          @owes[owes_user] = 0
+          @total += owes_amount
+          @settle[owes_user][owed_user] = owes_amount
+        
+        elsif(owed_amount + owes_amount < 0)
+          @total = 0
+          @owes[owes_user] = owes_amount + owed_amount
+          @settle[owes_user][owed_user] = owed_amount
+        
+        elsif(@isowed[owed_user] == 0)
+          break
         end
-        @isowed[owed_user] = @total
       end
+      @isowed[owed_user] = @total
+      
     end
   
     render 'settle_up'
