@@ -15,21 +15,20 @@
     %strong Description:
     = @groups.group_description
     
-    
   %div#membersBox
-    %div#membeersHeader Members:
+    %div#membersHeader Members:
     = render @groups.users
     %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
-  
     
-  %h3#sectionTitle Transactions:
-  %table#transactionTable 
-    %tr
-      %th Name
-      %th Total
-      %th
-      %th
-  = render @groups.transactions
+  %div  
+    %h3#sectionTitle Transactions:
+    %table#transactionTable 
+      %tr
+        %th Name
+        %th Total
+        %th
+        %th
+    = render @groups.transactions
   
   
   
