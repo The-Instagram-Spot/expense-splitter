@@ -2,6 +2,10 @@
 %br/
 
 = form_with(model: @transactions, url: transaction_update_users_path(@transactions), local: true) do |form|
+  - if @transactions.errors.any?
+    - @transactions.errors.full_messages.each do |msg|
+      %li= msg
+          
   = form_for (:users) do |user_form|
     %p#formLabels
       = user_form.label :name

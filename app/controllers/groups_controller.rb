@@ -99,17 +99,29 @@ class GroupsController < ApplicationController
   
   def update
     @groups = Group.find(params[:id])
-    if(params[:users][:email] != "")
+    if(params.has_key?(:users) && params[:users][:email] != "")
       @user = User.find_by(email: params[:users][:email])
-      if(!(@groups.users.exists?(@user.id)) && !@user.nil?)
-        @groups.users << @user
+      if(@user.nil?)
+        @groups.errors[:base] << "User does not exist"
+        render 'add_members'
+        return
       end
+      
+      if(@groups.users.exists?(@user.id))
+        @groups.errors[:base] << "User is already in this group"
+        render 'add_members'
+        return
+      end
+      
+      @groups.users << @user
     end
     
     if @groups.update(group_user_params)
       redirect_to @groups
+      return
     else
-      render 'edit'
+      render 'show'
+      return
     end
   end
   
