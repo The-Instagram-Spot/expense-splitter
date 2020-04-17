@@ -23,10 +23,9 @@ People who are owed money:
     = owes_user.name
     owes
     = user.name
-    = number_to_currency(-amount)
+    = number_to_currency(amount)
     %br
 
 
 
 = link_to 'Back', group_path(@group)
-= link_to 'Group has settled up'
