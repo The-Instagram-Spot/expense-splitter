@@ -5,20 +5,17 @@
     %meta{:content => "profile email", :name => "google-signin-scope"}/
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
-  
-  %body
-    %h1 
-      = @user.name
-    
+
   %div#body
-    %strong#pageTitle Groups
+    %span#sectionTitle= @user.name
+    %div#pageTitle
+      %strong Groups
     %br
     %br
     %table#groupTable 
       %tr
         %th Name
         %th Description
-        %th
         %th
         %th
       - @user.groups.each do |group|
@@ -28,7 +25,7 @@
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
           
-    %p#linkButtons= link_to 'New Group', new_group_path
+    %div#showFormButton= link_to 'New Group', new_group_path
 
     - if current_user.nil?
       %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'

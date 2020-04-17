@@ -1,3 +1,14 @@
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
 %p
   = user.name
-  = link_to 'Remove from group', group_user_path(user), method: :delete
+  // %span#linkButton= link_to 'Remove from group', group_user_path(user), method: :delete
+  
+  %button.btn#deleteButton
+    // %i.fa.fa-trash
+    %span=link_to'X', group_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: "deleteButton"
+    
+  //   = button_to "Add", new_admin_course_path, :id => "open-contacts-dialog-btn", |
+  // :class => "inbox-sf-add-btn tip", :method => :get                          |
+
+    
+    
