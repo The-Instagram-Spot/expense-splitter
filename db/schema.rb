@@ -34,13 +34,6 @@ ActiveRecord::Schema.define(version: 2020_04_15_023944) do
     t.integer "owner_id"
   end
 
-  create_table "member_of_groups", force: :cascade do |t|
-    t.integer "group_id"
-    t.integer "person_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "memberships", force: :cascade do |t|
     t.bigint "group_id"
     t.bigint "user_id"
