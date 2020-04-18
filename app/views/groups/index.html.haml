@@ -7,9 +7,19 @@
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
 
   %div#body
+    .topnav
+      - if current_user.nil?
+        = link_to 'Sign in', new_user_session_path, class:'linkButtons'
+      - if user_signed_in?
+        = link_to('Logout', destroy_user_session_path, :method => :delete)
+        = link_to('Edit profile', edit_user_registration_path)
+      - else
+        = link_to('Register', new_user_registration_path)
+        = link_to('Login', new_user_session_path)
+
+      
     %span#sectionTitle= @user.name
-    %div#pageTitle
-      %strong Groups
+    %div#pageTitle Groups
     %br
     %br
     %table#groupTable 
@@ -26,22 +36,3 @@
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
           
     %div#showFormButton= link_to 'New Group', new_group_path
-
-    - if current_user.nil?
-      %span#linkButtons= link_to 'Sign in', new_user_session_path, class:'linkButtons'
-  
-    
-    - if user_signed_in?
-      %div#navButtons
-        %span= link_to('Edit profile', edit_user_registration_path)
-        %span= link_to('Logout', destroy_user_session_path, :method => :delete)
-    - else
-      %div#navButtons
-        %span= link_to('Register', new_user_registration_path)
-        %span= link_to('Login', new_user_session_path)
-
-      
-
-
-      
-

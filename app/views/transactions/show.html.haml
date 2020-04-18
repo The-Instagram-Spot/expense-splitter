@@ -1,6 +1,8 @@
 %div#body   
-    %strong#pageTitle Transaction:
-    %span#pageTitle= @transactions.name
+    .topnav
+        = link_to 'Back', group_path(@transactions.group)
+        
+    %div#pageTitle= @transactions.name
     // &nbsp;
     %br
     %span#sectionInfo= number_to_currency(@transactions.amount) 
@@ -30,6 +32,4 @@
         //= link_to 'Edit', update_users_path(users: {name: user.name}, transaction_id: @transactions.id, group_id: @transactions.group.id), method: :patch
         = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
         %br
-        
-    %div#navButtons    
-        = link_to 'Save', group_path(@transactions.group)
+

@@ -8,23 +8,24 @@
     }
   }
   
-%div#body  
-  %strong#pageTitle Group Name:
-  %span#pageTitle= @groups.group_name
-  %span#navButtons= link_to 'Home', groups_path
-  %p#sectionInfo
-    %strong Description:
-    = @groups.group_description
-  
-  
-    
+
+%div#body
+  .topnav
+    = link_to 'Settle Up', settle_up_path(@groups)
+    = link_to 'Edit', edit_group_path(@groups)
+    = link_to 'Home', groups_path
+
+  %div#pageTitle= @groups.group_name
+  %div#sectionInfo= @groups.group_description
+
   %div#membersBox
     %div#membersHeader Members:
-    %span= render @groups.users
+    = render @groups.users
     %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
 
   %div
-    %h3#sectionTitle Transactions:
+    %br
+    %span#sectionTitle Transactions:
     %table#transactionTable 
       %tr
         %th Name
@@ -36,22 +37,19 @@
 
   %div 
     %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
-    
     %div#hiddenForm
-      %h3#sectionTitle New Transaction:
+      %h4#sectionInfo New Transaction:
       = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
         %p#formLabels
           = form.label :name
+          %br/
           = form.text_field :name, required: true
         %p#formLabels
           = form.label :amount
+          %br/
           = form.text_field :amount, required: true
         %p#formLabels
           = form.submit 
   //= link_to 'Settle Up', settle_up_path(@groups)
   
   
-  %div#navButtons
-    = link_to 'Settle Up', settle_up_path(@groups)
-    = link_to 'Home', groups_path
-    = link_to 'Edit', edit_group_path(@groups)

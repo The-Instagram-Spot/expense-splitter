@@ -1,34 +1,70 @@
+.topnav {
+  overflow: hidden;
+  background-color: #3d7ab8;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.topnav a {
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #9fbfdf;
+  color: black;
+}
+
+#body{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 80%;
+  height:100%;
+  /*margin: 0 auto;*/
+  background-color:#ffffff ;
+  display: inline-block;
+  /*position: absolute;*/
+  margin-left: 50%;
+  transform: translateX(-50%);
+  // display:  inherit;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
 #pageTitle{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: black;
  font-size: 35px;
- /*background-color: #a6a6a6  ;*/
+//  background-color: #3d7ab8;
+ width:100%;
+ padding-top: 10px;
 }
 
 #formLabels{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: black;
  font-size: 16px;
+ padding-left: 10px;
+//  width:40px;
 }
 
 #linkButtons{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: white;
- background-color: #f2a35c;
+ background-color: #64cbaf;
  margin-top:10px;
  width:70%;
  padding: 3px 5px;
  text-decoration: none;
  text-transform: uppercase;
  text-align: center;
- box-shadow: 0 3px 0 #ed801e;
+ box-shadow: 0 3px 0 #49aa8f;
  margin: 0 auto;
  border-radius: 3px;
-}
-
-#linkButtons:active {
-  box-shadow: none;
-  top: 5px;
 }
 
 
@@ -43,7 +79,6 @@
  text-align: center;
  box-shadow: 0 3px 0 #6699cc;
  border-radius: 3px;
- display: inline-block;
 }
 
 #navButtons:active{
@@ -54,6 +89,8 @@
 #sectionTitle{
  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
  color: black;
+ font-size: 25px;
+ padding-top: 5px;
 }
 
 #sectionInfo{
@@ -81,8 +118,8 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #3d7ab8 ;
-  color: white;
+  background-color: #bfc2cf ;
+  color: black;
 }
 
 #transactionTable {
@@ -107,86 +144,91 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #3d7ab8;
-  color: white;
+  background-color: #bfc2cf;
+  color: black;
   width: 16%;
 }
 
-#body{
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 80%;
-    height:100%;
-    /*margin: 0 auto;*/
-    background-color:#F0F0F0 ;
-    display: inline-block;
-    /*position: absolute;*/
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
+
 
 #hiddenForm{
-    width: 50%;
-    background-color: #ebecf0;
-    display: none;
+  width: 50%;
+  // background-color: #ebecf0;
+  display: none;
+  padding-top: 10px;
 }
 
 #showFormButton{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 15px;
-    background-color: #64cbaf;
-    margin-top:10px;
-    width:20%;
-    padding: 5px 5px;
-    /*position:relative;*/
-    text-transform: uppercase;
-    text-align: center;
-    box-shadow: 0 3px 0 #49aa8f;
-    border: none;
-    border-radius: 3px;
-    /*float: left;*/
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 15px;
+  background-color: #64cbaf;
+  margin-top:10px;
+  width:20%;
+  padding: 5px 5px;
+  /*position:relative;*/
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 3px 0 #49aa8f;
+  border: none;
+  border-radius: 3px;
+  /*float: left;*/
 }
 
 #membersBox{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 15px;
-    background-color: #ebecf0;
-    width: 23%;
-    padding-left: 5px;
-    height:15%;
-    overflow: scroll;
-    display: inline-block;
-    float: right;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  // font-size: 15px;
+  background-color: #ebecf0;
+  border-left: 10px;
+  width: 23%;
+  padding-left: 5px;
+  // height:15%;
+  overflow: scroll;
+  display: block;
+  float: right;
 }
 
 #membersHeader{
-    background-color: #ed801e;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-    font-size: 20px;
+  background-color: #64cbaf;
+  width: 100%;
+  // font-weight: ;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 3px;
 }
 
-#deleteButton{
-    float: right;
-    background-color: #ebecf0;
-    border: none;
-    color: black;
-    padding: 5px 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 3px;
+#member{
+  color: black;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-#deleteButton:hover{
-    background-color: #ff6961;    
+#member:hover{
+  background-color: #ddd;
+}
+
+a.deleteButton{
+  float: right;
+  // background-color: #ebecf0;
+  border: none;
+  color: black;
+  // padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.deleteButton:hover{
+  background-color: #ff6961;    
 }
 
 #leftDiv{
-    float: left;
-    display: inline-block;
+  float: left;
+  display: inline-block;
 }

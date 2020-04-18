@@ -1,5 +1,7 @@
 %div#body
-  %h1#pageTitle Creating New Group
+  .topnav
+    = link_to 'Back', groups_path
+  %div#pageTitle Creating New Group
    
   = form_with scope: :group, url: groups_path, local: true do |form|
     - if @groups.errors.any?
@@ -22,4 +24,4 @@
     %p
       = form.submit
   %br/
-  %div#navButtons= link_to 'Back', groups_path
+

@@ -1,6 +1,9 @@
 %div#body  
-  %strong#pageTitle Edit Transaction:
-  %span#pageTitle= @transactions.name
+  .topnav 
+    = link_to 'Back', group_path(@transactions.group)
+
+  %div#pageTitle Edit Transaction:
+  %div#pageTitle= @transactions.name
   
   = form_with(model: [@groups, @transactions], local: true) do |form|
     %p#formLabels
@@ -14,6 +17,4 @@
       &nbsp;&nbsp;
       
       %p#formLabels
-      = form.submit "Save Transaction Details"
-  %div#navButtons    
-    = link_to 'Back', group_path(@transactions.group)
+      = form.submit "Save Transaction Details"  
