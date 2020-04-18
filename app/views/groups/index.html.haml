@@ -8,6 +8,7 @@
 
   %div#body
     .topnav
+      DinDiv
       - if current_user.nil?
         = link_to 'Sign in', new_user_session_path, class:'linkButtons'
       - if user_signed_in?

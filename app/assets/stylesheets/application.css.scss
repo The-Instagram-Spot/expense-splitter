@@ -2,6 +2,9 @@
   overflow: hidden;
   background-color: #3d7ab8;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color:white;
+  font-size: 40px;
+  padding-left: 5px;
 }
 
 .topnav a {
@@ -17,6 +20,7 @@
   background-color: #9fbfdf;
   color: black;
 }
+
 
 #body{
   padding-bottom: 10px;
@@ -105,10 +109,14 @@
   width: 100%;
 }
 
-#groupTable  td, #groupTable  th {
+#groupTable td, #groupTable th {
   border: 1px solid #ddd;
   padding: 8px;
+  // text-decoration: none;
+  width:15%;
 }
+
+
 
 #groupTable  tr:nth-child(even){background-color: #f2f2f2;}
 
@@ -130,7 +138,7 @@
   /*float: left;*/
 }
 
-#transactionTable  td, #transactionTable  th{
+#transactionTable  td, #transactionTable th{
   border: 1px solid #ddd;
   padding: 8px;
   width: 16%;
@@ -207,6 +215,11 @@
 
 #member:hover{
   background-color: #ddd;
+}
+
+a{
+  color: black;
+  cursor: pointer;
 }
 
 a.deleteButton{

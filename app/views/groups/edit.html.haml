@@ -1,5 +1,8 @@
 %div#body
-  %strong#pageTitle Edit group
+  .topnav
+    DinDiv
+    = link_to 'Back', groups_path
+  %div#pageTitle Edit group
   = form_with(model: @groups, local: true) do |form|
     %p#formLabels
       = form.label :group_name
@@ -11,6 +14,3 @@
       = form.text_area :group_description
     %p#formLabels
       = form.submit
-      
-  %div#navButtons
-    = link_to 'Back', groups_path

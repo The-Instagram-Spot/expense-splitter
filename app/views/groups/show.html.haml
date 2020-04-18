@@ -11,6 +11,7 @@
 
 %div#body
   .topnav
+    DinDiv
     = link_to 'Settle Up', settle_up_path(@groups)
     = link_to 'Edit', edit_group_path(@groups)
     = link_to 'Home', groups_path
@@ -50,6 +51,5 @@
           = form.text_field :amount, required: true
         %p#formLabels
           = form.submit 
-  //= link_to 'Settle Up', settle_up_path(@groups)
   
   
