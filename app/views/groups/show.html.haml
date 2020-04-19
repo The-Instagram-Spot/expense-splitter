@@ -1,6 +1,15 @@
 :javascript
-  function myFunction() {
-    var x = document.getElementById("hiddenForm");
+  function showNewTransaction() {
+    var x = document.getElementById("hiddenTransactionForm");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showNewMember() {
+    var x = document.getElementById("hiddenMemberForm");
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
@@ -22,7 +31,18 @@
   %div#membersBox
     %div#membersHeader Members:
     = render @groups.users
-    %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
+    %button#showMemberFormButton{:onclick => "showNewMember()"} Add Member
+
+    %div#hiddenMemberForm
+      = form_with(model: @group, local: true) do |form|
+        = form_for (:users) do |user_form|
+          %p
+            = user_form.label :email
+            %br/
+            = user_form.text_field :email
+          %p
+            = user_form.submit
+      
 
   %div
     %br
@@ -37,8 +57,8 @@
       
 
   %div 
-    %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
-    %div#hiddenForm
+    %button#showFormButton{:onclick => "showNewTransaction()"} Add New Transaction
+    %div#hiddenTransactionForm
       %h4#sectionInfo New Transaction:
       = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
         %p#formLabels

@@ -2,10 +2,11 @@
     .topnav
         DinDiv
         = link_to 'Back', group_path(@group)
-    %div#sectionInfo
+    %div#settleUp
         - @settle.each do |owes_user, owed_users|
             - owed_users.each do |user, amount|
                 = owes_user.name
+                owes
                 = user.name
                 = number_to_currency(amount)
             
