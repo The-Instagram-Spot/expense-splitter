@@ -1,11 +1,35 @@
-.topnav {
+// https://icons8.com/icons/set/money-transfer
+
+.logintopnav {
   overflow: hidden;
-  background-color: #3d7ab8;
+  background-color: white;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color:white;
-  font-size: 40px;
+  color:#3d7ab8;
+  font-size: 30px;
   padding-left: 5px;
+  margin: auto;
+  // display: inline-block;
+  vertical-align: top;
 }
+
+.logintopnav a {
+  color: white;
+  text-decoration: none;
+  background-color: #3d7ab8;
+  padding: 8px;
+  border-radius: 5px;
+  float: right;
+  font-size: 20px;
+}
+
+img.images{
+  width: 40px;
+  height: 40px;
+  // padding-top: 10px;
+  // display: inline-block;
+  vertical-align: top;
+}
+
 
 .topnav a {
   float: right;
@@ -21,6 +45,25 @@
   color: black;
 }
 
+a.signInButton{
+  display: inline-block;
+  background: #3d7ab8;
+  color: white;
+  width: 190px;
+  border-radius: 3px;
+  border: thin solid #71a0d0;
+  box-shadow: 0px 3px 0px #71a0d0;
+  padding: 3px;
+  // white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+a.signInButton :active{
+  box-shadow: none;
+  top: 5px;
+}
 
 #body{
   padding-bottom: 10px;
@@ -37,6 +80,30 @@
   transform: translateX(-10%);
   // display:  inherit;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#login{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 45%;
+  height:100%;
+  background-color:#ffffff ;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 30px;
 }
 
 #pageTitle{
@@ -102,8 +169,6 @@
   // text-decoration: none;
   width:15%;
 }
-
-
 
 #groupTable  tr:nth-child(even){background-color: #f2f2f2;}
 
