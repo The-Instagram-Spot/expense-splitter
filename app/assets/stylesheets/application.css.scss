@@ -5,7 +5,7 @@
   background-color: white;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color:#3d7ab8;
-  font-size: 30px;
+  font-size: 40px;
   padding-left: 5px;
   margin: auto;
   // display: inline-block;
@@ -25,14 +25,26 @@
 img.images{
   width: 40px;
   height: 40px;
-  // padding-top: 10px;
+  padding-bottom: 3px;
   // display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #3d7ab8;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 40px;
+  padding-left: 5px;
+  // margin: auto;
+  // display: inline-block;
+  vertical-align: center;
+}
 
 .topnav a {
   float: right;
+  // background-color: #3d7ab8;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -67,9 +79,9 @@ a.signInButton :active{
 
 #body{
   padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-top: 10px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   width: 75%;
   height:100%;
   /*margin: 0 auto;*/
@@ -107,12 +119,14 @@ a.signInButton :active{
 }
 
 #pageTitle{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 35px;
-//  background-color: #3d7ab8;
- width:100%;
- padding-top: 10px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 35px;
+  //  background-color: #3d7ab8;
+  width:100%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #formLabels{
@@ -145,16 +159,20 @@ a.signInButton :active{
 }
 
 #sectionTitle{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 25px;
- padding-top: 5px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #sectionInfo{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 20px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #groupTable {
