@@ -6,20 +6,19 @@
     %meta{:content => "784382473737-ff9vrd0ejnns70uapa7vc2g7jfk675k7.apps.googleusercontent.com", :name => "google-signin-client_id"}/
     %script{:async => "", :defer => "defer", :src => "https://apis.google.com/js/platform.js"}
 
-  %div#body
-    .topnav
-      <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
-      DinDiv
-      - if current_user.nil?
-        = link_to 'Sign in', new_user_session_path, class:'linkButtons'
-      - if user_signed_in?
-        = link_to('Logout', destroy_user_session_path, :method => :delete)
-        = link_to('Edit profile', edit_user_registration_path)
-      - else
-        = link_to('Register', new_user_registration_path)
-        = link_to('Login', new_user_session_path)
+  .topnav
+    <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+    DinDiv
+    - if current_user.nil?
+      = link_to 'Sign in', new_user_session_path, class:'linkButtons'
+    - if user_signed_in?
+      = link_to('Logout', destroy_user_session_path, :method => :delete)
+      = link_to('Edit profile', edit_user_registration_path)
+    - else
+      = link_to('Register', new_user_registration_path)
+      = link_to('Login', new_user_session_path)
 
-      
+  %div#body
     %span#sectionTitle= @user.name
     %div#pageTitle Groups
     %br
@@ -37,4 +36,4 @@
           %td= link_to 'Edit', edit_group_path(group)
           %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
           
-    %div#showFormButton= link_to 'New Group', new_group_path
+    %div#showFormButton= link_to 'New Group', new_group_path, class: "newGroup"

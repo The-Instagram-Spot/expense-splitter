@@ -1,8 +1,9 @@
+.topnav
+  <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+  DinDiv
+  = link_to 'Back', groups_path
 %div#body
-  .topnav
-    <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
-    DinDiv
-    = link_to 'Back', groups_path
+
   %div#pageTitle Creating New Group
    
   = form_with scope: :group, url: groups_path, local: true do |form|
@@ -18,11 +19,11 @@
     %p#formLabels
       = form.label :group_name
       %br/
-      = form.text_field :group_name
+      = form.text_field :group_name, class: "textBox"
     %p#formLabels
       = form.label :group_description
       %br/
-      = form.text_area :group_description
+      = form.text_area :group_description, class: "textBox"
     %p
       = form.submit
   %br/

@@ -17,15 +17,14 @@
     }
   }
   
+.topnav
+  <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+  DinDiv
+  = link_to 'Settle Up', settle_up_path(@groups)
+  = link_to 'Edit', edit_group_path(@groups)
+  = link_to 'Home', groups_path
 
 %div#body
-  .topnav
-    <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
-    DinDiv
-    = link_to 'Settle Up', settle_up_path(@groups)
-    = link_to 'Edit', edit_group_path(@groups)
-    = link_to 'Home', groups_path
-
   %div#pageTitle= @groups.group_name
   %div#sectionInfo= @groups.group_description
 
@@ -37,11 +36,11 @@
     %div#hiddenMemberForm
       = form_with(model: @group, local: true) do |form|
         = form_for (:users) do |user_form|
-          %p
+          %p#formLabels
             = user_form.label :email
             %br/
             = user_form.text_field :email
-          %p
+          %p#formLabels
             = user_form.submit
       
 
@@ -65,12 +64,12 @@
         %p#formLabels
           = form.label :name
           %br/
-          = form.text_field :name, required: true
+          = form.text_field :name, required: true, class: "textBox"
         %p#formLabels
           = form.label :amount
           %br/
-          = form.text_field :amount, required: true
+          = form.text_field :amount, required: true, class: "textBox"
         %p#formLabels
-          = form.submit 
+          = form.submit
   
   

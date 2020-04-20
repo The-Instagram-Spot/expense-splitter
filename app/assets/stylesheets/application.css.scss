@@ -8,7 +8,6 @@
   font-size: 40px;
   padding-left: 5px;
   margin: auto;
-  // display: inline-block;
   vertical-align: top;
 }
 
@@ -26,7 +25,6 @@ img.images{
   width: 40px;
   height: 40px;
   padding-bottom: 3px;
-  // display: inline-block;
   vertical-align: bottom;
 }
 
@@ -36,15 +34,15 @@ img.images{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: white;
   font-size: 40px;
-  padding-left: 5px;
-  // margin: auto;
-  // display: inline-block;
-  vertical-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 75%;
+  margin-left: 19%;
+  transform: translateX(-10%);
 }
 
 .topnav a {
   float: right;
-  // background-color: #3d7ab8;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -66,7 +64,6 @@ a.signInButton{
   border: thin solid #71a0d0;
   box-shadow: 0px 3px 0px #71a0d0;
   padding: 3px;
-  // white-space: nowrap;
   text-decoration: none;
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -79,26 +76,19 @@ a.signInButton :active{
 
 #body{
   padding-bottom: 10px;
-  // padding-top: 10px;
-  // padding-left: 20px;
-  // padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 75%;
-  height:100%;
-  /*margin: 0 auto;*/
   background-color:#ffffff ;
   display: inline-block;
-  /*position: absolute;*/
   margin-left: 19%;
   transform: translateX(-10%);
-  // display:  inherit;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 #login{
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
   width: 45%;
   height:100%;
   background-color:#ffffff ;
@@ -122,11 +112,8 @@ a.signInButton :active{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: black;
   font-size: 35px;
-  //  background-color: #3d7ab8;
   width:100%;
   padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #formLabels{
@@ -134,28 +121,6 @@ a.signInButton :active{
  color: black;
  font-size: 16px;
  padding-left: 10px;
-//  width:40px;
-}
-
-
-
-
-#navButtons{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- float: right;
- color: white;
- background-color: #9fbfdf;
- width:15%;
- text-decoration: none;
- text-transform: uppercase;
- text-align: center;
- box-shadow: 0 3px 0 #6699cc;
- border-radius: 3px;
-}
-
-#navButtons:active{
-  box-shadow: none;
-  top: 5px;
 }
 
 #sectionTitle{
@@ -163,16 +128,12 @@ a.signInButton :active{
   color: black;
   font-size: 25px;
   padding-top: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #sectionInfo{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: black;
   font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #groupTable {
@@ -184,7 +145,6 @@ a.signInButton :active{
 #groupTable td, #groupTable th {
   border: 1px solid #ddd;
   padding: 8px;
-  // text-decoration: none;
   width:15%;
 }
 
@@ -200,12 +160,16 @@ a.signInButton :active{
   color: black;
 }
 
+a.newGroup{
+  text-decoration: none;
+}
+
 #transactionTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 75%;
-  /*display: inline-table;*/
-  /*float: left;*/
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #transactionTable  td, #transactionTable th{
@@ -230,7 +194,6 @@ a.signInButton :active{
 
 #hiddenTransactionForm{
   width: 50%;
-  // background-color: #ebecf0;
   display: none;
   padding-top: 10px;
 }
@@ -244,13 +207,11 @@ a.signInButton :active{
   margin-top:10px;
   width:20%;
   padding: 5px 5px;
-  /*position:relative;*/
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0 3px 0 #49aa8f;
   border: none;
   border-radius: 3px;
-  /*float: left;*/
 }
 
 #membersBox{
@@ -266,13 +227,11 @@ a.signInButton :active{
 
 #hiddenMemberForm{
   width: 23%;
-  // background-color: #ebecf0;
   display: none;
   padding-top: 10px;
 }
 
 #showMemberFormButton{
-
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: black;
@@ -280,11 +239,9 @@ a.signInButton :active{
   margin-top:10px;
   width:100%;
   padding:3px;
-  // text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0 3px 0 #49aa8f;
-  // margin: 0 auto;
   border-radius: 3px;
 
 }
@@ -292,11 +249,9 @@ a.signInButton :active{
 #membersHeader{
   background-color: #64cbaf;
   width: 100%;
-  // font-weight: ;
   text-align: center;
   font-size: 20px;
   border-radius: 3px;
-  // padding: 5px;
 }
 
 #member{
@@ -304,7 +259,6 @@ a.signInButton :active{
   font-size: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
-  // width: 95%;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -320,10 +274,8 @@ a{
 
 a.deleteButton{
   float: right;
-  // background-color: #ebecf0;
   border: none;
   color: black;
-  // padding: 3px;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 16px;
@@ -337,11 +289,6 @@ a.deleteButton:hover{
   background-color: #ff6961;    
 }
 
-#leftDiv{
-  float: left;
-  display: inline-block;
-}
-
 #settleUp{
   text-align: center;
   padding-top: 10px;
@@ -352,4 +299,20 @@ a.deleteButton:hover{
 
 #settleUp:hover{
   background-color: #ebecf0;
+}
+
+.textBox{
+  width: 35%;
+  height: 25px;
+  font-size: 15px;
+}
+
+input[type=submit i] {
+  background: #3d7ab8;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 3px 0px #71a0d0;
+  height: 35px;
+  font-size: 15px;
 }

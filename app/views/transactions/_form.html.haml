@@ -8,17 +8,17 @@
           
   = form_for (:users) do |user_form|
     %p#formLabels
-      = user_form.label :name
-      = user_form.text_field :name, required: true
-  
-      &nbsp;&nbsp;
-    
-      Paid &nbsp;&nbsp;
-      = user_form.text_field :paid, required: true
-      &nbsp;&nbsp;
-      
+      = form.label :name
+      %br/
+      = user_form.text_field :name, required: true, class: "textBox"
+    %p#formLabels
+      Paid:
+      %br/
+      = user_form.text_field :paid, required: true, class: "textBox"
+    %p#formLabels
       Expected Portion:
-      = user_form.text_field :proportion, required: true
+      %br/
+      = user_form.text_field :proportion, required: true, class: "textBox"
       %br/
 
     %p#formLabels
