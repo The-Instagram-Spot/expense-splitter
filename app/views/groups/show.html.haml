@@ -22,7 +22,7 @@
   %div#membersBox
     %div#membersHeader Members:
     = render @groups.users
-    %div#linkButtons= link_to 'Add Members', group_add_members_path(@groups)
+    %div#linkButtons= link_to 'Add Members', add_members_path(@groups), method: :patch
 
   %div
     %br
