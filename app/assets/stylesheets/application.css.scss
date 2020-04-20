@@ -112,8 +112,9 @@ a.signInButton :active{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: black;
   font-size: 35px;
-  width:100%;
   padding-top: 10px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #formLabels{
@@ -128,24 +129,30 @@ a.signInButton :active{
   color: black;
   font-size: 25px;
   padding-top: 5px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #sectionInfo{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: black;
   font-size: 20px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #groupTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  word-wrap: break-word;
 }
 
 #groupTable td, #groupTable th {
   border: 1px solid #ddd;
   padding: 8px;
-  width:15%;
+  word-wrap: break-word;
+  max-width: 100px;
 }
 
 #groupTable  tr:nth-child(even){background-color: #f2f2f2;}
@@ -162,12 +169,23 @@ a.signInButton :active{
 
 a.newGroup{
   text-decoration: none;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 15px;
+  background-color: #64cbaf;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 3px 0 #49aa8f;
+  border: none;
+  border-radius: 3px;
 }
 
 #transactionTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 75%;
+  word-wrap: break-word;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -175,7 +193,8 @@ a.newGroup{
 #transactionTable  td, #transactionTable th{
   border: 1px solid #ddd;
   padding: 8px;
-  width: 16%;
+  word-wrap: break-word;
+  max-width: 100px;
 }
 
 #transactionTable  tr:nth-child(even){background-color: #f2f2f2;}
@@ -188,9 +207,7 @@ a.newGroup{
   text-align: left;
   background-color: #bfc2cf;
   color: black;
-  width: 16%;
 }
-
 
 #hiddenTransactionForm{
   width: 50%;
@@ -223,10 +240,11 @@ a.newGroup{
   overflow: scroll;
   display: block;
   float: right;
+  padding-bottom: 10px;
 }
 
 #hiddenMemberForm{
-  width: 23%;
+  // width: 30%;
   display: none;
   padding-top: 10px;
 }
@@ -237,13 +255,13 @@ a.newGroup{
   color: black;
   background-color: #64cbaf;
   margin-top:10px;
-  width:100%;
+  width:90%;
   padding:3px;
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0 3px 0 #49aa8f;
   border-radius: 3px;
-
+  border: none;
 }
 
 #membersHeader{
@@ -261,6 +279,8 @@ a.newGroup{
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #member:hover{
@@ -270,6 +290,14 @@ a.newGroup{
 a{
   color: black;
   cursor: pointer;
+}
+
+a.table{
+  width: 50px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color:red;
+  hyphens: auto;
 }
 
 a.deleteButton{
@@ -303,6 +331,12 @@ a.deleteButton:hover{
 
 .textBox{
   width: 35%;
+  height: 25px;
+  font-size: 15px;
+}
+
+.memberTextBox{
+  width: 80%;
   height: 25px;
   font-size: 15px;
 }
