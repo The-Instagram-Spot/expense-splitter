@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :groups do
     resources :transactions
     resources :user
-    get :add_members
   end
 
   resources :transactions do
@@ -25,6 +24,7 @@ Rails.application.routes.draw do
   delete '/user/:user_id/transactions/:id/destroy_from_transaction', to: 'user#destroy_from_transaction', as: 'destroy_from_transaction'
   patch '/group/:group_id/transactions/:id/update_users', to: 'transactions#update_users', as: 'update_users'
   get '/group/:group_id/settle_up', to: 'groups#settle_up', as: 'settle_up'
+  patch '/group/:group_id/add_members', to: 'groups#add_members', as: 'add_members'
   
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
