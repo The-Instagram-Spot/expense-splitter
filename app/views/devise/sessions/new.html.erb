@@ -1,26 +1,47 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div id="login">
+  <div class="logintopnav">
+    <span>
+      <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+      DinDiv
+    </span>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to "Sign in", omniauth_authorize_path(resource_name, provider)%>
+    <% end %>
+  </div>
+  
+  <div id="center"> 
+    <h2>Keep track of shared expenses with your trips, household, friends, and more</h3>
+    </br>
+    <img src="https://img.icons8.com/dusk/50/000000/airport.png" alt = "airplane logo" class="images"/>
+    <img src="https://img.icons8.com/dusk/50/000000/home.png" alt = "house logo" class="images"/>
+    <img src="https://img.icons8.com/dusk/50/000000/tableware.png" alt = "dinner logo" class="images"/>
+    <img src="https://img.icons8.com/dusk/64/000000/plus.png" alt = "plus logo" class="images"/>
+    </br>
+    </br>
+    <h4 style="color: #3d7ab8">DinDiv makes it stressless and easy to settle up.</h4>
+    <div style="padding-bottom:20px">
+      <%- resource_class.omniauth_providers.each do |provider| %>
+        <%= link_to "Sign in with Google", omniauth_authorize_path(resource_name, provider), class: 'signInButton' %>
+      <% end %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
+  <!-- delete stuff below-->
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Log in" %>
     </div>
   <% end %>
+  
+</div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

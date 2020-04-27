@@ -1,10 +1,44 @@
+// https://icons8.com/icons/set/money-transfer
+
+.logintopnav {
+  overflow: hidden;
+  background-color: white;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color:#3d7ab8;
+  font-size: 40px;
+  padding-left: 5px;
+  margin: auto;
+  vertical-align: top;
+}
+
+.logintopnav a {
+  color: white;
+  text-decoration: none;
+  background-color: #3d7ab8;
+  padding: 8px;
+  border-radius: 5px;
+  float: right;
+  font-size: 20px;
+}
+
+img.images{
+  width: 40px;
+  height: 40px;
+  padding-bottom: 3px;
+  vertical-align: bottom;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #3d7ab8;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color:white;
+  color: white;
   font-size: 40px;
-  padding-left: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 75%;
+  margin-left: 19%;
+  transform: translateX(-10%);
 }
 
 .topnav a {
@@ -21,31 +55,66 @@
   color: black;
 }
 
+a.signInButton{
+  display: inline-block;
+  background: #3d7ab8;
+  color: white;
+  width: 190px;
+  border-radius: 3px;
+  border: thin solid #71a0d0;
+  box-shadow: 0px 3px 0px #71a0d0;
+  padding: 3px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+a.signInButton :active{
+  box-shadow: none;
+  top: 5px;
+}
 
 #body{
   padding-bottom: 10px;
-  padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 80%;
-  height:100%;
-  /*margin: 0 auto;*/
+  width: 75%;
   background-color:#ffffff ;
   display: inline-block;
-  /*position: absolute;*/
-  margin-left: 50%;
-  transform: translateX(-50%);
-  // display:  inherit;
+  margin-left: 19%;
+  transform: translateX(-10%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
+#login{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 45%;
+  height:100%;
+  background-color:#ffffff ;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 30px;
+}
+
 #pageTitle{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 35px;
-//  background-color: #3d7ab8;
- width:100%;
- padding-top: 10px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 35px;
+  padding-top: 10px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #formLabels{
@@ -53,70 +122,38 @@
  color: black;
  font-size: 16px;
  padding-left: 10px;
-//  width:40px;
-}
-
-#linkButtons{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: white;
- background-color: #64cbaf;
- margin-top:10px;
- width:70%;
- padding: 3px 5px;
- text-decoration: none;
- text-transform: uppercase;
- text-align: center;
- box-shadow: 0 3px 0 #49aa8f;
- margin: 0 auto;
- border-radius: 3px;
-}
-
-
-#navButtons{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- float: right;
- color: white;
- background-color: #9fbfdf;
- width:15%;
- text-decoration: none;
- text-transform: uppercase;
- text-align: center;
- box-shadow: 0 3px 0 #6699cc;
- border-radius: 3px;
-}
-
-#navButtons:active{
-  box-shadow: none;
-  top: 5px;
 }
 
 #sectionTitle{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 25px;
- padding-top: 5px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 25px;
+  padding-top: 5px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #sectionInfo{
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- color: black;
- font-size: 20px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 20px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #groupTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  word-wrap: break-word;
 }
 
 #groupTable td, #groupTable th {
   border: 1px solid #ddd;
   padding: 8px;
-  // text-decoration: none;
-  width:15%;
+  word-wrap: break-word;
+  max-width: 100px;
 }
-
-
 
 #groupTable  tr:nth-child(even){background-color: #f2f2f2;}
 
@@ -130,23 +167,39 @@
   color: black;
 }
 
+a.newGroup{
+  text-decoration: none;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 15px;
+  background-color: #64cbaf;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 3px 0 #49aa8f;
+  border: none;
+  border-radius: 3px;
+}
+
 #transactionTable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 75%;
-  /*display: inline-table;*/
-  /*float: left;*/
+  word-wrap: break-word;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #transactionTable  td, #transactionTable th{
   border: 1px solid #ddd;
   padding: 8px;
-  width: 16%;
+  word-wrap: break-word;
+  max-width: 100px;
 }
 
 #transactionTable  tr:nth-child(even){background-color: #f2f2f2;}
 
-#transactionTable  tr:hover {background-color: #ddd;}
+#transactionTable  tr:hover {background-color: #ebecf0;}
 
 #transactionTable  th {
   padding-top: 12px;
@@ -154,17 +207,14 @@
   text-align: left;
   background-color: #bfc2cf;
   color: black;
-  width: 16%;
 }
 
-
-
-#hiddenForm{
+#hiddenTransactionForm{
   width: 50%;
-  // background-color: #ebecf0;
   display: none;
   padding-top: 10px;
 }
+
 
 #showFormButton{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -174,33 +224,49 @@
   margin-top:10px;
   width:20%;
   padding: 5px 5px;
-  /*position:relative;*/
   text-transform: uppercase;
   text-align: center;
   box-shadow: 0 3px 0 #49aa8f;
   border: none;
   border-radius: 3px;
-  /*float: left;*/
 }
 
 #membersBox{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: black;
-  // font-size: 15px;
   background-color: #ebecf0;
-  border-left: 10px;
   width: 23%;
-  padding-left: 5px;
-  // height:15%;
+  height: 50%;
   overflow: scroll;
   display: block;
   float: right;
+  padding-bottom: 10px;
+}
+
+#hiddenMemberForm{
+  // width: 30%;
+  display: none;
+  padding-top: 10px;
+}
+
+#showMemberFormButton{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #64cbaf;
+  margin-top:10px;
+  width:90%;
+  padding:3px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 3px 0 #49aa8f;
+  border-radius: 3px;
+  border: none;
 }
 
 #membersHeader{
   background-color: #64cbaf;
   width: 100%;
-  // font-weight: ;
   text-align: center;
   font-size: 20px;
   border-radius: 3px;
@@ -211,6 +277,10 @@
   font-size: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 #member:hover{
@@ -222,12 +292,18 @@ a{
   cursor: pointer;
 }
 
+a.table{
+  width: 50px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color:red;
+  hyphens: auto;
+}
+
 a.deleteButton{
   float: right;
-  // background-color: #ebecf0;
   border: none;
   color: black;
-  // padding: 3px;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 16px;
@@ -241,7 +317,36 @@ a.deleteButton:hover{
   background-color: #ff6961;    
 }
 
-#leftDiv{
-  float: left;
-  display: inline-block;
+#settleUp{
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+#settleUp:hover{
+  background-color: #ebecf0;
+}
+
+.textBox{
+  width: 35%;
+  height: 25px;
+  font-size: 15px;
+}
+
+.memberTextBox{
+  width: 80%;
+  height: 25px;
+  font-size: 15px;
+}
+
+input[type=submit i] {
+  background: #3d7ab8;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 3px 0px #71a0d0;
+  height: 35px;
+  font-size: 15px;
 }

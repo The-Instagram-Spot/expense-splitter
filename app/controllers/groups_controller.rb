@@ -94,23 +94,23 @@ class GroupsController < ApplicationController
   end
   
   def add_members
-    @group = Group.find(params[:group_id])
+    @groups = Group.find(params[:group_id])
     if(params.has_key?(:users) && params[:users][:email] != "")
       @user = User.find_by(email: params[:users][:email])
       if(@user.nil?)
-        @group.errors[:base] << "User does not exist"
+        @groups.errors[:base] << "User does not exist"
         render 'add_members'
         return
       end
       
-      if(@group.users.exists?(@user.id))
-        @group.errors[:base] << "User is already in this group"
+      if(@groups.users.exists?(@user.id))
+        @groups.errors[:base] << "User is already in this group"
         render 'add_members'
        return
       end
       
-      @group.users << @user
-      redirect_to @group
+      @groups.users << @user
+      redirect_to @groups
       return
     else
       render 'add_members'

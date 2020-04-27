@@ -1,18 +1,21 @@
-%div#body  
-  .topnav 
-    = link_to 'Back', group_path(@transactions.group)
+.topnav 
+  <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+  DinDiv
+  = link_to 'Back', group_path(@transactions.group)
 
+%div#body  
   %div#pageTitle Edit Transaction:
-  %div#pageTitle= @transactions.name
   
   = form_with(model: [@groups, @transactions], local: true) do |form|
     %p#formLabels
       = form.label :name
-      = form.text_field :name
-      &nbsp;&nbsp;
-      
+      %br/
+      = form.text_field :name, class: "textBox"
+      %br/
+      %br/
       = form.label :amount
-      = form.text_field :amount
+      %br/
+      = form.text_field :amount, class: "textBox"
       
       &nbsp;&nbsp;
       

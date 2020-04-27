@@ -1,6 +1,15 @@
 :javascript
-  function myFunction() {
-    var x = document.getElementById("hiddenForm");
+  function showNewTransaction() {
+    var x = document.getElementById("hiddenTransactionForm");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showNewMember() {
+    var x = document.getElementById("hiddenMemberForm");
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
@@ -8,21 +17,35 @@
     }
   }
   
+.topnav
+  <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+  DinDiv
+  = link_to 'Settle Up', settle_up_path(@groups)
+  = link_to 'Edit', edit_group_path(@groups)
+  = link_to 'Home', groups_path
 
 %div#body
-  .topnav
-    DinDiv
-    = link_to 'Settle Up', settle_up_path(@groups)
-    = link_to 'Edit', edit_group_path(@groups)
-    = link_to 'Home', groups_path
-
   %div#pageTitle= @groups.group_name
   %div#sectionInfo= @groups.group_description
 
   %div#membersBox
     %div#membersHeader Members:
     = render @groups.users
-    %div#linkButtons= link_to 'Add Members', add_members_path(@groups), method: :patch
+    %div#center
+      %button#showMemberFormButton{:onclick => "showNewMember()"} Add Member
+
+    %div#hiddenMemberForm
+      = form_with(model: @groups, url: add_members_path(@groups), local: true) do |form|
+        - if @groups.errors.any?
+          - @groups.errors.full_messages.each do |msg|
+            %li= msg
+        = form_for (:users) do |user_form|
+          %p#formLabels
+            = user_form.label :email
+            %br/
+            = user_form.text_field :email, class: "memberTextBox"
+          %p#formLabels
+            = user_form.submit "Save User"
 
   %div
     %br
@@ -33,23 +56,28 @@
         %th Total
         %th
         %th
-      = render @groups.transactions
+      - @groups.transactions.each do |transaction|
+        %tr
+          %td= link_to transaction.name, group_transaction_path(transaction.group, transaction)
+          %td= number_to_currency(transaction.amount) 
+          %td= link_to 'Edit', edit_group_transaction_path(transaction.group, transaction)
+          %td= link_to 'Delete', [transaction.group, transaction], method: :delete, data: { confirm: 'Are you sure?' }
       
 
   %div 
-    %button#showFormButton{:onclick => "myFunction()"} Add New Transaction
-    %div#hiddenForm
+    %button#showFormButton{:onclick => "showNewTransaction()"} Add New Transaction
+    %div#hiddenTransactionForm
       %h4#sectionInfo New Transaction:
       = form_with(model: [ @groups, @groups.transactions.build ], local: true) do |form|
         %p#formLabels
           = form.label :name
           %br/
-          = form.text_field :name, required: true
+          = form.text_field :name, required: true, class: "textBox"
         %p#formLabels
           = form.label :amount
           %br/
-          = form.text_field :amount, required: true
+          = form.text_field :amount, required: true, class: "textBox"
         %p#formLabels
-          = form.submit 
+          = form.submit
   
   
