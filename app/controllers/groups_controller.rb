@@ -99,13 +99,13 @@ class GroupsController < ApplicationController
       @user = User.find_by(email: params[:users][:email])
       if(@user.nil?)
         @groups.errors[:base] << "User does not exist"
-        render 'show'
+        render 'groups/show'
         return
       end
       
       if(@groups.users.exists?(@user.id))
         @groups.errors[:base] << "User is already in this group"
-        render 'add_members'
+        render 'groups/show'
         return
       end
       
@@ -113,7 +113,7 @@ class GroupsController < ApplicationController
       redirect_to @groups
       return
     else
-      render 'add_members'
+      render 'groups/show'
       return
     end
   end

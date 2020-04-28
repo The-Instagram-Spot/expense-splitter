@@ -31,14 +31,18 @@
   %div#membersBox
     %div#membersHeader Members:
     = render @groups.users
+    
     %div#center
       %button#showMemberFormButton{:onclick => "showNewMember()"} Add Member
+    
+    //FIX SPACING HERE
+    - if @groups.errors.any?
+      - @groups.errors.full_messages.each do |msg|
+        %li= msg
+    /////////////////////
 
     %div#hiddenMemberForm
       = form_with(model: @groups, url: add_members_path(@groups), local: true) do |form|
-        - if @groups.errors.any?
-          - @groups.errors.full_messages.each do |msg|
-            %li= msg
         = form_for (:users) do |user_form|
           %p#formLabels
             = user_form.label :email

@@ -1,6 +1,6 @@
 %div#member
   = user.name
-  %span#deleteButton=link_to'X', group_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: "deleteButton"
+  %span#deleteButton=link_to'X', group_user_path(@groups.id, user.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "deleteButton"
     
     
     
