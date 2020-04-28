@@ -1,7 +1,7 @@
 .topnav
   <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
   DinDiv
-  = link_to 'Back', groups_path
+  = link_to 'Back', group_path(@groups)
 %div#body
 
   %div#pageTitle Edit group
@@ -16,3 +16,5 @@
       = form.text_area :group_description, class: "textBox"
     %p#formLabels
       = form.submit
+  
+  = link_to 'Delete this group', group_path(@groups), method: :delete, data: { confirm: 'Are you sure?' }

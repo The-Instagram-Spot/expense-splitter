@@ -21,3 +21,5 @@
       
       %p#formLabels
       = form.submit "Save Transaction Details"  
+  
+  = link_to 'Delete this transaction', [@transactions.group, @transactions], method: :delete, data: { confirm: 'Are you sure?' }

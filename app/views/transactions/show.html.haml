@@ -28,4 +28,6 @@
             = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
         = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
         %br
+        
+    = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 

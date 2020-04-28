@@ -1,6 +1,6 @@
-= form_with(model: @group, url: add_members_path(@group), local: true) do |form|
-  - if @group.errors.any?
-    - @group.errors.full_messages.each do |msg|
+= form_with(model: @groups, url: add_members_path(@groups), local: true) do |form|
+  - if @groups.errors.any?
+    - @groups.errors.full_messages.each do |msg|
       %li= msg
   = form_for (:users) do |user_form|
     %p
@@ -10,4 +10,4 @@
     %p
       = user_form.submit
       
-= link_to 'Back', group_path(@group)
+= link_to 'Back', group_path(@groups)

@@ -32,8 +32,6 @@
         %tr
           %td= link_to group.group_name, group_path(group), class: "table"
           %td= group.group_description
-          %td= link_to 'Edit', edit_group_path(group)
-          %td= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }
     %br/      
     %div= link_to 'New Group', new_group_path, class: "newGroup"
     %br/
