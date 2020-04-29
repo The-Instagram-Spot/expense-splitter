@@ -26,8 +26,6 @@
       %tr
         %th Name
         %th Description
-        %th
-        %th
       - @user.groups.each do |group|
         %tr
           %td= link_to group.group_name, group_path(group), class: "table"

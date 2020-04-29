@@ -34,12 +34,12 @@
     
     %div#center
       %button#showMemberFormButton{:onclick => "showNewMember()"} Add Member
-    
-    //FIX SPACING HERE
+
     - if @groups.errors.any?
       - @groups.errors.full_messages.each do |msg|
-        %li= msg
-    /////////////////////
+        %br
+        %span#errorMessageMem
+          = msg
 
     %div#hiddenMemberForm
       = form_with(model: @groups, url: add_members_path(@groups), local: true) do |form|
@@ -58,8 +58,6 @@
       %tr
         %th Name
         %th Total
-        %th
-        %th
       - @groups.transactions.each do |transaction|
         %tr
           %td= link_to transaction.name, group_transaction_path(transaction.group, transaction)

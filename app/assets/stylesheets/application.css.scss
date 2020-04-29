@@ -1,5 +1,14 @@
 // https://icons8.com/icons/set/money-transfer
 
+.topnav a.delete{
+  color:#ff8681;
+}
+
+.topnav a.delete:hover {
+  background-color:#ff8681;
+  color: black;
+}
+
 .logintopnav {
   overflow: hidden;
   background-color: white;
@@ -296,7 +305,7 @@ a.table{
   width: 50px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color:red;
+  // color:red;
   hyphens: auto;
 }
 
@@ -349,4 +358,19 @@ input[type=submit i] {
   box-shadow: 0px 3px 0px #71a0d0;
   height: 35px;
   font-size: 15px;
+}
+
+#errorMessage{
+  color:#ff554e; 
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#errorMessageMem{
+  color:#ff554e; 
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding-left: 10px;
 }

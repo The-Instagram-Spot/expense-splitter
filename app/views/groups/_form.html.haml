@@ -7,7 +7,9 @@
         this article from being saved:
       %ul
         - @groups.errors.full_messages.each do |msg|
-          %li= msg
+          %span#errorMessage
+            = msg
+  
   %p
     = form.label :group_name
     %br/

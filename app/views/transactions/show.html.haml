@@ -2,6 +2,7 @@
     <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
     DinDiv
     = link_to 'Back', group_path(@transactions.group)
+    = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 %div#body   
     %div#pageTitle= @transactions.name
     %br
@@ -29,5 +30,5 @@
         = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
         %br
         
-    = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+    //= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 
