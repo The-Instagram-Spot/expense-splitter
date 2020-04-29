@@ -56,11 +56,11 @@ class TransactionsController < ApplicationController
             @transactions.errors[:base] << "User cannot pay more than transaction total"
             render 'show'
             return
-        elsif(!@user.in? @transactions.group.users)
+        elsif(!@user.in? @transactions.group.users) #check if user is in group
             @transactions.errors[:base] << "User is not in this group"
             render 'show'
             return
-        elsif(@user.in? @transactions.users)
+        elsif(@user.in? @transactions.users) #check that user is not already in the transaction
             @transactions.errors[:base] << "User is already in this transaction"
             render 'show'
             return

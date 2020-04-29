@@ -1,13 +1,13 @@
+.topnav
+    <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+    DinDiv
+    = link_to 'Back', group_path(@transactions.group)
 %div#body   
-    %strong#pageTitle Transaction:
-    %span#pageTitle= @transactions.name
-    // &nbsp;
+    %div#pageTitle= @transactions.name
     %br
     %span#sectionInfo= number_to_currency(@transactions.amount) 
-    // &nbsp;&nbsp;
     %br
     %br
-    // %span#linkButtons= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
     %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
     %label#formLabels{:for => "split-evenly"} Split Evenly?
     %br
@@ -26,10 +26,8 @@
         - else
             is owed
             = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
-    
-        //= link_to 'Edit', update_users_path(users: {name: user.name}, transaction_id: @transactions.id, group_id: @transactions.group.id), method: :patch
         = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
         %br
         
-    %div#navButtons    
-        = link_to 'Save', group_path(@transactions.group)
+    = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
+

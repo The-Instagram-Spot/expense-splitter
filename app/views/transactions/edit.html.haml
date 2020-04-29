@@ -1,19 +1,25 @@
+.topnav 
+  <img src="https://img.icons8.com/cotton/50/000000/money-transfer.png" alt="money logo" class="images"/>
+  DinDiv
+  = link_to 'Back', group_path(@transactions.group)
+
 %div#body  
-  %strong#pageTitle Edit Transaction:
-  %span#pageTitle= @transactions.name
+  %div#pageTitle Edit Transaction:
   
   = form_with(model: [@groups, @transactions], local: true) do |form|
     %p#formLabels
       = form.label :name
-      = form.text_field :name
-      &nbsp;&nbsp;
-      
+      %br/
+      = form.text_field :name, class: "textBox"
+      %br/
+      %br/
       = form.label :amount
-      = form.text_field :amount
+      %br/
+      = form.text_field :amount, class: "textBox"
       
       &nbsp;&nbsp;
       
       %p#formLabels
-      = form.submit "Save Transaction Details"
-  %div#navButtons    
-    = link_to 'Back', group_path(@transactions.group)
+      = form.submit "Save Transaction Details"  
+  
+  = link_to 'Delete this transaction', [@transactions.group, @transactions], method: :delete, data: { confirm: 'Are you sure?' }
