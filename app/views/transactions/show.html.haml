@@ -15,20 +15,20 @@
     %br
     
     = render 'transactions/form'
-        
-    - @transactions.users.each do |user|
-        = user.name
-        paid
-        = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).paid)
-        and 
-        - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
-            owes
-            = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
-        - else
-            is owed
-            = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
-        = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
-        %br
-        
+    %div#sectionInfo    
+        - @transactions.users.each do |user|
+            = user.name
+            paid
+            = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).paid)
+            and 
+            - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
+                owes
+                = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+            - else
+                is owed
+                = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+            = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
+            %br
+            
     //= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 
