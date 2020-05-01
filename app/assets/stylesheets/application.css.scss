@@ -219,7 +219,7 @@ a.newGroup{
 }
 
 #hiddenTransactionForm{
-  width: 50%;
+  // width: 100%; 
   display: none;
   padding-top: 10px;
 }
@@ -339,7 +339,13 @@ a.deleteButton:hover{
 }
 
 .textBox{
-  width: 35%;
+  width: 45%;
+  height: 25px;
+  font-size: 15px;
+}
+
+.transactionTextBox{
+  width: 80%;
   height: 25px;
   font-size: 15px;
 }
@@ -373,4 +379,44 @@ input[type=submit i] {
   font-size: 15px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   padding-left: 10px;
+  float: right;
+  // text-align: right;
+}
+
+#transactionBod{
+  width: 50%;
+  float: left;
+}
+
+#transactionInfo{
+  font-size: 15px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding-top: 30px;
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+a.transactionDeleteButton{
+  // float: right;
+  border: none;
+  color: #ff6961;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.transactionDeleteButton:hover{
+  color:black;
+  background-color: #ff6961;    
+}
+
+#transactionLine{
+  height: 25px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }

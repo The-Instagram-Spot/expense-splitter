@@ -4,31 +4,32 @@
     = link_to 'Back', group_path(@transactions.group)
     = link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 %div#body   
-    %div#pageTitle= @transactions.name
-    %br
-    %span#sectionInfo= number_to_currency(@transactions.amount) 
-    %br
-    %br
-    %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
-    %label#formLabels{:for => "split-evenly"} Split Evenly?
-    %br
-    %br
-    
-    = render 'transactions/form'
-    %div#sectionInfo    
+    %div#transactionBod 
+        %div#pageTitle= @transactions.name
+        %br
+        %span#sectionInfo= number_to_currency(@transactions.amount) 
+        %br
+        %br
+        %input#scales{:checked => "checked", :name => "split-evenly", :type => "checkbox"}/
+        %label#formLabels{:for => "split-evenly"} Split Evenly?
+        %br
+        %br
+        = render 'transactions/form'
+    %div#transactionInfo  
         - @transactions.users.each do |user|
-            = user.name
-            paid
-            = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).paid)
-            and 
-            - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
-                owes
-                = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
-            - else
-                is owed
-                = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
-            = link_to 'Delete', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }
-            %br
-            
+            %div#transactionLine       
+                = user.name
+                paid
+                = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).paid)
+                and 
+                - if(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference < 0)
+                    owes
+                    = number_to_currency(0 - user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+                - else
+                    is owed
+                    = number_to_currency(user.amounts.find_by(user_id: user.id, transaction_id: @transactions.id).difference)
+                = link_to 'X', destroy_from_transaction_path(user, id: @transactions.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "transactionDeleteButton"
+                
+                
     //= link_to 'Edit', edit_group_transaction_path(@transactions.group, @transactions)
 

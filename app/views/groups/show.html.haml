@@ -62,7 +62,6 @@
         %tr
           %td= link_to transaction.name, group_transaction_path(transaction.group, transaction)
           %td= number_to_currency(transaction.amount) 
-      
 
   %div 
     %button#showFormButton{:onclick => "showNewTransaction()"} Add New Transaction
